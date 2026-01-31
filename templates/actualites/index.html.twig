@@ -1,0 +1,268 @@
+{% extends 'accueil_base.html.twig' %}
+
+{% block title %}Blog Gazette Solutions - Actualités Juridiques
+{% endblock %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('assets-actualites/css/globals.css') }}">
+	<link rel="stylesheet" href="{{ asset('assets-actualites/css/styleguide.css') }}">
+	<link rel="stylesheet" href="{{ asset('assets-actualites/css/style.css') }}">
+	<link rel="stylesheet" href="{{ asset('assets-actualites/css/responsive-style.css') }}">
+{% endblock %}
+
+{% block content %}
+	<!-- Hero Section -->
+	<section class="hero">
+		<div class="hero-content">
+			<div class="hero-tag">ACTUALITÉS JURIDIQUES</div>
+			<div class="hero-title">
+				<h1>
+					<span class="title-line">Le</span>
+					<span class="title-line">
+						<span class="title-underline">blog Gazette Solution</span>
+					</span>
+				</h1>
+				<p class="hero-subtitle">Votre source d'expertise en formalités légales.</p>
+			</div>
+			<p class="hero-description">
+				Des analyses éclairées pour les professionnels du droit et toute l'actualité du cabinet. 
+								        Découvrez les tendances, les retours d'expérience et les conseils pour naviguer efficacement 
+								        dans le monde des formalités juridiques en ligne.
+			</p>
+		</div>
+		<div class="hero-image">
+			<img src="https://c.animaapp.com/ml2mibj9gkulId/img/illustrations-heros-actus-1.png" alt="Illustration">
+		</div>
+	</section>
+
+	<!-- Blog Section -->
+	<section
+		class="blog-section">
+		<!-- Featured Article -->
+		<div class="section-header">
+			<h2 class="section-title">
+				<span class="title-underline-small">A LA UNE</span>
+			</h2>
+		</div>
+
+		<div class="section-subtitle">
+			<p>L'actualité juridique évolue vite.<br>Les news Gazette Solutions, sans superflu.</p>
+		</div>
+
+		<div class="featured-article-container">
+			<article class="article-card article-featured">
+				<div class="article-image"></div>
+				<div class="article-content">
+					<span class="article-tag">Astuces</span>
+					<div class="article-meta">
+						<span>07/05/2025</span>
+						<span>|</span>
+						<span>2 min de lecture</span>
+					</div>
+					<h3 class="article-title">Votre AG d'approbation des<br>comptes approche ?</h3>
+					<a href="#" class="article-link">
+						<span>Lire l'article</span>
+						<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
+					</a>
+				</div>
+			</article>
+		</div>
+
+		<!-- All Articles -->
+		<div class="section-header">
+			<h2 class="section-title">
+				<span class="title-underline-small">LE BLOG</span>
+			</h2>
+		</div>
+
+		<div class="section-subtitle">
+			<p>Toute l'actualité juridique.</p>
+		</div>
+
+		<!-- Filters -->
+		<div class="filters">
+			<button class="filter-tag filter-active">Tous les articles</button>
+			<button class="filter-tag">Formalités</button>
+			<button class="filter-tag">Annonces légales</button>
+			<button class="filter-tag">Astuces</button>
+			<button class="filter-tag">Juridique</button>
+			<button class="filter-tag">Actus La Gazette</button>
+		</div>
+
+		<!-- Articles Grid -->
+		<div class="articles-grid">
+			<article class="article-card">
+				<div class="article-image"></div>
+				<div class="article-content">
+					<span class="article-tag">Astuces</span>
+					<div class="article-meta">
+						<span>07/05/2025</span>
+						<span>|</span>
+						<span>2 min de lecture</span>
+					</div>
+					<h3 class="article-title">Votre AG d'approbation des<br>comptes approche ?</h3>
+					<a href="#" class="article-link">
+						<span>Lire l'article</span>
+						<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
+					</a>
+				</div>
+			</article>
+
+			<article class="article-card">
+				<div class="article-image"></div>
+				<div class="article-content">
+					<span class="article-tag">Formalités</span>
+					<div class="article-meta">
+						<span>23/04/2025</span>
+						<span>|</span>
+						<span>5 min de lecture</span>
+					</div>
+					<h3 class="article-title">La communication dans un<br>cabinet de formalités ?</h3>
+					<a href="#" class="article-link">
+						<span>Lire l'article</span>
+						<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
+					</a>
+				</div>
+			</article>
+
+			<article class="article-card">
+				<div class="article-image"></div>
+				<div class="article-content">
+					<span class="article-tag">Juridique</span>
+					<div class="article-meta">
+						<span>02/04/2025</span>
+						<span>|</span>
+						<span>5 min de lecture</span>
+					</div>
+					<h3 class="article-title">La fusion-absorption d'une<br>société</h3>
+					<a href="#" class="article-link">
+						<span>Lire l'article</span>
+						<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
+					</a>
+				</div>
+			</article>
+
+			<article class="article-card">
+				<div class="article-image"></div>
+				<div class="article-content">
+					<span class="article-tag">Astuces</span>
+					<div class="article-meta">
+						<span>07/05/2025</span>
+						<span>|</span>
+						<span>2 min de lecture</span>
+					</div>
+					<h3 class="article-title">Votre AG d'approbation des<br>comptes approche ?</h3>
+					<a href="#" class="article-link">
+						<span>Lire l'article</span>
+						<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
+					</a>
+				</div>
+			</article>
+
+			<article class="article-card">
+				<div class="article-image"></div>
+				<div class="article-content">
+					<span class="article-tag">Formalités</span>
+					<div class="article-meta">
+						<span>23/04/2025</span>
+						<span>|</span>
+						<span>5 min de lecture</span>
+					</div>
+					<h3 class="article-title">La communication dans un<br>cabinet de formalités ?</h3>
+					<a href="#" class="article-link">
+						<span>Lire l'article</span>
+						<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
+					</a>
+				</div>
+			</article>
+
+			<article class="article-card">
+				<div class="article-image"></div>
+				<div class="article-content">
+					<span class="article-tag">Juridique</span>
+					<div class="article-meta">
+						<span>02/04/2025</span>
+						<span>|</span>
+						<span>5 min de lecture</span>
+					</div>
+					<h3 class="article-title">La fusion-absorption d'une<br>société</h3>
+					<a href="#" class="article-link">
+						<span>Lire l'article</span>
+						<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
+					</a>
+				</div>
+			</article>
+
+			<article class="article-card">
+				<div class="article-image"></div>
+				<div class="article-content">
+					<span class="article-tag">Astuces</span>
+					<div class="article-meta">
+						<span>07/05/2025</span>
+						<span>|</span>
+						<span>5 min de lecture</span>
+					</div>
+					<h3 class="article-title">Votre AG d'approbation des<br>comptes approche ?</h3>
+					<a href="#" class="article-link">
+						<span>Lire l'article</span>
+						<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
+					</a>
+				</div>
+			</article>
+
+			<article class="article-card">
+				<div class="article-image"></div>
+				<div class="article-content">
+					<span class="article-tag">Formalités</span>
+					<div class="article-meta">
+						<span>23/04/2025</span>
+						<span>|</span>
+						<span>5 min de lecture</span>
+					</div>
+					<h3 class="article-title">La communication dans un<br>cabinet de formalités ?</h3>
+					<a href="#" class="article-link">
+						<span>Lire l'article</span>
+						<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
+					</a>
+				</div>
+			</article>
+
+			<article class="article-card">
+				<div class="article-image"></div>
+				<div class="article-content">
+					<span class="article-tag">Juridique</span>
+					<div class="article-meta">
+						<span>02/04/2025</span>
+						<span>|</span>
+						<span>5 min de lecture</span>
+					</div>
+					<h3 class="article-title">La fusion-absorption d'une<br>société</h3>
+					<a href="#" class="article-link">
+						<span>Lire l'article</span>
+						<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
+					</a>
+				</div>
+			</article>
+		</div>
+
+		<!-- Pagination -->
+		<div class="pagination">
+			<button class="pagination-arrow" aria-label="Page précédente">
+				<img src="https://c.animaapp.com/ml2mibj9gkulId/img/solid-interface-caret-left.svg" alt="">
+			</button>
+			<button class="pagination-page pagination-active">1</button>
+			<button class="pagination-page">2</button>
+			<button class="pagination-page">3</button>
+			<button class="pagination-page">4</button>
+			<button class="pagination-page">5</button>
+			<button class="pagination-page pagination-desktop-only">6</button>
+			<button class="pagination-page pagination-desktop-only">7</button>
+			<button class="pagination-page pagination-desktop-only">8</button>
+			<button class="pagination-page pagination-desktop-only">9</button>
+			<button class="pagination-page pagination-desktop-only">10</button>
+			<button class="pagination-arrow" aria-label="Page suivante">
+				<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-caret-right.svg" alt="">
+			</button>
+		</div>
+	</section>
+{% endblock %}

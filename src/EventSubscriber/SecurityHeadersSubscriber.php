@@ -25,10 +25,10 @@ class SecurityHeadersSubscriber implements EventSubscriberInterface
 
         // Strict Content Security Policy
         $csp = "default-src 'self'; ";
-        $csp .= "img-src 'self' https://images.prismic.io data:; ";
-        $csp .= "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; ";
+        $csp .= "img-src 'self' https://images.prismic.io https://c.animaapp.com data:; ";
+        $csp .= "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; ";
         $csp .= "font-src 'self' https://fonts.gstatic.com; ";
-        $csp .= "script-src 'self'; ";
+        $csp .= "script-src 'self' 'unsafe-eval'; ";
         $csp .= "frame-ancestors 'none'; ";
         $csp .= "base-uri 'self'; ";
         $csp .= "form-action 'self';";

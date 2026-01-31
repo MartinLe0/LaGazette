@@ -6,12 +6,18 @@ use App\Service\PrismicService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
 
 class DefaultController extends AbstractController
 {
-    #[Route('/', name: 'app_home')]
+    #[Route('/annonces-legales', name: 'app_annonces_legales')]
+    public function annoncesLegales(): Response
+    {
+        return $this->render('annonces_legales/index.html.twig');
+    }
+
+    #[Route('/cms', name: 'app_cms')]
     #[Route('/page/{slug}', name: 'app_page')]
     public function index(PrismicService $prismic, string $slug = 'home'): Response
     {

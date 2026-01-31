@@ -1,0 +1,1262 @@
+.element-annonces {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  position: relative;
+  background-color: #fcfdfd;
+}
+
+.element-annonces .hero {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  /* Allow flexible height */
+  min-height: 560px;
+  align-items: center;
+  justify-content: center;
+  /* Center content vertically */
+  padding: 0px 20px;
+  position: relative;
+}
+
+.element-annonces .background {
+  padding: 80px;
+  flex: 1;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  border-radius: 0px 0px 15.09px 15.09px;
+  background: linear-gradient(31deg,
+      rgba(27, 47, 83, 1) 0%,
+      rgba(62, 95, 188, 1) 75%);
+}
+
+.element-annonces .container {
+  display: flex;
+  width: 650px;
+  gap: 20px;
+  padding: 0px 20px 0px 0px;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.element-annonces .div-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element-annonces .text-wrapper {
+  position: relative;
+  flex: 1;
+  margin-top: -1.00px;
+  font-family: var(--title-medium-font-family);
+  font-weight: var(--title-medium-font-weight);
+  color: var(--confirmation);
+  font-size: var(--title-medium-font-size);
+  letter-spacing: var(--title-medium-letter-spacing);
+  line-height: var(--title-medium-line-height);
+  font-style: var(--title-medium-font-style);
+}
+
+.element-annonces .titre {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-self: stretch;
+  width: 100%;
+  align-items: flex-start;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element-annonces .heading {
+  display: flex;
+  gap: 4px;
+  align-self: stretch;
+  width: 100%;
+  align-items: flex-start;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element-annonces .span-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "IBM Plex Sans Arabic", Helvetica;
+  font-weight: 400;
+  color: #fcfdfd;
+  font-size: 30px;
+  letter-spacing: 0;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.element-annonces .span {
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.element-annonces .div {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 0px 0px 0.92px;
+  align-items: flex-start;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element-annonces .p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "IBM Plex Sans Arabic", Helvetica;
+  color: #fcfdfd;
+  font-size: 30px;
+  letter-spacing: 0;
+  line-height: 30px;
+  white-space: nowrap;
+  position: relative;
+  font-weight: 400;
+}
+
+.element-annonces .vector {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 7.78px;
+  margin-bottom: -2.00px;
+  margin-left: -0.16px;
+  margin-right: -2.00px;
+}
+
+.element-annonces .en-quelques-clics-et {
+  position: relative;
+  align-self: stretch;
+  font-family: "IBM Plex Sans Arabic", Helvetica;
+  font-weight: 400;
+  color: #fcfdfd;
+  font-size: 30px;
+  letter-spacing: 0;
+  line-height: 30px;
+}
+
+.element-annonces .text-wrapper-2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin-top: -1.00px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 400;
+  color: #fcfdfd;
+  font-size: 16px;
+  letter-spacing: 0.50px;
+  line-height: 24px;
+}
+
+.element-annonces .ILLUSTRATIONS-HEROS {
+  position: relative;
+  width: 400px;
+  height: 350px;
+  margin-top: -55.00px;
+  margin-bottom: -55.00px;
+  margin-right: -50.00px;
+  object-fit: cover;
+}
+
+.element-annonces .div-2 {
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+  padding: 40px 80px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element-annonces .rectangle {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.element-annonces .div-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.element-annonces .text-wrapper-3 {
+  justify-content: center;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: var(--title-small-font-family);
+  font-weight: var(--title-small-font-weight);
+  color: #3e5fbc;
+  font-size: var(--title-small-font-size);
+  letter-spacing: var(--title-small-letter-spacing);
+  line-height: var(--title-small-line-height);
+  white-space: nowrap;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-style: var(--title-small-font-style);
+}
+
+.element-annonces .img {
+  height: 8px;
+  margin-left: -0.61px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  margin-bottom: -2.00px;
+  margin-right: -2.00px;
+}
+
+.element-annonces .titre-2 {
+  display: flex;
+  align-self: stretch;
+  width: 100%;
+  align-items: flex-start;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element-annonces .text-wrapper-4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin-top: -1.00px;
+  font-weight: var(--www-msb-formalites-fr-semantic-heading-2-font-weight);
+  color: var(--wwwmsb-formalitesfrcerulean-blue);
+  font-size: var(--www-msb-formalites-fr-semantic-heading-2-font-size);
+  letter-spacing: var(--www-msb-formalites-fr-semantic-heading-2-letter-spacing);
+  line-height: var(--www-msb-formalites-fr-semantic-heading-2-line-height);
+  position: relative;
+  font-family: var(--www-msb-formalites-fr-semantic-heading-2-font-family);
+  font-style: var(--www-msb-formalites-fr-semantic-heading-2-font-style);
+}
+
+.element-annonces .la-publication-d-une {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin-top: -1.00px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 400;
+  color: #030303;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  line-height: 20px;
+}
+
+.element-annonces .bouton {
+  height: 40px;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 12px;
+  background-color: var(--info);
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.element-annonces .text-wrapper-5 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 400;
+  color: #030303;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.element-annonces .img-2 {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.element-annonces .container-2 {
+  display: flex;
+  width: 570px;
+  gap: 40px;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.element-annonces .vector-2 {
+  height: 8px;
+  margin-left: -0.41px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  margin-bottom: -2.00px;
+  margin-right: -2.00px;
+}
+
+.element-annonces .annonceslegales-pro {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin-top: -1.00px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 400;
+  color: #030303;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.element-annonces .text-wrapper-6 {
+  text-decoration: underline;
+  letter-spacing: 0.04px;
+  line-height: 20px;
+}
+
+.element-annonces .text-wrapper-7 {
+  letter-spacing: 0.04px;
+  line-height: 20px;
+}
+
+.element-annonces .text-wrapper-8 {
+  font-weight: 700;
+  letter-spacing: 0.04px;
+  line-height: 20px;
+}
+
+.element-annonces .MOCK-UP-AL {
+  position: relative;
+  width: 424px;
+  height: 300px;
+  margin-right: -34.00px;
+  object-fit: cover;
+}
+
+.element-annonces .avantages {
+  display: flex;
+  width: 1200px;
+  align-items: flex-start;
+  gap: 80px;
+  padding: 40px 80px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: var(--gris);
+}
+
+.element-annonces .vector-3 {
+  height: 8px;
+  margin-left: -0.14px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  margin-bottom: -2.00px;
+  margin-right: -2.00px;
+}
+
+.element-annonces .pourquoi-choisir-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  width: 100%;
+  align-items: flex-start;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element-annonces .pourquoi-choisir {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "IBM Plex Sans Arabic", Helvetica;
+  font-weight: 400;
+  color: var(--wwwmsb-formalitesfrindigo);
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.element-annonces .nous-assurons-une {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin-top: -1.00px;
+  font-family: var(--body-large-font-family);
+  font-weight: var(--body-large-font-weight);
+  color: #030303;
+  font-size: var(--body-large-font-size);
+  letter-spacing: var(--body-large-letter-spacing);
+  line-height: var(--body-large-line-height);
+  font-style: var(--body-large-font-style);
+}
+
+.element-annonces .CTA {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element-annonces .bouton-2 {
+  height: 40px;
+  gap: 4px;
+  padding: 8px 12px;
+  flex: 0 0 auto;
+  background-color: #3e5fbc;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.element-annonces .text-button {
+  font-weight: 400;
+  color: #fcfdfd;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  line-height: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  font-family: "Montserrat", Helvetica;
+  white-space: nowrap;
+}
+
+.element-annonces .bouton-3 {
+  gap: 4px;
+  padding: 8px 12px;
+  align-self: stretch;
+  flex: 0 0 auto;
+  background-color: #fcfdfd;
+  border-radius: 8px;
+  border: 1px solid;
+  border-color: #3e5fbc;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.element-annonces .text-button-2 {
+  font-weight: 400;
+  color: #3e5fbc;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  line-height: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  font-family: "Montserrat", Helvetica;
+  white-space: nowrap;
+}
+
+.element-annonces .div-4 {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element-annonces .row {
+  padding: 0px 0px 40px;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+}
+
+.element-annonces .service-wrapper {
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 20px;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: #fcfdfd;
+  border-radius: 20px;
+  border: 2px solid;
+  border-color: #f1f1f1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.element-annonces .nb {
+  display: flex;
+  flex-direction: column;
+  width: 21px;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 0px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: #3e5fbc;
+  border-radius: 10px;
+}
+
+.element-annonces .element {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 400;
+  color: #fcfdfd;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 12px;
+}
+
+.element-annonces .text-wrapper-9 {
+  font-weight: var(--body-small-font-weight);
+  line-height: var(--body-small-line-height);
+  font-family: var(--body-small-font-family);
+  font-style: var(--body-small-font-style);
+  letter-spacing: var(--body-small-letter-spacing);
+  font-size: var(--body-small-font-size);
+}
+
+.element-annonces .text-wrapper-10 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  font-family: var(--title-small-font-family);
+  font-weight: var(--title-small-font-weight);
+  color: #3e5fbc;
+  font-size: var(--title-small-font-size);
+  text-align: center;
+  letter-spacing: var(--title-small-letter-spacing);
+  line-height: var(--title-small-line-height);
+  white-space: nowrap;
+  font-style: var(--title-small-font-style);
+}
+
+.element-annonces .texte {
+  display: flex;
+  align-items: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element-annonces .text-wrapper-11 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin-top: -1.00px;
+  font-family: var(--body-small-font-family);
+  font-weight: var(--body-small-font-weight);
+  color: #030303;
+  font-size: var(--body-small-font-size);
+  text-align: center;
+  letter-spacing: var(--body-small-letter-spacing);
+  line-height: var(--body-small-line-height);
+  font-style: var(--body-small-font-style);
+}
+
+.element-annonces .row-2 {
+  padding: 40px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+}
+
+.element-annonces .autres-services {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 80px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element-annonces .vector-4 {
+  height: 8px;
+  margin-left: -0.30px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  margin-bottom: -2.00px;
+  margin-right: -2.00px;
+}
+
+.element-annonces .liste-services {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px 0px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element-annonces .service-wrapper-2 {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  align-items: center;
+  gap: 20px;
+  padding: 0px 20px;
+  position: relative;
+  background-color: #fcfdfd;
+  border-radius: 20px;
+}
+
+.element-annonces .icon {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element-annonces .FORMALIT-s {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sauce One-Bold", Helvetica;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 16px;
+  position: relative;
+  align-self: stretch;
+  font-weight: 400;
+  color: #030303;
+}
+
+.element-annonces .text-wrapper-12 {
+  font-weight: var(--title-medium-font-weight);
+  line-height: var(--title-medium-line-height);
+  font-family: var(--title-medium-font-family);
+  font-style: var(--title-medium-font-style);
+  letter-spacing: var(--title-medium-letter-spacing);
+  font-size: var(--title-medium-font-size);
+}
+
+.element-annonces .text-wrapper-13 {
+  position: relative;
+  align-self: stretch;
+  font-family: var(--body-medium-font-family);
+  font-weight: var(--body-medium-font-weight);
+  color: #030303;
+  font-size: var(--body-medium-font-size);
+  text-align: center;
+  letter-spacing: var(--body-medium-letter-spacing);
+  line-height: var(--body-medium-line-height);
+  font-style: var(--body-medium-font-style);
+}
+
+.element-annonces .call-to-action {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  align-items: center;
+  padding: 0px 20px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element-annonces .background-2 {
+  height: 200px;
+  justify-content: center;
+  gap: 100px;
+  padding: 40px 80px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  border-radius: 0px 0px 15.09px 15.09px;
+  background: linear-gradient(31deg,
+      rgba(27, 47, 83, 1) 0%,
+      rgba(62, 95, 188, 1) 75%);
+}
+
+.element-annonces .container-3 {
+  display: inline-flex;
+  gap: 20px;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.element-annonces .titre-3 {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element-annonces .heading-2 {
+  display: inline-flex;
+  gap: 4px;
+  align-items: flex-start;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element-annonces .vector-5 {
+  height: 7.78px;
+  margin-left: -0.43px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  margin-bottom: -2.00px;
+  margin-right: -2.00px;
+}
+
+.element-annonces .consacrez-le-votre {
+  position: relative;
+  width: fit-content;
+  font-family: "IBM Plex Sans Arabic", Helvetica;
+  font-weight: 400;
+  color: #fcfdfd;
+  font-size: 30px;
+  letter-spacing: 0;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+.element-annonces .sur-titre {
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  display: inline-flex;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element-annonces .text-wrapper-14 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: var(--title-medium-font-family);
+  font-weight: var(--title-medium-font-weight);
+  color: var(--confirmation);
+  font-size: var(--title-medium-font-size);
+  letter-spacing: var(--title-medium-letter-spacing);
+  line-height: var(--title-medium-line-height);
+  white-space: nowrap;
+  font-style: var(--title-medium-font-style);
+}
+
+.element-annonces .bouton-4 {
+  height: 44px;
+  gap: 8px;
+  padding: 12px;
+  flex: 0 0 auto;
+  background-color: #fcfdfd;
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: #3e5fbc;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.element-annonces .text-button-3 {
+  margin-top: -1.00px;
+  font-weight: var(--label-large-font-weight);
+  color: #3e5fbc;
+  font-size: var(--label-large-font-size);
+  letter-spacing: var(--label-large-letter-spacing);
+  line-height: var(--label-large-line-height);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  font-family: var(--label-large-font-family);
+  white-space: nowrap;
+  font-style: var(--label-large-font-style);
+}
+
+.element-annonces .d-GS-footer {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px 80px;
+  position: relative;
+  flex: 0 0 auto;
+  background-color: #fcfdfd;
+}
+
+.element-annonces .footer {
+  gap: 80px;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  background-color: transparent;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.element-annonces .footer-content {
+  justify-content: space-between;
+  flex: 1;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.element-annonces .logo-RS {
+  width: 290px;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.element-annonces .logo {
+  width: 144px;
+  height: 50px;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.element-annonces .PRIMAIRE {
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.element-annonces .text-wrapper-15 {
+  align-self: stretch;
+  font-weight: var(--body-medium-font-weight);
+  color: #030303;
+  font-size: var(--body-medium-font-size);
+  letter-spacing: var(--body-medium-letter-spacing);
+  line-height: var(--body-medium-line-height);
+  position: relative;
+  font-family: var(--body-medium-font-family);
+  font-style: var(--body-medium-font-style);
+}
+
+.element-annonces .outline-brands-wrapper {
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+  background-color: var(--gris);
+  border-radius: 100px;
+  display: inline-flex;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element-annonces .div-5 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element-annonces .span-wrapper-2 {
+  position: relative;
+  align-self: stretch;
+  margin-top: -1.00px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 400;
+  color: #030303;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.element-annonces .text-wrapper-16 {
+  font-weight: var(--body-medium-font-weight);
+  letter-spacing: var(--body-medium-letter-spacing);
+  line-height: var(--body-medium-line-height);
+  font-family: var(--body-medium-font-family);
+  font-style: var(--body-medium-font-style);
+  font-size: var(--body-medium-font-size);
+}
+
+.element-annonces .menu-list {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.element-annonces .text-wrapper-17 {
+  margin-top: -1.00px;
+  font-family: var(--body-medium-font-family);
+  font-size: var(--body-medium-font-size);
+  letter-spacing: var(--body-medium-letter-spacing);
+  line-height: var(--body-medium-line-height);
+  position: relative;
+  align-self: stretch;
+  font-weight: var(--body-medium-font-weight);
+  color: #030303;
+  font-style: var(--body-medium-font-style);
+}
+
+.element-annonces .NL {
+  width: 320px;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.element-annonces .newsletter {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 400;
+  color: transparent;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.element-annonces .text-wrapper-18 {
+  font-weight: var(--body-medium-font-weight);
+  color: #030303;
+  letter-spacing: var(--body-medium-letter-spacing);
+  line-height: var(--body-medium-line-height);
+  font-family: var(--body-medium-font-family);
+  font-style: var(--body-medium-font-style);
+  font-size: var(--body-medium-font-size);
+}
+
+.element-annonces .div-6 {
+  gap: 16px;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.element-annonces .input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element-annonces .zone-d-interaction {
+  display: flex;
+  height: 44px;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px 8px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid;
+  border-color: #03030380;
+}
+
+.element-annonces .champ-rempli {
+  position: relative;
+  flex: 1;
+  height: 20px;
+  margin-top: -1.00px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 400;
+  color: var(--noir-light);
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  line-height: 20px;
+  white-space: nowrap;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.element-annonces .div-7 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  align-self: stretch;
+  flex: 0 0 auto;
+}
+
+.element-annonces .check {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background-color: #fcfdfd;
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: #030303;
+}
+
+.element-annonces .label {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 400;
+  color: #030303;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.element-annonces .bouton-5 {
+  height: 32px;
+  gap: 2px;
+  padding: 8px 6px;
+  align-self: stretch;
+  background-color: #3e5fbc;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.element-annonces .text-button-4 {
+  margin-top: -1.00px;
+  font-weight: var(--body-small-font-weight);
+  color: #fcfdfd;
+  font-size: var(--body-small-font-size);
+  letter-spacing: var(--body-small-letter-spacing);
+  line-height: var(--body-small-line-height);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  font-family: var(--body-small-font-family);
+  white-space: nowrap;
+  font-style: var(--body-small-font-style);
+}
+
+.element-annonces .line {
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  height: 1px;
+  object-fit: cover;
+}
+
+.element-annonces .rglementaires {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.element-annonces .text-wrapper-19 {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: var(--body-medium-font-family);
+  font-weight: var(--body-medium-font-weight);
+  color: #030303;
+  font-size: var(--body-medium-font-size);
+  letter-spacing: var(--body-medium-letter-spacing);
+  line-height: var(--body-medium-line-height);
+  white-space: nowrap;
+  font-style: var(--body-medium-font-style);
+}
+
+.element-annonces .GS-header {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.element-annonces .menu {
+  display: flex;
+  width: 1200px;
+  height: 80px;
+  align-items: center;
+  gap: 40px;
+  padding: 20px 20px 20px 80px;
+  position: relative;
+  background-color: #fcfdfd;
+}
+
+.element-annonces .PRIMAIRE-wrapper {
+  width: 144px;
+  height: 50px;
+  gap: 8px;
+  margin-top: -5.00px;
+  margin-bottom: -5.00px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.element-annonces .menu-2 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.element-annonces .menu-3 {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  align-self: stretch;
+  flex: 0 0 auto;
+}
+
+.element-annonces .frame {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  flex: 0 0 auto;
+  margin-top: -4.00px;
+  margin-bottom: -4.00px;
+}
+
+.element-annonces .bouton-6 {
+  gap: 8px;
+  padding: 12px;
+  align-self: stretch;
+  flex: 0 0 auto;
+  background-color: #fcfdfd;
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: #3e5fbc;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.element-annonces .text-button-5 {
+  font-weight: var(--label-large-font-weight);
+  color: #3e5fbc;
+  font-size: var(--label-large-font-size);
+  letter-spacing: var(--label-large-letter-spacing);
+  line-height: var(--label-large-line-height);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  font-family: var(--label-large-font-family);
+  white-space: nowrap;
+  font-style: var(--label-large-font-style);
+}
+
+.element-annonces .bouton-7 {
+  height: 48px;
+  gap: 8px;
+  padding: 12px;
+  flex: 0 0 auto;
+  background-color: #3e5fbc;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.element-annonces .text-button-6 {
+  font-weight: var(--label-large-font-weight);
+  color: #fcfdfd;
+  font-size: var(--label-large-font-size);
+  letter-spacing: var(--label-large-letter-spacing);
+  line-height: var(--label-large-line-height);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  font-family: var(--label-large-font-family);
+  white-space: nowrap;
+  font-style: var(--label-large-font-style);
+}

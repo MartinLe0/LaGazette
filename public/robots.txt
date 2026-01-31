@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /webhook/
+
+Sitemap: http://localhost:8000/sitemap.xml
