@@ -80,3 +80,169 @@ h1 {
 .btn-primary:hover {
     background-color: var(--primary-hover);
 }
+
+/* =========================================
+   STYLES DU FOOTER (Importés de Actus)
+   ========================================= */
+
+/* On définit le conteneur principal du footer */
+.d-GS-footer-8 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px 80px;
+    background-color: var(--blanc, #fcfdfd);
+    /* Fallback si styleguide.css ne charge pas */
+    border-top: 1px solid var(--border);
+    box-sizing: border-box;
+}
+
+/* Colonne Logo et Réseaux Sociaux */
+.logo-RS-8 {
+    width: 290px;
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo-13 {
+    width: 144px;
+    height: 50px;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.RS-6 {
+    align-items: flex-start;
+    gap: 20px;
+    display: inline-flex;
+}
+
+.outline-brands-wrapper-8 {
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px;
+    background-color: var(--gris, #f2f2f2);
+    border-radius: 100px;
+    display: inline-flex;
+}
+
+/* Colonnes de Menu */
+.div-42 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.menu-list-8 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* Textes et Typographie */
+.text-wrapper-155,
+.text-wrapper-157 {
+    font-family: var(--body-medium-font-family, sans-serif);
+    font-weight: 400;
+    color: var(--noir, #030303);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.text-wrapper-156,
+.text-wrapper-158 {
+    font-family: var(--body-medium-font-family, sans-serif);
+    font-weight: 700;
+    color: var(--noir, #030303);
+    font-size: 16px;
+}
+
+/* Section Newsletter */
+.NL-8 {
+    width: 320px;
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.div-43 {
+    gap: 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input-8 {
+    width: 100%;
+}
+
+.zone-d-interaction-8 {
+    display: flex;
+    height: 44px;
+    align-items: center;
+    padding: 12px 8px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid rgba(3, 3, 3, 0.5);
+    box-sizing: border-box;
+}
+
+.champ-rempli-8 {
+    flex: 1;
+    height: 20px;
+    font-family: inherit;
+    font-size: 14px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.checkbox-5 {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.check-8 {
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--noir, #000);
+    border-radius: 4px;
+}
+
+.bouton-40 {
+    padding: 8px 12px;
+    background-color: var(--primaire, #3e5fbc);
+    border-radius: 6px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+}
+
+/* Bas de page (Mentions légales) */
+.rglementaires-8 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.text-wrapper-160,
+.text-wrapper-161 {
+    font-family: var(--body-medium-font-family, sans-serif);
+    font-size: 12px;
+    color: var(--noir, #030303);
+}

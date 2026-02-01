@@ -1,28 +1,20 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}Gazette - Votre Actualité{% endblock %}</title>
         
-        {# SEO Meta Tags #}
         <meta name="description" content="Gazette - Plateforme d'actualité moderne propulsée par Symfony et Prismic.">
-        <meta property="og:title" content="Gazette">
-        <meta property="og:description" content="Actualité moderne et sécurisée.">
-        <meta property="og:type" content="website">
-
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%22120%22>📰</text></svg>">
         
         {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('styles/app.css')|replace({"/assets/": "assets/"}) }}">
-            <link rel="stylesheet" href="{{ asset('css/common/globals.css')|replace({"/assets/": "assets/"}) }}">
-            <link rel="stylesheet" href="{{ asset('css/common/styleguide.css')|replace({"/assets/": "assets/"}) }}">
-            <link rel="stylesheet" href="{{ asset('css/common/header.css')|replace({"/assets/": "assets/"}) }}">
-            <link rel="stylesheet" href="{{ asset('css/common/footer.css')|replace({"/assets/": "assets/"}) }}">
-            <link rel="stylesheet" href="{{ asset('css/common/bandeaux.css')|replace({"/assets/": "assets/"}) }}">
+            {# IMPORTANT : On charge d'abord le styleguide pour les variables du footer #}
+            <link rel="stylesheet" href="{{ asset('styleguide.css') }}">
+            <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
+            
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@400;500;700&family=Open+Sauce+One:wght@500&display=swap" rel="stylesheet">
         {% endblock %}
 
         {% block javascripts %}
@@ -30,16 +22,92 @@
         {% endblock %}
     </head>
     <body>
-        <div class="element-HP">
-            {% include 'includes/_header.html.twig' %}
-            
-            <main class="container">
-                {% block body %}
-                    {# Content #}
-                {% endblock %}
-            </main>
+        <header>
+            <nav class="container" style="display: flex; justify-content: space-between; align-items: center;">
+                <a href="{{ path('app_home') }}" style="font-size: 1.5rem; font-weight: 800; text-decoration: none; color: var(--text-main);">GAZETTE</a>
+                <div style="display: flex; gap: 2rem;">
+                    <a href="{{ path('app_home') }}" style="text-decoration: none; color: var(--text-main); font-weight: 600;">Accueil</a>
+                    <a href="#" style="text-decoration: none; color: var(--text-muted); font-weight: 600;">À propos</a>
+                    <button onclick="document.documentElement.setAttribute('data-theme', document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark')" style="background: none; border: none; cursor: pointer; font-size: 1.2rem;">🌓</button>
+                </div>
+            </nav>
+        </header>
 
-            {% include 'includes/_footer.html.twig' %}
-        </div>
+        <main class="container">
+            {% block body %}{% endblock %}
+        </main>
+
+        {# --- NOUVEAU FOOTER --- #}
+        <footer class="d-GS-footer-8">
+            <div class="logo-RS-8">
+                <div class="logo-13">
+                    <img class="img-20" src="https://c.animaapp.com/ml0sjzoaeutvco/img/primaire.svg" alt="Logo Gazette" />
+                </div>
+                <p class="text-wrapper-155">
+                    Gazette Solutions simplifie vos tâches juridiques, vous offrant sérénité et temps pour votre croissance.
+                </p>
+                <div class="RS-6">
+                    <div class="outline-brands-wrapper-8">
+                        <img class="img-22" src="https://c.animaapp.com/ml0sjzoaeutvco/img/outline-brands-linkedin.svg" alt="LinkedIn" />
+                    </div>
+                    <div class="outline-brands-wrapper-8">
+                        <img class="img-22" src="https://c.animaapp.com/ml0sjzoaeutvco/img/outline-brands-youtube.svg" alt="YouTube" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="div-42">
+                <p class="span-wrapper-18"><span class="text-wrapper-156">Services</span></p>
+                <div class="menu-list-8">
+                    <div class="text-wrapper-157">Formalités légales</div>
+                    <div class="text-wrapper-155">Annonces légales</div>
+                    <div class="text-wrapper-155">Secrétariat juridique</div>
+                    <div class="text-wrapper-155">Tous les services</div>
+                </div>
+            </div>
+
+            <div class="div-42">
+                <p class="span-wrapper-18"><span class="text-wrapper-156">A propos</span></p>
+                <div class="menu-list-8">
+                    <div class="text-wrapper-157">Qui sommes-nous ?</div>
+                    <div class="text-wrapper-155">Actualités</div>
+                    <div class="text-wrapper-155">Espace AL.pro</div>
+                    <div class="text-wrapper-155">Espace Formalités</div>
+                    <div class="text-wrapper-155">Nous contacter</div>
+                </div>
+            </div>
+
+            <div class="NL-8">
+                <p class="newsletter-8"><span class="text-wrapper-158">Newsletter</span></p>
+                <div class="div-43">
+                    <p class="text-wrapper-157">
+                        Renseignez votre adresse email pour rester informé.
+                    </p>
+                </div>
+                <div class="div-43">
+                    <div class="input-8">
+                        <div class="zone-d-interaction-8">
+                            <input class="champ-rempli-8" placeholder="Adresse email" type="email" />
+                        </div>
+                    </div>
+                    <div class="checkbox-5">
+                        <div class="check-8"></div>
+                        <p class="label-8">
+                            <span class="text-wrapper-159">J’accepte la </span>
+                            <span class="text-wrapper-149">politique de confidentialité</span>
+                        </p>
+                    </div>
+                    <div class="bouton-40"><div class="text-button-33">S’inscrire</div></div>
+                </div>
+            </div>
+            
+            <div style="width: 100%; height: 1px; background-color: rgba(0,0,0,0.1); margin: 20px 0;"></div>
+
+            <div class="rglementaires-8">
+                <div class="text-wrapper-160">Politique de confidentialité</div>
+                <div class="text-wrapper-161">Mentions légales</div>
+                <div class="text-wrapper-161">Charte sur les cookies</div>
+            </div>
+        </footer>
     </body>
 </html>
