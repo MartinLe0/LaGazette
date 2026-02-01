@@ -93,18 +93,15 @@ body {
   }
 
   .background {
-    background: linear-gradient(31deg, rgba(27, 47, 83, 1) 0%, rgba(62, 95, 188, 1) 75%);
-    padding: 80px;
-    /* Increased to match Annonces Légales */
+    background: transparent;
+    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 40px;
     width: 100%;
-    border-radius: 0 0 15px 15px;
-    /* sharper corners to match Annonces */
-    min-height: 560px;
+    border-radius: 0;
+    min-height: auto;
     justify-content: center;
-
   }
 
   .hero-content {
