@@ -1,0 +1,219 @@
+/* --- Hero Section --- */
+.hero-section {
+    width: 100%;
+    background: linear-gradient(108deg, #1B2F53 0%, #3E5FBC 100%);
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    color: var(--blanc);
+}
+
+.hero-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero-title {
+    font-family: var(--display-large-font-family);
+    font-weight: var(--display-large-font-weight);
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-family: var(--body-large-font-family);
+    font-size: 18px;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* --- History Section --- */
+.history-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.history-text {
+    flex: 1;
+}
+
+.section-label {
+    color: var(--primaire);
+    font-family: var(--title-small-font-family);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.history-title {
+    font-family: var(--title-medium-font-family);
+    font-size: 32px;
+    color: var(--wwwmsb-formalitesfrindigo);
+    margin-bottom: 20px;
+}
+
+.history-description {
+    font-family: var(--body-medium-font-family);
+    color: var(--noir);
+    line-height: 1.6;
+}
+
+.history-image {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.history-image img {
+    width: 100%;
+    display: block;
+}
+
+/* --- Vision Section --- */
+.vision-section {
+    background-color: var(--gris);
+    padding: 80px 20px;
+    width: 100%;
+}
+
+.vision-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.vision-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.vision-card {
+    background: var(--blanc);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.vision-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--info);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--primaire);
+}
+
+.vision-card h3 {
+    font-family: var(--title-small-font-family);
+    color: var(--primaire);
+    margin-bottom: 10px;
+}
+
+/* --- Why Us Section --- */
+.why-us-section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.why-card {
+    text-align: center;
+}
+
+.why-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.why-title {
+    font-family: var(--title-medium-font-family);
+    margin-bottom: 15px;
+    color: var(--noir);
+}
+
+/* --- Testimonials --- */
+.testimonials-section {
+    background: linear-gradient(108deg, #1B2F53 0%, #3E5FBC 100%);
+    color: var(--blanc);
+    padding: 80px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 50px auto 0;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 16px;
+    text-align: left;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.client-avatar {
+    width: 50px;
+    height: 50px;
+    background: var(--blanc);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primaire);
+    font-weight: bold;
+}
+
+.rating {
+    color: #FFD700;
+}

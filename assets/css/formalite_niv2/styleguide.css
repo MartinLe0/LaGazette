@@ -1,0 +1,15 @@
+:root {
+    --solutions: rgba(230, 48, 50, 1);
+    --blanc: rgba(252, 253, 253, 1);
+    --primaire: #3e5fbc;
+    --noir: rgba(33, 33, 33, 1);
+    --confirmation: rgba(191, 245, 217, 1);
+    --gris: rgba(242, 242, 242, 1);
+    --info: rgba(191, 219, 245, 1);
+    --wwwmsb-formalitesfrindigo: rgba(62, 95, 188, 1);
+    --noir-light: rgba(3, 3, 3, 0.5);
+    --body-medium-font-family: "Montserrat", Helvetica;
+    --body-medium-font-weight: 400;
+    --body-medium-font-size: 16px;
+    --body-medium-line-height: 24px;
+}

@@ -1,0 +1,26 @@
+@media (max-width: 900px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-image img {
+        margin-top: 40px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .process-image {
+        width: 100%;
+    }
+}

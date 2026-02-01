@@ -1,0 +1,144 @@
+{% extends 'accueil_base.html.twig' %}
+
+{% block title %}Gazette Solutions - Qui sommes-nous ?{% endblock %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('css/qui_sommes_nous/globals.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/qui_sommes_nous/styleguide.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/qui_sommes_nous/style.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/qui_sommes_nous/responsive-style.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="element-qui-sommes-screen">
+    <div class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Confiez vos démarches légales à une équipe d'experts</h1>
+                <p class="hero-subtitle">Retrouvez la sérénité : nous gérons vos formalités de A à Z avec rigueur et rapidité.</p>
+                <div class="bouton-hero" style="margin-top:20px;">
+                     <a href="#" class="text-button-hero" style="color:white; text-decoration:underline;">Découvrir nos services</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/600x400" alt="Equipe Gazette Solutions" style="border-radius:20px;">
+            </div>
+        </div>
+    </div>
+
+    <div class="history-section">
+        <div class="history-text">
+            <span class="section-label">NOTRE HISTOIRE</span>
+            <h2 class="history-title">Une synergie entre expertise juridique et technologie</h2>
+            <p class="history-description">
+                Gazette Solutions est née d'un constat simple : les formalités légales sont chronophages et complexes. 
+                <br><br>
+                En alliant l'expertise de formalistes chevronnés à une plateforme technologique performante, nous avons créé la solution idéale pour les professionnels du Chiffre et du Droit.
+                Notre mission est de vous redonner du temps pour vous concentrer sur votre cœur de métier.
+            </p>
+        </div>
+        <div class="history-image">
+            <img src="https://via.placeholder.com/500x500" alt="Notre Histoire">
+        </div>
+    </div>
+
+    <div class="vision-section">
+        <div class="vision-container">
+            <h2 class="history-title" style="text-align:center;">Notre Vision des formalités</h2>
+            <p style="text-align:center; max-width:600px; margin:0 auto 40px auto; color:var(--text-muted);">
+                Proposer une expérience fluide, sécurisée et transparente à chacun de nos partenaires.
+            </p>
+            <div class="vision-cards">
+                <div class="vision-card">
+                    <div class="vision-icon">
+                        <img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon.svg" style="width:24px;">
+                    </div>
+                    <h3>Simplicité</h3>
+                    <p>Une plateforme intuitive pour déposer et suivre vos dossiers en quelques clics.</p>
+                </div>
+                <div class="vision-card">
+                     <div class="vision-icon">
+                        <img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon-2.svg" style="width:24px;">
+                     </div>
+                    <h3>Expertise</h3>
+                    <p>Une équipe de formalistes dédiés vérifie chaque document avant envoi.</p>
+                </div>
+                 <div class="vision-card">
+                     <div class="vision-icon">
+                        <img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon-4.svg" style="width:24px;">
+                     </div>
+                    <h3>Réactivité</h3>
+                    <p>Traitement express de vos demandes et attestations immédiates.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="why-us-section">
+        <h2 class="history-title" style="text-align:center;">Pourquoi faire confiance à Gazette Solutions ?</h2>
+        <div class="why-us-grid">
+             <div class="why-card">
+                <div class="why-icon">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#3E5FBC" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                </div>
+                <h3 class="why-title">Fiabilité garantie</h3>
+                <p>Moins de 1% de rejet greffe grâce à notre double contrôle.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#3E5FBC" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
+                <h3 class="why-title">Gain de temps</h3>
+                <p>Vos annonces publiées instantanément, vos kbis obtenus plus vite.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#3E5FBC" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                </div>
+                <h3 class="why-title">Service Client Humain</h3>
+                <p>Pas de robots, mais de vrais experts disponibles par téléphone.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonials-section">
+         <h2 class="hero-title" style="font-size:30px; margin-bottom:10px;">Ils nous recommandent</h2>
+         <p style="opacity:0.8;">Découvrez les retours de nos clients partenaires.</p>
+         <div class="testimonials-grid">
+             <div class="testimonial-card">
+                 <div class="client-info">
+                     <div class="client-avatar">A</div>
+                     <div>
+                         <strong>Cabinet Audit & Co</strong><br>
+                         <span style="font-size:12px;">Expert-Comptable</span>
+                     </div>
+                 </div>
+                 <p class="rating">★★★★★</p>
+                 <p>"Un gain de temps considérable pour notre cabinet. L'interface est fluide et l'équipe très réactive."</p>
+             </div>
+             <div class="testimonial-card">
+                 <div class="client-info">
+                     <div class="client-avatar">L</div>
+                     <div>
+                         <strong>Maître Laurent</strong><br>
+                         <span style="font-size:12px;">Avocat</span>
+                     </div>
+                 </div>
+                 <p class="rating">★★★★★</p>
+                 <p>"Je délègue toutes mes annonces légales à Gazette Solutions. Fiabilité parfaite."</p>
+             </div>
+             <div class="testimonial-card">
+                 <div class="client-info">
+                     <div class="client-avatar">S</div>
+                     <div>
+                         <strong>Start-Up Legal</strong><br>
+                         <span style="font-size:12px;">Directeur Juridique</span>
+                     </div>
+                 </div>
+                 <p class="rating">★★★★☆</p>
+                 <p>"Le service de formalités est efficace, nous avons pu immatriculer notre filiale en un temps record."</p>
+             </div>
+         </div>
+    </div>
+</div>
+{% endblock %}

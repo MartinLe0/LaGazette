@@ -1,0 +1,144 @@
+{% extends 'accueil_base.html.twig' %}
+
+{% block title %}Gazette Solutions - Formalités Légales{% endblock %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('css/formalites/globals.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/formalites/styleguide.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/formalites/style.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/formalites/responsive-style.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="element-formalites-screen">
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-tag">FORMALITÉS LÉGALES</span>
+                <h1 class="hero-title">Gérez toutes vos formalités en un clic.</h1>
+                <p class="hero-subtitle">
+                    Immatriculations, modifications, radiations... Déléguez vos obligations légales à des experts et suivez l'avancement en temps réel.
+                </p>
+                <div class="hero-actions">
+                    <a href="#" class="btn-primary">Déposer un dossier</a>
+                    <a href="#" class="btn-secondary">Prendre rendez-vous</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/600x450" alt="Illustration Formalités">
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nos prestations formalités</h2>
+                <p class="section-subtitle">Nous intervenons sur l'ensemble du cycle de vie de l'entreprise.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Création -->
+                <a href="{{ path('app_formalite_creation') }}" class="service-card-link">
+                    <div class="service-card">
+                        <div class="card-icon blue">
+                            <img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon.svg" alt="Création">
+                        </div>
+                        <h3>Création d'entreprise</h3>
+                        <ul>
+                            <li>Immatriculation (SAS, SARL, SCI...)</li>
+                            <li>Rédaction des statuts</li>
+                            <li>Annonce légale de constitution</li>
+                        </ul>
+                    </div>
+                </a>
+
+                <!-- Modification -->
+                <div class="service-card">
+                    <div class="card-icon blue">
+                         <img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon-4.svg" alt="Modification">
+                    </div>
+                    <h3>Modifications statutaires</h3>
+                    <ul>
+                        <li>Transfert de siège</li>
+                        <li>Changement de dirigeant</li>
+                        <li>Augmentation de capital</li>
+                    </ul>
+                </div>
+
+                <!-- Radiation -->
+                <div class="service-card">
+                    <div class="card-icon blue">
+                         <img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon-2.svg" alt="Radiation">
+                    </div>
+                    <h3>Fermeture & Radiation</h3>
+                    <ul>
+                        <li>Dissolution anticipée</li>
+                        <li>Liquidation amiable</li>
+                        <li>Radiation du RCS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Process Section -->
+    <div class="process-section">
+        <div class="container">
+            <div class="process-wrapper">
+                <div class="process-image">
+                     <img src="https://via.placeholder.com/500x600" alt="Démonstration plateforme">
+                </div>
+                <div class="process-content">
+                    <h2 class="section-title">Un processus simplifié</h2>
+                    <p class="section-description">Plus besoin de vous déplacer ou de multiplier les interlocuteurs.</p>
+                    
+                    <div class="process-steps">
+                        <div class="step-row">
+                            <div class="step-number">1</div>
+                            <div class="step-info">
+                                <h4>Dépôt du dossier</h4>
+                                <p>Téléchargez vos pièces justificatives directement sur votre espace sécurisé.</p>
+                            </div>
+                        </div>
+                        <div class="step-row">
+                            <div class="step-number">2</div>
+                            <div class="step-info">
+                                <h4>Vérification expert</h4>
+                                <p>Un formaliste contrôle la conformité de votre dossier sous 24h.</p>
+                            </div>
+                        </div>
+                        <div class="step-row">
+                            <div class="step-number">3</div>
+                            <div class="step-info">
+                                <h4>Transmission Greffe</h4>
+                                <p>Nous assurons les échanges avec le Greffe et le CFE compétent.</p>
+                            </div>
+                        </div>
+                        <div class="step-row">
+                            <div class="step-number">4</div>
+                            <div class="step-info">
+                                <h4>Validation & Kbis</h4>
+                                <p>Recevez votre Kbis et vos attestation directement par email.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Bottom -->
+    <div class="cta-section-bottom">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Prêt à simplifier vos formalités ?</h2>
+                <p>Rejoignez plus de 3500 professionnels qui nous font confiance.</p>
+                <a href="#" class="btn-primary-white">Créer un compte pro</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

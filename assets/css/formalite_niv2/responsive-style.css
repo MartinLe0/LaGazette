@@ -1,0 +1,17 @@
+@media (max-width: 900px) {
+    .content-grid {
+        flex-direction: column;
+    }
+
+    .sidebar-column {
+        order: 1;
+    }
+
+    .sticky-card {
+        position: static;
+    }
+
+    .page-title {
+        font-size: 28px;
+    }
+}

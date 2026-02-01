@@ -1,0 +1,22 @@
+@media (max-width: 900px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        margin-top: 30px;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .values-content {
+        flex-direction: column;
+    }
+
+    .values-images {
+        width: 100%;
+    }
+}

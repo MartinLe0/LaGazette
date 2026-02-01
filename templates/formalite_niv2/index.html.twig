@@ -1,0 +1,144 @@
+{% extends 'accueil_base.html.twig' %}
+
+{% block title %}Gazette Solutions - Création du fonds{% endblock %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('css/formalite_niv2/globals.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/formalite_niv2/styleguide.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/formalite_niv2/style.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/formalite_niv2/responsive-style.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="element-formalite-niv2-screen">
+    <!-- Hero / Top Section -->
+    <div class="page-header">
+        <div class="container">
+             <div class="breadcrumbs">
+                 <a href="{{ path('app_formalites') }}">Formalités</a> > <a href="{{ path('app_formalite_creation') }}">Création d'entreprise</a> > <span class="current">Création du fonds</span>
+             </div>
+             
+             <h1 class="page-title">Création du fonds - personne physique</h1>
+             <p class="tag-status">À l'étape</p>
+             
+             <p class="page-subtitle">
+                 L'immatriculation d'une personne physique qui crée ou achète un fonds de commerce nécessite le dépôt d'un dossier complet au greffe.
+             </p>
+             
+             <div class="alert-box">
+                 <p><strong>A noter :</strong></p>
+                 <p>
+                     Si l'activité est réglementée, vérifiez bien que vous remplissez les conditions d'exercice avant de déposer le dossier (diplômes, autorisations...).
+                     En cas de rachat de fonds, l'acte de vente doit être enregistré aux impôts avant la formalité.
+                 </p>
+             </div>
+        </div>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="main-content-section">
+        <div class="container content-grid">
+            
+            <!-- Left Column: Details -->
+            <div class="details-column">
+                
+                <div class="content-section">
+                     <h3>Pièces à fournir</h3>
+                     <p>Veuillez réunir les pièces suivantes pour la constitution de votre dossier :</p>
+                     <ul class="checklist">
+                         <li>Formulaire P0 signé (original ou copie)</li>
+                         <li>Attestation de non-condamnation et de filiation</li>
+                         <li>Justificatif d'identité (CNI ou Passeport en cours de validité)</li>
+                         <li>Justificatif de jouissance des locaux (Bail, titre de propriété...)</li>
+                         <li>Attestation de l'annonce légale (si achat de fonds)</li>
+                         <li>Chèque à l'ordre du Greffe du Tribunal de Commerce</li>
+                     </ul>
+                     
+                     <div class="action-buttons-row">
+                         <a href="#" class="btn-download">
+                             <img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon-4.svg" style="width:20px; filter:brightness(0) invert(1);"> 
+                             Télécharger la liste complète
+                         </a>
+                         <a href="#" class="btn-secondary-action">Faire une demande de devis</a>
+                     </div>
+                </div>
+
+                <div class="content-section">
+                     <h3>Infos formalités à savoir pour aller plus loin</h3>
+                     <ul class="info-list">
+                         <li>Coût moyen Greffe : 60 € (création), 200 € (achat)</li>
+                         <li>Délai moyen de traitement : 48h à 72h</li>
+                         <li>TVA : Pensez à choisir votre régime fiscal dès le début</li>
+                         <li>CFE : Déclaration automatique via le guichet unique</li>
+                     </ul>
+                     
+                     <a href="#" class="link-more">Consulter le guide pratique -></a>
+                </div>
+
+            </div>
+
+            <!-- Right Column: Sticky Contact Form -->
+            <div class="sidebar-column">
+                <div class="contact-card sticky-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Réserver la formalité</h3>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-row">
+                             <div class="form-group half">
+                                <label>Nom</label>
+                                <input type="text" placeholder="Dupond">
+                             </div>
+                             <div class="form-group half">
+                                <label>Prénom</label>
+                                <input type="text" placeholder="Jean">
+                             </div>
+                        </div>
+                        <div class="form-row">
+                             <div class="form-group half">
+                                <label>Téléphone</label>
+                                <input type="tel" placeholder="06...">
+                             </div>
+                             <div class="form-group half">
+                                <label>Email</label>
+                                <input type="email" placeholder="@">
+                             </div>
+                        </div>
+                        
+                        <div class="form-group">
+                             <label>Message / SIREN (si existant)</label>
+                             <textarea rows="3" placeholder="Précisez votre demande..."></textarea>
+                        </div>
+                        
+                        <div class="form-checkbox">
+                             <input type="checkbox" id="accept">
+                             <label for="accept">J'accepte que mes données soient traitées par Gazette Solutions.</label>
+                        </div>
+                        
+                        <div class="form-bottom">
+                            <button type="submit" class="submit-btn">Envoyer la demande</button>
+                        </div>
+                    </form>
+                    
+                    <p class="footer-note">
+                        Un expert vous recontactera sous 2h ouvrées pour valider le dossier.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Simulator Banner (Blue) -->
+    <div class="simulator-banner">
+        <div class="container simulator-content">
+            <div class="simulator-text">
+                <h2>Rien n'a plus de valeur que votre <span class="highlight-text">temps</span>.</h2>
+                <p>Consacrez-le à votre cœur de métier.</p>
+                <a href="#" class="btn-simulator">Nous contacter</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

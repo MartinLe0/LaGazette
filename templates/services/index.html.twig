@@ -1,0 +1,149 @@
+{% extends 'accueil_base.html.twig' %}
+
+{% block title %}Gazette Solutions - Nos Services{% endblock %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('css/services/globals.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/services/styleguide.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/services/style.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/services/responsive-style.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="element-services-screen">
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-tag">SERVICES</span>
+                <h1 class="hero-title">Simplifiez toutes vos démarches juridiques en ligne.</h1>
+                <p class="hero-subtitle">
+                    Gazette Solutions accompagne les professionnels du Droit et du Chiffre dans la gestion de leurs formalités légales.
+                </p>
+                <div class="hero-actions">
+                     <div class="bouton-hero" style="background:var(--primaire); border-radius:8px; display:inline-block; padding:12px 24px;">
+                        <a href="#" style="color:white; font-weight:bold;">Découvrir nos offres</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/600x500" alt="Illustration Services" style="max-width:100%; height:auto;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Nos Expertises -->
+    <div class="expertises-section">
+        <div class="container">
+            <h2 class="section-title">NOS EXPERTISES</h2>
+            <p class="section-subtitle">Une réponse à chaque besoin : claire, rapide et conforme.</p>
+            
+            <div class="cards-grid">
+                <!-- Annonces Légales -->
+                <div class="service-card">
+                    <div class="card-icon">
+                        <img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon-4.svg" alt="Icon">
+                    </div>
+                    <h3>Annonces Légales</h3>
+                    <p>Publication instantanée et attestation de parution immédiate dans toute la France.</p>
+                    <a href="{{ path('app_annonces_legales') }}" class="card-link">Publier une annonce</a>
+                </div>
+
+                <!-- Formalités -->
+                <div class="service-card">
+                    <div class="card-icon">
+                         <img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon.svg" alt="Icon">
+                    </div>
+                    <h3>Formalités</h3>
+                    <p>Immatriculation, modification, radiation, dépôt des comptes. Nous gérons tout.</p>
+                    <a href="{{ path('app_formalites') }}" class="card-link">Déléguer une formalité</a>
+                </div>
+
+                <!-- Secrétariat Juridique -->
+                <div class="service-card">
+                    <div class="card-icon">
+                         <img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon-2.svg" alt="Icon">
+                    </div>
+                    <h3>Secrétariat Juridique</h3>
+                    <p>Externalisez la préparation de vos AG et la tenue de vos registres.</p>
+                    <a href="#" class="card-link">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pourquoi nous choisir (Values) -->
+    <div class="values-section">
+        <div class="container">
+            <div class="values-content">
+                <div class="values-text">
+                    <span class="section-label">POURQUOI NOUS CHOISIR ?</span>
+                    <h2 class="values-title">De la demande à la validation, on s'occupe de tout.</h2>
+                    <p>
+                        Notre équipe d'experts vérifie chaque dossier avant envoi. 
+                        Nous garantissons un suivi personnalisé et une réactivité sans faille.
+                    </p>
+                    <ul class="values-list">
+                        <li>
+                            <strong>Simplicité</strong> : Une interface unique pour toutes vos démarches.
+                        </li>
+                        <li>
+                            <strong>Gain de temps</strong> : Concentrez-vous sur le conseil, on gère l'administratif.
+                        </li>
+                        <li>
+                            <strong>Sécurité</strong> : Veille juridique permanente et conformité assurée.
+                        </li>
+                    </ul>
+                </div>
+                <div class="values-images">
+                    <!-- Placeholder for the grid of people images -->
+                    <div class="image-grid">
+                         <img src="https://via.placeholder.com/150x200" style="border-radius:10px;">
+                         <img src="https://via.placeholder.com/150x200" style="border-radius:10px;">
+                         <img src="https://via.placeholder.com/150x200" style="border-radius:10px;">
+                         <img src="https://via.placeholder.com/150x200" style="border-radius:10px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interlocuteurs / Team -->
+    <div class="team-contact-section">
+        <div class="container" style="text-align:center;">
+             <h2 class="section-title">Qui sont vos interlocuteurs ?</h2>
+             <p>Une équipe humaine et disponible pour vous répondre.</p>
+             <div class="team-grid">
+                  <div class="team-member">
+                      <div class="member-photo" style="background:#eee; height:80px; width:80px; border-radius:50%; margin:0 auto 10px;"></div>
+                      <h4>Service Formalités</h4>
+                      <p>Des experts dédiés à la conformité.</p>
+                  </div>
+                  <div class="team-member">
+                      <div class="member-photo" style="background:#eee; height:80px; width:80px; border-radius:50%; margin:0 auto 10px;"></div>
+                      <h4>Support Client</h4>
+                      <p>Réponse en moins de 2h.</p>
+                  </div>
+             </div>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="testimonials-section">
+        <div class="container">
+             <h2 class="section-title" style="color:white; text-align:center;">Ils nous font confiance</h2>
+             <div class="testimonials-slider">
+                 <div class="testimonial-item">
+                     <p class="quote">"Un gain de temps phénoménal. Je recommande Gazette Solutions."</p>
+                     <p class="author">- Cabinet Dupont</p>
+                 </div>
+                 <div class="testimonial-item">
+                     <p class="quote">"Service impeccable, validation des annonces dans la minute."</p>
+                     <p class="author">- Maitre Martin</p>
+                 </div>
+             </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

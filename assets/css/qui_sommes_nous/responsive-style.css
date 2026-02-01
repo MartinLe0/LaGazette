@@ -1,0 +1,16 @@
+@media (max-width: 768px) {
+
+    .hero-content,
+    .history-section {
+        flex-direction: column;
+    }
+
+    .why-us-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+}

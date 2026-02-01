@@ -1,0 +1,250 @@
+.element-formalite-niv1-screen {
+    background-color: var(--blanc);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Page Header */
+.page-header {
+    background: #fff;
+    padding: 60px 0 40px 0;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primaire);
+    font-weight: 700;
+    margin-bottom: 32px;
+    width: fit-content;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link img {
+    width: 20px;
+    height: 20px;
+}
+
+.page-title {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 52px;
+    font-weight: 800;
+    color: var(--wwwmsb-formalitesfrindigo);
+    margin-bottom: 24px;
+    line-height: 1.1;
+}
+
+.page-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #475569;
+    max-width: 800px;
+    line-height: 1.5;
+}
+
+/* Main Content Grid */
+.main-content-section {
+    padding: 40px 0 80px 0;
+}
+
+.content-grid {
+    display: flex;
+    gap: 50px;
+}
+
+.details-column {
+    flex: 2;
+}
+
+.info-block {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.block-icon {
+    width: 24px;
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+.block-icon img {
+    width: 24px;
+}
+
+.info-block h3 {
+    font-family: 'Open Sauce One', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primaire);
+    margin-bottom: 15px;
+}
+
+.info-block p {
+    color: var(--noir);
+    margin-bottom: 15px;
+}
+
+.checklist,
+.process-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.checklist li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: var(--noir);
+    line-height: 1.5;
+}
+
+.checklist li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primaire);
+    font-weight: bold;
+}
+
+.process-list li {
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: var(--noir);
+}
+
+/* Sidebar Column */
+.sidebar-column {
+    flex: 1;
+}
+
+.sticky-card {
+    position: sticky;
+    top: 20px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background: var(--primaire);
+    padding: 24px 30px;
+}
+
+.card-title {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 0;
+}
+
+.contact-form {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--noir);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primaire);
+    box-shadow: 0 0 0 3px rgba(62, 95, 188, 0.1);
+}
+
+.submit-btn {
+    width: 100%;
+    background: var(--primaire);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.submit-btn:hover {
+    background: #324c9c;
+}
+
+.privacy-note {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 15px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* Simulator Banner */
+.simulator-banner {
+    background: linear-gradient(108deg, #1B2F53 0%, #3E5FBC 100%);
+    padding: 60px 0;
+    color: white;
+    margin-top: 40px;
+}
+
+.simulator-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.simulator-text h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.highlight-text {
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.3);
+}
+
+.simulator-text p {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 25px;
+}
+
+.btn-simulator {
+    background: white;
+    color: var(--primaire);
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: 700;
+    display: inline-block;
+}

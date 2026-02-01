@@ -1,0 +1,20 @@
+@media (max-width: 900px) {
+    .content-grid {
+        flex-direction: column;
+    }
+
+    .sidebar-column {
+        order: -1;
+        /* Move form to top on mobile?? Or keeping it bottom is better? Often bottom on mobile for detailed content. Let's keep it default order (bottom) for now, or sticky bottom? */
+        /* Actually user usually wants form accessible. But let's keep normal flow. */
+        order: 1;
+    }
+
+    .sticky-card {
+        position: static;
+    }
+
+    .page-title {
+        font-size: 30px;
+    }
+}

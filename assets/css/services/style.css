@@ -1,0 +1,234 @@
+.element-services-screen {
+    background-color: var(--blanc);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero */
+.hero-section {
+    background: #fff;
+    padding: 60px 0 80px 0;
+    color: var(--noir);
+    position: relative;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1.2;
+}
+
+.hero-tag {
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 6px 16px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hero-title {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--wwwmsb-formalitesfrindigo);
+    margin-bottom: 24px;
+}
+
+.hero-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    color: #475569;
+    max-width: 90%;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    border-radius: 20px;
+    max-width: 100%;
+}
+
+/* Expertises */
+.expertises-section {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.section-title {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 800;
+    font-size: 38px;
+    color: var(--wwwmsb-formalitesfrindigo);
+    margin-bottom: 12px;
+}
+
+.section-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #64748b;
+    margin-bottom: 64px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.service-card {
+    background: white;
+    padding: 48px 40px;
+    border-radius: 20px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background-color: #eff6ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+.card-icon img {
+    width: 32px;
+    height: 32px;
+}
+
+.service-card h3 {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--wwwmsb-formalitesfrindigo);
+    margin-bottom: 16px;
+}
+
+.service-card p {
+    flex: 1;
+    margin-bottom: 32px;
+    line-height: 1.5;
+    color: #475569;
+    font-size: 15px;
+}
+
+.card-link {
+    color: var(--primaire);
+    font-weight: 700;
+    background: #eef2ff;
+    padding: 12px 24px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.card-link:hover {
+    background: #dbeafe;
+}
+
+/* Values */
+.values-section {
+    padding: 80px 0;
+    background: var(--gris);
+}
+
+.values-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.values-text {
+    flex: 1;
+}
+
+.values-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--noir);
+    margin: 20px 0;
+}
+
+.values-list {
+    margin-top: 30px;
+    list-style: none;
+    padding: 0;
+}
+
+.values-list li {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.values-images {
+    flex: 1;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* Testimonials */
+.testimonials-section {
+    background: var(--primaire);
+    padding: 80px 0;
+    color: white;
+    text-align: center;
+}
+
+.testimonial-item {
+    margin-top: 30px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.author {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    opacity: 0.9;
+}
