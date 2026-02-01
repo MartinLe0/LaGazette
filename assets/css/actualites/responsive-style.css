@@ -106,8 +106,10 @@ body {
 
 .hero-tag {
   font-family: var(--title-medium-font-family);
-  font-weight: var(--title-medium-font-weight);
-  font-size: var(--title-medium-font-size);
+  font-weight: 700;
+  /* Bold */
+  font-size: 20px;
+  /* Increased */
   line-height: var(--title-medium-line-height);
   color: var(--confirmation);
   text-align: center;
@@ -116,8 +118,9 @@ body {
 .hero-title h1 {
   font-family: 'IBM Plex Sans Arabic', Helvetica;
   font-weight: 700;
-  font-size: 28px;
-  line-height: 30px;
+  font-size: 48px;
+  /* Increased from 28px */
+  line-height: 56px;
   color: #fcfdfd;
   margin-bottom: 8px;
 }
@@ -147,16 +150,18 @@ body {
 .hero-subtitle {
   font-family: 'IBM Plex Sans Arabic', Helvetica;
   font-weight: 700;
-  font-size: 28px;
-  line-height: 28px;
+  font-size: 32px;
+  /* Increased from 28px */
+  line-height: 40px;
   color: #fcfdfd;
 }
 
 .hero-description {
   font-family: var(--body-large-font-family);
   font-weight: var(--body-large-font-weight);
-  font-size: var(--body-large-font-size);
-  line-height: var(--body-large-line-height);
+  font-size: 20px;
+  /* Increased */
+  line-height: 28px;
   color: #fcfdfd;
 }
 
