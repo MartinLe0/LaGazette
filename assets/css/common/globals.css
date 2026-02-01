@@ -1,5 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Arabic:400,700,var(--display-large-font-weight)|Montserrat:var(--label-large-font-weight),var(--body-medium-font-weight),var(--label-medium-font-weight),var(--body-small-font-weight),400,var(--body-large-font-weight),700,800");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;700&family=Montserrat:wght@400;500;600;700;800&display=swap");
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -20,4 +20,39 @@ button:focus-visible {
 
 a {
   text-decoration: none;
+}
+
+/* ========== STRUCTURE GLOBALE ========== */
+.element-HP {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  position: relative;
+  background-color: #fcfdfd;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Masquage des éléments mobiles sur Bureau par défaut */
+.element-HP .PRIMAIRE-SHORT,
+.element-HP .frame-responsive,
+.element-HP .hero-content-responsive {
+  display: none;
+}
+
+/* ========== RESPONSIVE HEADER ========== */
+@media (max-width: 991px) {
+
+  .GS-header .menu-2,
+  .GS-header .frame,
+  .GS-header .PRIMAIRE {
+    display: none !important;
+  }
+
+  .GS-header .PRIMAIRE-SHORT,
+  .GS-header .frame-responsive {
+    display: flex !important;
+  }
 }

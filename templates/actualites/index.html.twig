@@ -4,14 +4,16 @@
 {% endblock %}
 
 {% block stylesheets %}
-	<link rel="stylesheet" href="{{ asset('css/actualites/globals.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/actualites/styleguide.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/actualites/style.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/actualites/responsive-style.css') }}">
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('css/actualites/globals.css')|replace({"/assets/": "assets/"}) }}">
+	<link rel="stylesheet" href="{{ asset('css/actualites/styleguide.css')|replace({"/assets/": "assets/"}) }}">
+	<link rel="stylesheet" href="{{ asset('css/actualites/style.css')|replace({"/assets/": "assets/"}) }}">
+	<link rel="stylesheet" href="{{ asset('css/actualites/responsive-style.css')|replace({"/assets/": "assets/"}) }}">
 {% endblock %}
 
 {% block content %}
-	<!-- Hero Section -->
+	<div class="actualites-page-wrapper">
+		<!-- Hero Section -->
 	<section class="hero">
 		<div class="background">
 			<div class="hero-content">
@@ -52,22 +54,25 @@
 		</div>
 
 		<div class="featured-article-container">
-			<article class="article-card article-featured">
-				<div class="article-image"></div>
-				<div class="article-content">
-					<span class="article-tag">Astuces</span>
-					<div class="article-meta">
-						<span>07/05/2025</span>
-						<span>|</span>
-						<span>2 min de lecture</span>
+			{% if articles|length > 0 %}
+				{% set featured = articles[0] %}
+				<article class="article-card article-featured">
+					<div class="article-image" style="background-image: url('{{ featured.data.main_image.url|default('') }}'); background-size: cover; background-position: center;"></div>
+					<div class="article-content">
+						<span class="article-tag">{{ featured.data.category|as_text|default('Astuces') }}</span>
+						<div class="article-meta">
+							<span>{{ featured.last_publication_date|date('d/m/Y') }}</span>
+							<span>|</span>
+							<span>{{ featured.data.reading_time|as_text|default('2 min de lecture') }}</span>
+						</div>
+						<h3 class="article-title">{{ featured.data.title|as_text }}</h3>
+						<a href="{{ path('app_actualites_show', {slug: featured.uid}) }}" class="article-link">
+							<span>Lire l'article</span>
+							<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
+						</a>
 					</div>
-					<h3 class="article-title">Votre AG d'approbation des<br>comptes approche ?</h3>
-					<a href="#" class="article-link">
-						<span>Lire l'article</span>
-						<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
-					</a>
-				</div>
-			</article>
+				</article>
+			{% endif %}
 		</div>
 
 		<!-- All Articles -->
@@ -93,158 +98,26 @@
 
 		<!-- Articles Grid -->
 		<div class="articles-grid">
-			<article class="article-card">
-				<div class="article-image"></div>
-				<div class="article-content">
-					<span class="article-tag">Astuces</span>
-					<div class="article-meta">
-						<span>07/05/2025</span>
-						<span>|</span>
-						<span>2 min de lecture</span>
+			{% for article in articles %}
+				<article class="article-card">
+					<div class="article-image" style="background-image: url('{{ article.data.main_image.url|default('') }}'); background-size: cover; background-position: center;"></div>
+					<div class="article-content">
+						<span class="article-tag">{{ article.data.category|as_text|default('Actualités') }}</span>
+						<div class="article-meta">
+							<span>{{ article.last_publication_date|date('d/m/Y') }}</span>
+							<span>|</span>
+							<span>{{ article.data.reading_time|as_text|default('2 min de lecture') }}</span>
+						</div>
+						<h3 class="article-title">{{ article.data.title|as_text }}</h3>
+						<a href="{{ path('app_actualites_show', {slug: article.uid}) }}" class="article-link">
+							<span>Lire l'article</span>
+							<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
+						</a>
 					</div>
-					<h3 class="article-title">Votre AG d'approbation des<br>comptes approche ?</h3>
-					<a href="#" class="article-link">
-						<span>Lire l'article</span>
-						<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
-					</a>
-				</div>
-			</article>
-
-			<article class="article-card">
-				<div class="article-image"></div>
-				<div class="article-content">
-					<span class="article-tag">Formalités</span>
-					<div class="article-meta">
-						<span>23/04/2025</span>
-						<span>|</span>
-						<span>5 min de lecture</span>
-					</div>
-					<h3 class="article-title">La communication dans un<br>cabinet de formalités ?</h3>
-					<a href="#" class="article-link">
-						<span>Lire l'article</span>
-						<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
-					</a>
-				</div>
-			</article>
-
-			<article class="article-card">
-				<div class="article-image"></div>
-				<div class="article-content">
-					<span class="article-tag">Juridique</span>
-					<div class="article-meta">
-						<span>02/04/2025</span>
-						<span>|</span>
-						<span>5 min de lecture</span>
-					</div>
-					<h3 class="article-title">La fusion-absorption d'une<br>société</h3>
-					<a href="#" class="article-link">
-						<span>Lire l'article</span>
-						<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
-					</a>
-				</div>
-			</article>
-
-			<article class="article-card">
-				<div class="article-image"></div>
-				<div class="article-content">
-					<span class="article-tag">Astuces</span>
-					<div class="article-meta">
-						<span>07/05/2025</span>
-						<span>|</span>
-						<span>2 min de lecture</span>
-					</div>
-					<h3 class="article-title">Votre AG d'approbation des<br>comptes approche ?</h3>
-					<a href="#" class="article-link">
-						<span>Lire l'article</span>
-						<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
-					</a>
-				</div>
-			</article>
-
-			<article class="article-card">
-				<div class="article-image"></div>
-				<div class="article-content">
-					<span class="article-tag">Formalités</span>
-					<div class="article-meta">
-						<span>23/04/2025</span>
-						<span>|</span>
-						<span>5 min de lecture</span>
-					</div>
-					<h3 class="article-title">La communication dans un<br>cabinet de formalités ?</h3>
-					<a href="#" class="article-link">
-						<span>Lire l'article</span>
-						<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
-					</a>
-				</div>
-			</article>
-
-			<article class="article-card">
-				<div class="article-image"></div>
-				<div class="article-content">
-					<span class="article-tag">Juridique</span>
-					<div class="article-meta">
-						<span>02/04/2025</span>
-						<span>|</span>
-						<span>5 min de lecture</span>
-					</div>
-					<h3 class="article-title">La fusion-absorption d'une<br>société</h3>
-					<a href="#" class="article-link">
-						<span>Lire l'article</span>
-						<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
-					</a>
-				</div>
-			</article>
-
-			<article class="article-card">
-				<div class="article-image"></div>
-				<div class="article-content">
-					<span class="article-tag">Astuces</span>
-					<div class="article-meta">
-						<span>07/05/2025</span>
-						<span>|</span>
-						<span>5 min de lecture</span>
-					</div>
-					<h3 class="article-title">Votre AG d'approbation des<br>comptes approche ?</h3>
-					<a href="#" class="article-link">
-						<span>Lire l'article</span>
-						<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
-					</a>
-				</div>
-			</article>
-
-			<article class="article-card">
-				<div class="article-image"></div>
-				<div class="article-content">
-					<span class="article-tag">Formalités</span>
-					<div class="article-meta">
-						<span>23/04/2025</span>
-						<span>|</span>
-						<span>5 min de lecture</span>
-					</div>
-					<h3 class="article-title">La communication dans un<br>cabinet de formalités ?</h3>
-					<a href="#" class="article-link">
-						<span>Lire l'article</span>
-						<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
-					</a>
-				</div>
-			</article>
-
-			<article class="article-card">
-				<div class="article-image"></div>
-				<div class="article-content">
-					<span class="article-tag">Juridique</span>
-					<div class="article-meta">
-						<span>02/04/2025</span>
-						<span>|</span>
-						<span>5 min de lecture</span>
-					</div>
-					<h3 class="article-title">La fusion-absorption d'une<br>société</h3>
-					<a href="#" class="article-link">
-						<span>Lire l'article</span>
-						<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
-					</a>
-				</div>
-			</article>
+				</article>
+			{% else %}
+				<p>Aucun article trouvé.</p>
+			{% endfor %}
 		</div>
 
 		<!-- Pagination -->
@@ -267,4 +140,5 @@
 			</button>
 		</div>
 	</section>
+</div>
 {% endblock %}

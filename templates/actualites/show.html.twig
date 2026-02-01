@@ -1,0 +1,123 @@
+{% extends 'accueil_base.html.twig' %}
+
+{% block title %}
+	{{ article.data.title|as_text|default('Article') }} - Gazette Solutions
+{% endblock %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('css/actualites/article/globals.css') }}"/>
+	<link rel="stylesheet" href="{{ asset('css/actualites/article/styleguide.css') }}"/>
+	<link rel="stylesheet" href="{{ asset('css/actualites/article/style.css') }}"/>
+{% endblock %}
+
+{% block content %}
+	<div class="element-article">
+		<!-- Breadcrumb -->
+		<div class="breadcrumb">
+			<div class="div">
+				<div class="text-wrapper">Blog</div>
+				<img class="img" src="https://c.animaapp.com/ml2mq02iz1NB4K/img/outline-interface-caret-right.svg" alt=""/>
+				<div class="text-wrapper">
+					{{ article.data.category|as_text|default('Actualités') }}
+				</div>
+				<img class="img" src="https://c.animaapp.com/ml2mq02iz1NB4K/img/outline-interface-caret-right.svg" alt=""/>
+				<p class="MSB-formalit-s-et-la">
+					<span class="span">{{ article.data.title|as_text }}</span>
+				</p>
+			</div>
+		</div>
+
+		<!-- Detail Section -->
+		<div class="detail">
+			<div class="article">
+				<div class="right-content">
+					<div class="div-2">
+						<div class="tag">
+							<div class="text-wrapper-2">{{ article.data.category|as_text|default('Actualités') }}</div>
+						</div>
+						<div class="info-article">
+							<div class="text-wrapper-2">{{ article.last_publication_date|date('d/m/Y') }}</div>
+							<div class="text-wrapper-2">•</div>
+							<div class="text-wrapper-2">{{ article.data.reading_time|as_text|default('2 min de lecture') }}</div>
+						</div>
+					</div>
+					<div class="titre">
+						<p class="span-wrapper">
+							<span class="text-wrapper-3">{{ article.data.title|as_text }}</span>
+						</p>
+					</div>
+					{% if article.data.main_image.url %}
+						<img class="image" src="{{ article.data.main_image.url }}" alt="{{ article.data.main_image.alt }}"/>
+					{% endif %}
+
+					<div class="article-body">
+						{% for slice in article.data.body %}
+							{% if slice.slice_type == 'text' %}
+								<div class="text-wrapper-4">{{ slice.primary.text|as_html|raw }}</div>
+							{% elseif slice.slice_type == 'title_h2' %}
+								<div class="text-wrapper-5">{{ slice.primary.title|as_text }}</div>
+							{% elseif slice.slice_type == 'title_h3' %}
+								<div class="text-wrapper-6">{{ slice.primary.title|as_text }}</div>
+							{% endif %}
+						{% endfor %}
+
+						{# Fullback if no slices #}
+						{% if article.data.content is defined %}
+							<div class="text-wrapper-4">{{ article.data.content|as_html|raw }}</div>
+						{% endif %}
+					</div>
+				</div>
+
+				<!-- Sidebar / Left Content -->
+				<div class="left-content">
+					<div class="div-3">
+						<div class="div-wrapper">
+							<p class="p">
+								<span class="text-wrapper-7">Auteur</span>
+							</p>
+						</div>
+						<div class="div-2">
+							<img class="auteur" src="{{ article.data.author_image.url|default('https://c.animaapp.com/ml2mq02iz1NB4K/img/auteur.svg') }}" alt="Auteur"/>
+							<div class="text-wrapper-8">{{ article.data.author_name|as_text|default('Gazette Solutions') }}</div>
+						</div>
+					</div>
+
+					<div class="div-3">
+						<div class="div-wrapper">
+							<p class="p">
+								<span class="text-wrapper-7">À lire aussi</span>
+							</p>
+						</div>
+						<!-- We can populate this dynamically later -->
+						<div class="carte-article">
+							<div class="image-2"></div>
+							<div class="texte">
+								<div class="tag-2">
+									<div class="text-wrapper-9">Astuces</div>
+								</div>
+								<div class="date-temps-de">
+									<div class="text-wrapper-10">07/05/2025</div>
+									<div class="text-wrapper-10">|</div>
+									<div class="text-wrapper-10">2 min de lecture</div>
+								</div>
+								<div class="votre-AG-d-wrapper">
+									<p class="votre-AG-d">
+										<span class="text-wrapper-7">Votre AG d’approbation des
+											<br/>comptes approche ?</span>
+									</p>
+								</div>
+								<div class="bouton">
+									<p class="text-button">
+										<span class="text-wrapper-11">Lire l’article</span>
+									</p>
+									<img class="img" src="https://c.animaapp.com/ml2mq02iz1NB4K/img/outline-interface-arrow-right.svg" alt=""/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

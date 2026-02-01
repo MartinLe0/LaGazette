@@ -39,17 +39,24 @@ class PrismicService
     private function getMasterRef(): string
     {
         return $this->cache->get('prismic_master_ref', function (ItemInterface $item) {
-            $item->expiresAfter(60); // Check for new ref every minute
+            $item->expiresAfter(300); // Check for new ref every 5 minutes
 
-            $response = $this->httpClient->request('GET', $this->apiEndpoint, [
-                'query' => ['access_token' => $this->apiToken]
-            ]);
+            try {
+                $response = $this->httpClient->request('GET', $this->apiEndpoint, [
+                    'query' => ['access_token' => $this->apiToken],
+                    'timeout' => 3
+                ]);
 
-            $data = $response->toArray();
-            foreach ($data['refs'] as $ref) {
-                if ($ref['isMasterRef']) {
-                    return $ref['ref'];
+                $data = $response->toArray();
+                foreach ($data['refs'] as $ref) {
+                    if ($ref['isMasterRef']) {
+                        return $ref['ref'];
+                    }
                 }
+            } catch (\Exception $e) {
+                $this->logger->error('Prismic Master Ref Error: ' . $e->getMessage());
+                // Return a previously cached ref if possible or fail
+                throw $e;
             }
 
             throw new \RuntimeException('Master ref not found in Prismic API');
@@ -65,7 +72,8 @@ class PrismicService
 
         try {
             return $this->cache->get($cacheKey, function (ItemInterface $item) use ($type, $slug) {
-                $item->expiresAfter(3600); // 1 hour TTL
+                // Extended TTL for better availability during API downtime
+                $item->expiresAfter(86400); // 24 hours
                 $item->tag(['prismic_content']);
 
                 $ref = $this->getMasterRef();
@@ -77,7 +85,7 @@ class PrismicService
                         'q' => $query,
                         'access_token' => $this->apiToken
                     ],
-                    'timeout' => 5, // Timeout to prevent long waits
+                    'timeout' => 5,
                 ]);
 
                 if ($response->getStatusCode() !== 200) {
@@ -97,9 +105,52 @@ class PrismicService
                 'slug' => $slug
             ]);
 
-            // In production, we could return a previously cached value even if expired
-            // (requires a fallback cache or different cache strategy like stale-if-error)
             return null;
+        }
+    }
+
+    /**
+     * Fetch all articles from Prismic
+     */
+    public function getArticles(int $page = 1, int $pageSize = 12): array
+    {
+        $cacheKey = sprintf('prismic_articles_p%d_s%d', $page, $pageSize);
+
+        try {
+            return $this->cache->get($cacheKey, function (ItemInterface $item) use ($page, $pageSize) {
+                $item->expiresAfter(3600);
+                $item->tag(['prismic_content']);
+
+                $ref = $this->getMasterRef();
+                $query = '[[at(document.type, "article")]]';
+
+                $response = $this->httpClient->request('GET', $this->apiEndpoint . '/documents/search', [
+                    'query' => [
+                        'ref' => $ref,
+                        'q' => $query,
+                        'access_token' => $this->apiToken,
+                        'page' => $page,
+                        'pageSize' => $pageSize,
+                        'orderings' => '[document.last_publication_date desc]'
+                    ],
+                    'timeout' => 5,
+                ]);
+
+                if ($response->getStatusCode() !== 200) {
+                    throw new \RuntimeException('Prismic API returned ' . $response->getStatusCode());
+                }
+
+                $data = $response->toArray();
+
+                return [
+                    'results' => array_map([$this, 'filterData'], $data['results']),
+                    'total_pages' => $data['total_pages'],
+                    'total_results_size' => $data['total_results_size'],
+                ];
+            });
+        } catch (\Exception $e) {
+            $this->logger->error('Prismic Articles Fetch Error: ' . $e->getMessage());
+            return ['results' => [], 'total_pages' => 0, 'total_results_size' => 0];
         }
     }
 
@@ -114,6 +165,7 @@ class PrismicService
             'uid' => $document['uid'],
             'type' => $document['type'],
             'data' => $document['data'], // This contains the actual CMS content
+            'slug' => $document['slugs'][0] ?? null,
             'last_publication_date' => $document['last_publication_date'],
         ];
     }

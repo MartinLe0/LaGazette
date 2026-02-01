@@ -24,11 +24,16 @@
 		<meta property="twitter:title" content="{{ block('og_title') }}">
 		<meta property="twitter:description" content="{{ block('og_description') }}">
 
-		<link rel="stylesheet" href="{{ asset('css/common/globals.css') }}"/>
-		<link rel="stylesheet" href="{{ asset('css/common/styleguide.css') }}"/>
-		<link rel="stylesheet" href="{{ asset('css/common/footer.css') }}"/>
-		<link rel="stylesheet" href="{{ asset('css/accueil/style.css') }}"/> {% block stylesheets %}{% endblock %}
-		</head>
+		<link rel="stylesheet" href="{{ asset('css/common/globals.css')|replace({"/assets/": "assets/"}) }}"/>
+		<link rel="stylesheet" href="{{ asset('css/common/styleguide.css')|replace({"/assets/": "assets/"}) }}"/>
+		<link rel="stylesheet" href="{{ asset('css/common/header.css')|replace({"/assets/": "assets/"}) }}"/>
+		{% if app.request.attributes.get('_route') == 'app_accueil' %}
+			<link rel="stylesheet" href="{{ asset('css/accueil/style.css')|replace({"/assets/": "assets/"}) }}"/>
+		{% endif %}
+		<link rel="stylesheet" href="{{ asset('css/common/bandeaux.css')|replace({"/assets/": "assets/"}) }}"/>
+		<link rel="stylesheet" href="{{ asset('css/common/footer.css')|replace({"/assets/": "assets/"}) }}"/>
+		{% block stylesheets %}{% endblock %}
+	</head>
 
 		<body>
 			<div class="element-HP">
