@@ -7,11 +7,21 @@ use Symfony\Contracts\Cache\TagAwareCacheInterface;
 use Symfony\Contracts\Cache\ItemInterface;
 use Psr\Log\LoggerInterface;
 
+/**
+ * Service for interacting with the Prismic CMS API.
+ */
 class PrismicService
 {
     private string $apiEndpoint;
     private string $apiToken;
 
+    /**
+     * @param HttpClientInterface $httpClient The HTTP client
+     * @param TagAwareCacheInterface $cache The cache interface
+     * @param LoggerInterface $logger The logger interface
+     * @param string $prismicRepoName The Prismic repository name (from parameters)
+     * @param string $prismicToken The Prismic API token (from parameters)
+     */
     public function __construct(
         private HttpClientInterface $httpClient,
         private TagAwareCacheInterface $cache,
