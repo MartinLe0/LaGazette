@@ -1641,8 +1641,7 @@
 
   .element-HP .div-2,
   .element-HP .blog,
-  .element-HP .call-to-action,
-  .element-HP .d-GS-footer {
+  .element-HP .call-to-action {
     padding: 40px 20px !important;
     width: 100%;
     align-items: center !important;
@@ -1724,14 +1723,7 @@
     gap: 40px;
   }
 
-  /* Footer */
-  /* Footer */
-  .element-HP .d-GS-footer {
-    flex-direction: column !important;
-    gap: 40px;
-    align-items: flex-start !important;
-    text-align: left;
-  }
+
 
   .element-HP .menu-list {
     align-items: flex-start !important;
@@ -1765,11 +1757,7 @@
     gap: 40px;
   }
 
-  /* Fix Footer Stack */
-  .element-HP .footer-content {
-    flex-direction: column !important;
-    gap: 40px;
-  }
+
 
   .element-HP .NL,
   .element-HP .logo-RS,
@@ -1789,10 +1777,7 @@
     text-align: left !important;
   }
 
-  /* Unhide Logo in Footer */
-  .element-HP .d-GS-footer .PRIMAIRE {
-    display: block !important;
-  }
+
 
   /* Align Footer Description */
   .element-HP .logo-RS .text-wrapper-18 {
