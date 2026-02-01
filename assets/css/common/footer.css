@@ -265,6 +265,20 @@
    TABLET Styles (790px)
    ======================================== */
 @media (min-width: 790px) {
+    .cta-section {
+        padding: 40px 80px;
+    }
+
+    .cta-title h2 {
+        font-size: 28px;
+        line-height: 30px;
+    }
+
+    .cta-subtitle {
+        font-size: 28px;
+        line-height: 28px;
+    }
+
     .footer {
         padding: 40px 80px;
     }
@@ -280,6 +294,35 @@
    DESKTOP Styles (1200px)
    ======================================== */
 @media (min-width: 1200px) {
+    .cta-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .cta-section>div {
+        background: linear-gradient(31deg, rgba(27, 47, 83, 1) 0%, rgba(62, 95, 188, 1) 75%);
+        border-radius: 0 0 15px 15px;
+        padding: 40px 80px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+        min-height: 200px;
+    }
+
+    .cta-content {
+        flex-direction: row;
+        align-items: center;
+        gap: 100px;
+        flex: 1;
+    }
+
+    .cta-title {
+        flex: 1;
+    }
+
     .footer {
         max-width: 1200px;
         margin: 0 auto;
