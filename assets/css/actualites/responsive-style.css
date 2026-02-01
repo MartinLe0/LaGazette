@@ -737,26 +737,3 @@ body {
   .cta-description {
     display: none;
   }
-
-  /* Footer */
-  .footer {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .footer-content {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 80px;
-  }
-
-  .footer-brand {
-    max-width: 290px;
-  }
-
-  .footer-legal {
-    flex-direction: row;
-    justify-content: center;
-    gap: 40px;
-  }
-}
