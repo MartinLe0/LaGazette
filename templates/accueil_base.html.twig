@@ -26,11 +26,12 @@
 
 		<link rel="stylesheet" href="{{ asset('css/common/globals.css') }}"/>
 		<link rel="stylesheet" href="{{ asset('css/common/styleguide.css') }}"/>
+		<link rel="stylesheet" href="{{ asset('css/common/footer.css') }}"/>
 		<link rel="stylesheet" href="{{ asset('css/accueil/style.css') }}"/> {% block stylesheets %}{% endblock %}
 		</head>
 
 		<body>
-			<div class="element-HP {% block wrapper_class %}{% endblock %}">
+			<div class="element-HP">
 				{% include 'includes/_header.html.twig' %}
 				{% block content %}{% endblock %}
 				{% include 'includes/_footer.html.twig' %}
