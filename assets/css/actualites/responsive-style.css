@@ -77,11 +77,25 @@ body {
    ======================================== */
 
 .hero {
+  /* background: linear-gradient(...) moved to .background wrapper */
+  padding: 0;
+  /* Let .background handle padding/borders */
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.background {
   background: linear-gradient(31deg, rgba(27, 47, 83, 1) 0%, rgba(62, 95, 188, 1) 75%);
   padding: 40px 20px;
   display: flex;
   flex-direction: column;
   gap: 40px;
+  width: 100%;
+  border-radius: 0 0 50px 50px;
+  min-height: 560px;
+  justify-content: center;
+
 }
 
 .hero-content {
@@ -246,7 +260,10 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 320px;
+  width: 100%;
+  max-width: 100%;
+  /* Removing 320px limit */
+
 }
 
 .article-featured {
@@ -636,6 +653,7 @@ body {
    ======================================== */
 
 @media (min-width: 790px) {
+
   /* Header */
   .header-mobile .header-container {
     padding: 20px 80px;
@@ -643,6 +661,11 @@ body {
 
   /* Hero */
   .hero {
+    padding: 0 80px;
+    /* Outer padding for white border effect */
+  }
+
+  .background {
     padding: 40px 80px;
   }
 
@@ -682,6 +705,7 @@ body {
    ======================================== */
 
 @media (min-width: 1200px) {
+
   /* Hide mobile header, show desktop header */
   .header-mobile {
     display: none;
@@ -764,10 +788,19 @@ body {
   .hero {
     flex-direction: row;
     align-items: center;
-    padding: 80px;
-    max-width: 1200px;
+    align-items: center;
+    padding: 0 80px;
+    /* White border padding */
+    max-width: 1600px;
+    /* Wider layout */
     margin: 0 auto;
     gap: 0;
+  }
+
+  .background {
+    flex-direction: row;
+    align-items: center;
+    padding: 80px;
   }
 
   .hero-content {
@@ -795,7 +828,8 @@ body {
 
   /* Blog Section */
   .blog-section {
-    max-width: 1200px;
+    max-width: 1600px;
+    /* Wider layout */
     margin: 0 auto;
     padding: 40px 80px;
   }
@@ -840,7 +874,7 @@ body {
     padding: 0 20px;
   }
 
-  .cta-section > div {
+  .cta-section>div {
     background: linear-gradient(31deg, rgba(27, 47, 83, 1) 0%, rgba(62, 95, 188, 1) 75%);
     border-radius: 0 0 15px 15px;
     padding: 40px 80px;
