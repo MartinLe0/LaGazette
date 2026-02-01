@@ -314,16 +314,18 @@ body {
   gap: 5px;
   font-family: 'Montserrat', Helvetica;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 16px;
+  /* Increased form 14px */
+  line-height: 24px;
   color: rgba(33, 33, 33, 0.5);
 }
 
 .article-title {
   font-family: var(--title-medium-font-family);
   font-weight: var(--title-medium-font-weight);
-  font-size: var(--title-medium-font-size);
-  line-height: var(--title-medium-line-height);
+  font-size: 24px;
+  /* Increased from 20px/var */
+  line-height: 32px;
   color: #030303;
 }
 
