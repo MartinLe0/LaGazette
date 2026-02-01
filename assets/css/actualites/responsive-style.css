@@ -87,12 +87,14 @@ body {
 
 .background {
   background: linear-gradient(31deg, rgba(27, 47, 83, 1) 0%, rgba(62, 95, 188, 1) 75%);
-  padding: 40px 20px;
+  padding: 80px;
+  /* Increased to match Annonces Légales */
   display: flex;
   flex-direction: column;
   gap: 40px;
   width: 100%;
-  border-radius: 0 0 50px 50px;
+  border-radius: 0 0 15px 15px;
+  /* sharper corners to match Annonces */
   min-height: 560px;
   justify-content: center;
 
