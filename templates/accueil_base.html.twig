@@ -30,7 +30,7 @@
 		</head>
 
 		<body>
-			<div class="{% block wrapper_class %}element-HP{% endblock %}">
+			<div class="element-HP {% block wrapper_class %}{% endblock %}">
 				{% include 'includes/_header.html.twig' %}
 				{% block content %}{% endblock %}
 				{% include 'includes/_footer.html.twig' %}
