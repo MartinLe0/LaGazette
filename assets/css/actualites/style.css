@@ -1194,3 +1194,8 @@
   white-space: nowrap;
   font-style: var(--label-large-font-style);
 }
+
+/* Override base template padding for Actualités page to remove gap */
+.element-HP {
+  padding-top: 0 !important;
+}
