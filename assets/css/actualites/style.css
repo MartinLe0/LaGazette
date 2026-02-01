@@ -1,22 +1,31 @@
 .element-actus {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content */
+  align-items: center;
+  /* Center content */
   padding: 80px 0px 0px;
   position: relative;
   background-color: #fcfdfd;
   width: 100%;
-  max-width: 1600px; /* Match header max-width */
-  margin: 0 auto;    /* Center container */
+  max-width: 1600px;
+  /* Match header max-width */
+  margin: 0 auto;
+  /* Center container */
 }
 
 .element-actus .hero {
   display: flex;
   flex-direction: column;
-  width: 100%;      /* Use full width available */
-  height: 400px;
+  width: 100%;
+  /* Use full width available */
+  height: auto;
+  min-height: 560px;
+  /* Increased height */
   align-items: center;
-  padding: 0px 80px; /* Match standard page padding */
+  justify-content: center;
+  /* Center vertically */
+  padding: 0px 80px;
+  /* Match standard page padding */
   position: relative;
 }
 
@@ -30,11 +39,9 @@
   align-self: stretch;
   width: 100%;
   border-radius: 0px 0px 15.09px 15.09px;
-  background: linear-gradient(
-    31deg,
-    rgba(27, 47, 83, 1) 0%,
-    rgba(62, 95, 188, 1) 75%
-  );
+  background: linear-gradient(31deg,
+      rgba(27, 47, 83, 1) 0%,
+      rgba(62, 95, 188, 1) 75%);
 }
 
 .element-actus .container {
@@ -96,7 +103,8 @@
   font-family: "IBM Plex Sans Arabic", Helvetica;
   font-weight: 400;
   color: #fcfdfd;
-  font-size: 30px; /* Increased to 30px */
+  font-size: 30px;
+  /* Increased to 30px */
   line-height: 36px;
   position: relative;
   width: fit-content;
@@ -129,7 +137,8 @@
   font-family: "IBM Plex Sans Arabic", Helvetica;
   font-weight: 400;
   color: #fcfdfd;
-  font-size: 30px; /* Increased to 30px */
+  font-size: 30px;
+  /* Increased to 30px */
   letter-spacing: 0;
   line-height: 36px;
   white-space: nowrap;
@@ -151,7 +160,8 @@
   font-family: "IBM Plex Sans Arabic", Helvetica;
   font-weight: 400;
   color: #fcfdfd;
-  font-size: 30px; /* Increased to 30px */
+  font-size: 30px;
+  /* Increased to 30px */
   letter-spacing: 0;
   line-height: 36px;
 }
@@ -184,7 +194,8 @@
 
 .element-actus .blog {
   flex-direction: column;
-  width: 100%; /* Full width */
+  width: 100%;
+  /* Full width */
   justify-content: center;
   gap: 40px;
   padding: 40px 80px;
@@ -598,9 +609,11 @@
 .element-actus .call-to-action {
   display: flex;
   flex-direction: column;
-  width: 100%; /* Full width */
+  width: 100%;
+  /* Full width */
   align-items: center;
-  padding: 0px 80px; /* Match standard padding */
+  padding: 0px 80px;
+  /* Match standard padding */
   position: relative;
   flex: 0 0 auto;
 }
@@ -616,11 +629,9 @@
   align-self: stretch;
   width: 100%;
   border-radius: 0px 0px 15.09px 15.09px;
-  background: linear-gradient(
-    31deg,
-    rgba(27, 47, 83, 1) 0%,
-    rgba(62, 95, 188, 1) 75%
-  );
+  background: linear-gradient(31deg,
+      rgba(27, 47, 83, 1) 0%,
+      rgba(62, 95, 188, 1) 75%);
 }
 
 .element-actus .container-2 {
@@ -728,7 +739,8 @@
 .element-actus .d-GS-footer {
   display: flex;
   flex-direction: column;
-  width: 100%; /* Full width */
+  width: 100%;
+  /* Full width */
   align-items: flex-start;
   gap: 40px;
   padding: 40px 80px;
