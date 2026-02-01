@@ -267,7 +267,8 @@ body {
 }
 
 .article-featured {
-  max-width: 320px;
+  max-width: 100%;
+  /* Removing 320px limit */
 }
 
 .article-image {
@@ -727,7 +728,8 @@ body {
     gap: 40px;
     padding: 20px 80px 20px 80px;
     height: 80px;
-    max-width: 1200px;
+    max-width: 1600px;
+    /* Align with new wide layout */
     margin: 0 auto;
   }
 
