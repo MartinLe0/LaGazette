@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 80px 0px 0px;
+  padding: 0px;
+  /* Removed top padding */
   position: relative;
   background-color: #fcfdfd;
   width: 100%;
@@ -30,8 +31,8 @@
   height: 560px;
   overflow: hidden;
   position: relative;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 15.09px;
+  border-bottom-right-radius: 15.09px;
 }
 
 @media (min-width: 1200px) {
