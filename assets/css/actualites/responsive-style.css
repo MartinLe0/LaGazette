@@ -338,7 +338,9 @@ body {
 .articles-grid {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
+  /* Allow items to stretch */
+  width: 100%;
   gap: 40px;
 }
 

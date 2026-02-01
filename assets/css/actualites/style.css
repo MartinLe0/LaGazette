@@ -265,7 +265,8 @@
 
 .element-actus .carte-article {
   display: flex;
-  width: 1040px;
+  width: 100%;
+  /* Full width */
   align-items: center;
   gap: 20px;
   padding: 20px;
