@@ -1,212 +1,225 @@
 /**
- * Footer commun - même style et même taille sur toutes les pages (accueil, actualités, annonces légales).
+ * Footer unifié basé sur le style "Actualités" (classes -8).
  */
 
-.d-GS-footer {
-  --footer-font: "Montserrat", Helvetica, sans-serif;
-  --footer-body-size: 16px;
-  --footer-body-height: 24px;
-  --footer-body-spacing: 0.25px;
-  --footer-small-size: 14px;
-  --footer-small-height: 20px;
-  --footer-color: #030303;
-  --footer-bg: #fcfdfd;
-  --footer-gris: #f2f2f2;
-  --footer-noir-light: rgba(3, 3, 3, 0.5);
-  --footer-primaire: #3e5fbc;
-}
-
-.d-GS-footer {
+.d-GS-footer-8 {
   display: flex !important;
-  flex-direction: column !important;
+  flex-wrap: wrap !important;
   width: 100% !important;
   max-width: 1600px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  margin: 0 auto !important;
   align-items: flex-start !important;
   gap: 40px !important;
   padding: 40px 80px !important;
-  position: relative !important;
-  background-color: var(--footer-bg) !important;
+  background-color: #fcfdfd !important;
   box-sizing: border-box !important;
-}
-
-.d-GS-footer .footer {
-  gap: 80px !important;
-  align-self: stretch !important;
-  width: 100% !important;
-  background-color: transparent !important;
-  display: flex !important;
-  align-items: flex-start !important;
   position: relative !important;
 }
 
-.d-GS-footer .footer-content {
-  justify-content: space-between !important;
-  flex: 1 !important;
-  display: flex !important;
-  align-items: flex-start !important;
-}
-
-.d-GS-footer .f-logo-RS {
+.logo-RS-8 {
   width: 400px !important;
   max-width: 100% !important;
   gap: 24px !important;
   display: flex !important;
   flex-direction: column !important;
+  align-items: flex-start !important;
 }
 
-.d-GS-footer .f-logo-img-wrapper {
+.logo-13 {
   width: 144px !important;
   height: 50px !important;
   display: flex !important;
 }
 
-.d-GS-footer .f-text-18 {
-  font-family: var(--footer-font) !important;
+.logo-13 img {
+  height: 100% !important;
+}
+
+.text-wrapper-155 {
+  font-family: "Montserrat", Helvetica, sans-serif !important;
   font-weight: 400 !important;
-  color: var(--footer-color) !important;
-  font-size: 16px !important;
-  line-height: 24px !important;
-  text-align: left !important;
+  color: #030303 !important;
+  font-size: 14px !important;
+  letter-spacing: 0 !important;
+  line-height: 20px !important;
 }
 
-.d-GS-footer .f-RS-social {
-  display: flex !important;
+.RS-6 {
+  align-items: flex-start !important;
   gap: 20px !important;
+  display: inline-flex !important;
 }
 
-.d-GS-footer .outline-brands-wrapper {
+.outline-brands-wrapper-8 {
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
   padding: 8px !important;
-  background-color: var(--footer-gris) !important;
+  background-color: #f1f1f1 !important;
   border-radius: 100px !important;
-  display: flex !important;
+  display: inline-flex !important;
 }
 
-.d-GS-footer .f-div-links {
-  display: flex !important;
+.outline-brands-wrapper-8 img {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.div-42 {
+  display: inline-flex !important;
   flex-direction: column !important;
+  align-items: flex-start !important;
   gap: 24px !important;
 }
 
-.d-GS-footer .f-text-19 {
-  font-family: var(--footer-font) !important;
-  font-weight: 700 !important;
-  color: var(--footer-color) !important;
-  font-size: 16px !important;
-  line-height: 24px !important;
+.span-wrapper-18 {
+  margin-top: -1.00px !important;
+  font-family: "Montserrat", Helvetica, sans-serif !important;
+  font-weight: 400 !important;
+  color: #030303 !important;
+  font-size: 14px !important;
+  line-height: 14px !important;
 }
 
-.d-GS-footer .f-menu-list {
-  display: flex !important;
+.text-wrapper-156 {
+  font-weight: 700 !important;
+  font-size: 16px !important;
+}
+
+.menu-list-8 {
+  display: inline-flex !important;
   flex-direction: column !important;
+  align-items: flex-start !important;
   gap: 10px !important;
 }
 
-.d-GS-footer .f-text-20 {
-  font-family: var(--footer-font) !important;
+.text-wrapper-157 {
+  font-family: "Montserrat", Helvetica, sans-serif !important;
   font-weight: 400 !important;
-  font-size: 16px !important;
-  color: var(--footer-color) !important;
+  color: #030303 !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
 }
 
-.d-GS-footer .f-newsletter-wrapper {
+.NL-8 {
   width: 450px !important;
   max-width: 100% !important;
-  display: flex !important;
-  flex-direction: column !important;
   gap: 24px !important;
-}
-
-.d-GS-footer .f-text-21 {
-  font-family: var(--footer-font) !important;
-  font-weight: 700 !important;
-  color: var(--footer-color) !important;
-  font-size: 16px !important;
-}
-
-.d-GS-footer .f-div-newsletter {
   display: flex !important;
   flex-direction: column !important;
-  gap: 16px !important;
+  align-items: flex-start !important;
 }
 
-.d-GS-footer .zone-d-interaction {
-  height: 44px !important;
-  padding: 12px 8px !important;
-  border-radius: 8px !important;
-  border: 1px solid rgba(3, 3, 3, 0.5) !important;
+.newsletter-8 {
+  font-family: "Montserrat", Helvetica, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 14px !important;
 }
 
-.d-GS-footer .champ-rempli {
-  font-family: var(--footer-font) !important;
+.text-wrapper-158 {
+  font-weight: 700 !important;
+  color: #030303 !important;
   font-size: 16px !important;
-  border: none !important;
-  background: transparent !important;
+}
+
+.div-43 {
+  gap: 16px !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+.input-8 {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 4px !important;
   width: 100% !important;
 }
 
-.d-GS-footer .f-div-checkbox {
+.zone-d-interaction-8 {
+  display: flex !important;
+  height: 44px !important;
+  align-items: center !important;
+  padding: 12px 8px !important;
+  width: 100% !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(3, 3, 3, 0.5) !important;
+  box-sizing: border-box !important;
+}
+
+.champ-rempli-8 {
+  flex: 1 !important;
+  font-family: "Montserrat", Helvetica, sans-serif !important;
+  font-size: 14px !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  outline: none !important;
+}
+
+.check-box-container {
   display: flex !important;
   align-items: center !important;
   gap: 8px !important;
 }
 
-.d-GS-footer .check {
-  width: 16px !important;
-  height: 16px !important;
-  border-radius: 4px !important;
-  border: 1px solid var(--footer-color) !important;
+.label-8 {
+  cursor: pointer !important;
 }
 
-.d-GS-footer .f-text-2 {
-  font-size: 14px !important;
-  color: var(--footer-color) !important;
-}
-
-.d-GS-footer .f-text-15 {
-  font-size: 14px !important;
+.text-wrapper-149 {
   text-decoration: underline !important;
 }
 
-.d-GS-footer .f-bouton-7 {
+.bouton-40 {
   height: 32px !important;
   padding: 8px 12px !important;
-  background-color: var(--footer-primaire) !important;
+  background-color: #3e5fbc !important;
   border-radius: 6px !important;
   display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: white !important;
+  font-family: "Montserrat", Helvetica, sans-serif !important;
+  font-size: 12px !important;
+  cursor: pointer !important;
+}
+
+.text-button-33 {
   color: white !important;
 }
 
-.d-GS-footer .f-text-button-6 {
-  color: white !important;
-  font-size: 14px !important;
-}
-
-.d-GS-footer .rglementaires {
+.rglementaires-8 {
   display: flex !important;
+  flex-direction: row !important;
   gap: 40px !important;
+  width: 100% !important;
+  padding-top: 20px !important;
   flex-wrap: wrap !important;
 }
 
-.d-GS-footer .f-text-22 {
-  font-size: 16px !important;
-  color: var(--footer-color) !important;
+.text-wrapper-160 {
+  font-family: "Montserrat", Helvetica, sans-serif !important;
+  font-size: 14px !important;
+  color: #030303 !important;
 }
 
 /* RESPONSIVE */
 @media (max-width: 991px) {
-  .d-GS-footer {
+  .d-GS-footer-8 {
     padding: 40px 20px !important;
-  }
-
-  .d-GS-footer .footer-content {
     flex-direction: column !important;
-    gap: 40px !important;
   }
 
-  .d-GS-footer .f-logo-RS,
-  .d-GS-footer .f-newsletter-wrapper {
+  .logo-RS-8,
+  .NL-8 {
     width: 100% !important;
+  }
+
+  .rglementaires-8 {
+    gap: 20px !important;
   }
 }
