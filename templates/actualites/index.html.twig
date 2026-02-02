@@ -12,133 +12,134 @@
 {% endblock %}
 
 {% block content %}
-	<div class="actualites-page-wrapper">
+	<div
+		class="element-actus">
 		<!-- Hero Section -->
-	<section class="hero">
-		<div class="background">
-			<div class="hero-content">
-				<div class="hero-tag">ACTUALITÉS JURIDIQUES</div>
-				<div class="hero-title">
-					<h1>
-						<span class="title-line">Le</span>
-						<span class="title-line">
-							<span class="title-underline">blog Gazette Solution</span>
-						</span>
-					</h1>
-					<p class="hero-subtitle">Votre source d'expertise en formalités légales.</p>
+		<section class="hero">
+			<div class="background">
+				<div class="hero-content">
+					<div class="hero-tag">ACTUALITÉS JURIDIQUES</div>
+					<div class="hero-title">
+						<h1>
+							<span class="title-line">Le</span>
+							<span class="title-line">
+								<span class="title-underline">blog Gazette Solution</span>
+							</span>
+						</h1>
+						<p class="hero-subtitle">Votre source d'expertise en formalités légales.</p>
+					</div>
+					<p class="hero-description">
+						Des analyses éclairées pour les professionnels du droit et toute l'actualité du cabinet. 
+																															        Découvrez les tendances, les retours d'expérience et les conseils pour naviguer efficacement 
+																															        dans le monde des formalités juridiques en ligne.
+					</p>
 				</div>
-				<p class="hero-description">
-					Des analyses éclairées pour les professionnels du droit et toute l'actualité du cabinet. 
-																									        Découvrez les tendances, les retours d'expérience et les conseils pour naviguer efficacement 
-																									        dans le monde des formalités juridiques en ligne.
-				</p>
+				<div class="hero-image">
+					<img src="https://c.animaapp.com/ml2mibj9gkulId/img/illustrations-heros-actus-1.png" alt="Illustration">
+				</div>
 			</div>
-			<div class="hero-image">
-				<img src="https://c.animaapp.com/ml2mibj9gkulId/img/illustrations-heros-actus-1.png" alt="Illustration">
+		</section>
+
+		<!-- Blog Section -->
+		<section
+			class="blog-section">
+			<!-- Featured Article -->
+			<div class="section-header">
+				<h2 class="section-title">
+					<span class="title-underline-small">A LA UNE</span>
+				</h2>
 			</div>
-		</div>
-	</section>
 
-	<!-- Blog Section -->
-	<section
-		class="blog-section">
-		<!-- Featured Article -->
-		<div class="section-header">
-			<h2 class="section-title">
-				<span class="title-underline-small">A LA UNE</span>
-			</h2>
-		</div>
+			<div class="section-subtitle">
+				<p>L'actualité juridique évolue vite.<br>Les news Gazette Solutions, sans superflu.</p>
+			</div>
 
-		<div class="section-subtitle">
-			<p>L'actualité juridique évolue vite.<br>Les news Gazette Solutions, sans superflu.</p>
-		</div>
-
-		<div class="featured-article-container">
-			{% if articles|length > 0 %}
-				{% set featured = articles[0] %}
-				<article class="article-card article-featured">
-					<div class="article-image" style="background-image: url('{{ featured.data.main_image.url|default('') }}'); background-size: cover; background-position: center;"></div>
-					<div class="article-content">
-						<span class="article-tag">{{ featured.data.category|as_text|default('Astuces') }}</span>
-						<div class="article-meta">
-							<span>{{ featured.last_publication_date|date('d/m/Y') }}</span>
-							<span>|</span>
-							<span>{{ featured.data.reading_time|as_text|default('2 min de lecture') }}</span>
+			<div class="featured-article-container">
+				{% if articles|length > 0 %}
+					{% set featured = articles[0] %}
+					<article class="article-card article-featured">
+						<div class="article-image" style="background-image: url('{{ featured.data.main_image.url|default('') }}'); background-size: cover; background-position: center;"></div>
+						<div class="article-content">
+							<span class="article-tag">{{ featured.data.category|as_text|default('Astuces') }}</span>
+							<div class="article-meta">
+								<span>{{ featured.last_publication_date|date('d/m/Y') }}</span>
+								<span>|</span>
+								<span>{{ featured.data.reading_time|as_text|default('2 min de lecture') }}</span>
+							</div>
+							<h3 class="article-title">{{ featured.data.title|as_text }}</h3>
+							<a href="{{ path('app_actualites_show', {slug: featured.uid}) }}" class="article-link">
+								<span>Lire l'article</span>
+								<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
+							</a>
 						</div>
-						<h3 class="article-title">{{ featured.data.title|as_text }}</h3>
-						<a href="{{ path('app_actualites_show', {slug: featured.uid}) }}" class="article-link">
-							<span>Lire l'article</span>
-							<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
-						</a>
-					</div>
-				</article>
-			{% endif %}
-		</div>
+					</article>
+				{% endif %}
+			</div>
 
-		<!-- All Articles -->
-		<div class="section-header">
-			<h2 class="section-title">
-				<span class="title-underline-small">LE BLOG</span>
-			</h2>
-		</div>
+			<!-- All Articles -->
+			<div class="section-header">
+				<h2 class="section-title">
+					<span class="title-underline-small">LE BLOG</span>
+				</h2>
+			</div>
 
-		<div class="section-subtitle">
-			<p>Toute l'actualité juridique.</p>
-		</div>
+			<div class="section-subtitle">
+				<p>Toute l'actualité juridique.</p>
+			</div>
 
-		<!-- Filters -->
-		<div class="filters">
-			<button class="filter-tag filter-active">Tous les articles</button>
-			<button class="filter-tag">Formalités</button>
-			<button class="filter-tag">Annonces légales</button>
-			<button class="filter-tag">Astuces</button>
-			<button class="filter-tag">Juridique</button>
-			<button class="filter-tag">Actus La Gazette</button>
-		</div>
+			<!-- Filters -->
+			<div class="filters">
+				<button class="filter-tag filter-active">Tous les articles</button>
+				<button class="filter-tag">Formalités</button>
+				<button class="filter-tag">Annonces légales</button>
+				<button class="filter-tag">Astuces</button>
+				<button class="filter-tag">Juridique</button>
+				<button class="filter-tag">Actus La Gazette</button>
+			</div>
 
-		<!-- Articles Grid -->
-		<div class="articles-grid">
-			{% for article in articles %}
-				<article class="article-card">
-					<div class="article-image" style="background-image: url('{{ article.data.main_image.url|default('') }}'); background-size: cover; background-position: center;"></div>
-					<div class="article-content">
-						<span class="article-tag">{{ article.data.category|as_text|default('Actualités') }}</span>
-						<div class="article-meta">
-							<span>{{ article.last_publication_date|date('d/m/Y') }}</span>
-							<span>|</span>
-							<span>{{ article.data.reading_time|as_text|default('2 min de lecture') }}</span>
+			<!-- Articles Grid -->
+			<div class="articles-grid">
+				{% for article in articles %}
+					<article class="article-card">
+						<div class="article-image" style="background-image: url('{{ article.data.main_image.url|default('') }}'); background-size: cover; background-position: center;"></div>
+						<div class="article-content">
+							<span class="article-tag">{{ article.data.category|as_text|default('Actualités') }}</span>
+							<div class="article-meta">
+								<span>{{ article.last_publication_date|date('d/m/Y') }}</span>
+								<span>|</span>
+								<span>{{ article.data.reading_time|as_text|default('2 min de lecture') }}</span>
+							</div>
+							<h3 class="article-title">{{ article.data.title|as_text }}</h3>
+							<a href="{{ path('app_actualites_show', {slug: article.uid}) }}" class="article-link">
+								<span>Lire l'article</span>
+								<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
+							</a>
 						</div>
-						<h3 class="article-title">{{ article.data.title|as_text }}</h3>
-						<a href="{{ path('app_actualites_show', {slug: article.uid}) }}" class="article-link">
-							<span>Lire l'article</span>
-							<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-arrow-right.svg" alt="">
-						</a>
-					</div>
-				</article>
-			{% else %}
-				<p>Aucun article trouvé.</p>
-			{% endfor %}
-		</div>
+					</article>
+				{% else %}
+					<p>Aucun article trouvé.</p>
+				{% endfor %}
+			</div>
 
-		<!-- Pagination -->
-		<div class="pagination">
-			<button class="pagination-arrow" aria-label="Page précédente">
-				<img src="https://c.animaapp.com/ml2mibj9gkulId/img/solid-interface-caret-left.svg" alt="">
-			</button>
-			<button class="pagination-page pagination-active">1</button>
-			<button class="pagination-page">2</button>
-			<button class="pagination-page">3</button>
-			<button class="pagination-page">4</button>
-			<button class="pagination-page">5</button>
-			<button class="pagination-page pagination-desktop-only">6</button>
-			<button class="pagination-page pagination-desktop-only">7</button>
-			<button class="pagination-page pagination-desktop-only">8</button>
-			<button class="pagination-page pagination-desktop-only">9</button>
-			<button class="pagination-page pagination-desktop-only">10</button>
-			<button class="pagination-arrow" aria-label="Page suivante">
-				<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-caret-right.svg" alt="">
-			</button>
-		</div>
-	</section>
-</div>
+			<!-- Pagination -->
+			<div class="pagination">
+				<button class="pagination-arrow" aria-label="Page précédente">
+					<img src="https://c.animaapp.com/ml2mibj9gkulId/img/solid-interface-caret-left.svg" alt="">
+				</button>
+				<button class="pagination-page pagination-active">1</button>
+				<button class="pagination-page">2</button>
+				<button class="pagination-page">3</button>
+				<button class="pagination-page">4</button>
+				<button class="pagination-page">5</button>
+				<button class="pagination-page pagination-desktop-only">6</button>
+				<button class="pagination-page pagination-desktop-only">7</button>
+				<button class="pagination-page pagination-desktop-only">8</button>
+				<button class="pagination-page pagination-desktop-only">9</button>
+				<button class="pagination-page pagination-desktop-only">10</button>
+				<button class="pagination-arrow" aria-label="Page suivante">
+					<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-caret-right.svg" alt="">
+				</button>
+			</div>
+		</section>
+	</div>
 {% endblock %}

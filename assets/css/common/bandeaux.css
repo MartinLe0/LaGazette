@@ -14,23 +14,23 @@
   min-height: 200px !important;
   padding: 40px 80px !important;
   gap: 120px !important;
-  border-radius: 0 0 20px 20px !important;
+  /* border-radius removed for full width */
+  border-radius: 0 !important;
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
   justify-content: center !important;
   position: relative !important;
   width: 100% !important;
-  max-width: 1600px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
   box-sizing: border-box !important;
 }
 
 /* ========== HERO BLEU (bandeau du haut) - Actualités et Annonces ========== */
 .element-HP section.hero,
 .element-annonces .hero,
-.actualites-page-wrapper .hero {
+.element-actus .hero {
   background: var(--bandeau-gradient) !important;
   min-height: 560px !important;
   padding: 0 80px !important;
@@ -120,7 +120,7 @@
 .cta-text-button-5 {
   color: #3E5FBC !important;
   font-weight: 700 !important;
-  font-size: 14px !important;
+  font-size: 28px !important;
 }
 
 .vector-4 {

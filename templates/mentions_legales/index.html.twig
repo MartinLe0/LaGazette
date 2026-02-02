@@ -1,0 +1,51 @@
+{% extends 'accueil_base.html.twig' %}
+
+{% block title %}Mentions légales - Gazette Solutions
+{% endblock %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('css/mentions_legales/style.css') }}">
+{% endblock %}
+
+{% block content %}
+	<!-- Main Content -->
+	<section class="services-section">
+		<div class="section-tag">
+			<span class="tag-text">VOS DONNÉES</span>
+			<img src="https://c.animaapp.com/ml2mt8s50CfbBZ/img/vector-14.svg" alt="" class="tag-underline">
+		</div>
+
+		<h1 class="page-title">Mentions légales</h1>
+
+		<div class="content-text">
+			<p>
+				Éditeur du site<br><br>
+				Le site gazettesolutions.fr (ci-après le « Site ») est édité par :<br>
+				La Gazette Solutions<br>
+				SARL au capital de 100 000 euros<br>
+				Siège social : 7 rue Jacquemars Giélée, 59800 Lille<br>
+				Immatriculée au RCS de Lille Métropole sous le numéro 794 696 344<br>
+				N° TVA intracommunautaire : FR55794696344<br><br>
+				Directeur de la publication<br><br>
+				Benjamin POIRET<br><br>
+				Hébergement<br><br>
+				Le site est hébergé par :<br>
+				Amazon Web Services LLC<br>
+				P.O. Box 81226, WA 98108-1226 Seattle, États-Unis<br>
+				Site : https://aws.amazon.com<br>
+				Téléphone : +1 (206) 266-4064<br>
+				Formulaire de contact : https://aws.amazon.com/fr/contact-us/<br><br>
+				Propriété intellectuelle<br><br>
+				L'ensemble du Site, sa structure et ses contenus (textes, images, graphismes, logos, icônes, sons, logiciels, etc.) sont la propriété exclusive de La Gazette Solutions, sauf mention contraire. Toute reproduction, représentation, modification, publication, transmission ou dénaturation, totale ou partielle, du site ou de son contenu, par quelque procédé que ce soit, est interdite sans l'autorisation préalable et écrite de La Gazette Solutions.<br><br>
+				Protection des données personnelles<br><br>
+				La Gazette Solutions s'engage à ce que la collecte et le traitement de vos données, effectués à partir du Site, soient conformes au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés.Pour toute question relative à vos données personnelles, vous pouvez contacter : dpo@gazettesolutions.fr<br>
+				Vous disposez des droits suivants sur vos données : accès, rectification, opposition, effacement, portabilité et limitation du traitement.<br><br>
+				Cookies<br><br>
+				Le Site peut déposer des cookies sur votre terminal afin d'améliorer l'expérience utilisateur et mesurer l'audience. Consultez notre page Charte sur les cookies pour savoir comment paramétrer vos préférences dans les réglages de votre navigateur.<br><br>
+				Droit applicable<br><br>
+				Les présentes mentions légales sont soumises au droit français. En cas de litige, compétence exclusive est attribuée aux tribunaux de Lille, sauf disposition légale impérative contraire.
+			</p>
+		</div>
+	</section>
+{% endblock %}

@@ -24,6 +24,9 @@
   height: 560px;
   object-fit: cover;
   object-position: center;
+  /* Apply radius to image directly */
+  border-bottom-left-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
 }
 
 .element-HP .hero-container {
@@ -31,8 +34,9 @@
   height: 560px;
   overflow: hidden;
   position: relative;
-  border-bottom-left-radius: 15.09px;
-  border-bottom-right-radius: 15.09px;
+  /* Correction coins arrondis */
+  border-bottom-left-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
 }
 
 @media (min-width: 1200px) {
@@ -40,6 +44,23 @@
   .element-HP .hero,
   .element-HP .hero-container {
     height: 650px;
+  }
+}
+
+/* Fix Zooming: Increase height on larger screens */
+@media (min-width: 1440px) {
+
+  .element-HP .hero,
+  .element-HP .hero-container {
+    height: 750px !important;
+  }
+}
+
+@media (min-width: 1800px) {
+
+  .element-HP .hero,
+  .element-HP .hero-container {
+    height: 850px !important;
   }
 }
 

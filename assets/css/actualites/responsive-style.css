@@ -15,15 +15,18 @@ body {
   line-height: 1.5;
 }
 
-.actualites-page-wrapper {
+.element-actus {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start !important;
   text-align: left !important;
+  margin-top: 0 !important;
+  /* Correction for gap */
+  padding-top: 0 !important;
 }
 
-.actualites-page-wrapper section {
+.element-actus section {
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 !important;
@@ -306,7 +309,7 @@ body {
   /* Header removed to use global header.css */
 
   body {
-    padding-top: 80px;
+    padding-top: 0;
   }
 
   .hero {

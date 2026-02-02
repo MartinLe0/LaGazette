@@ -32,6 +32,18 @@ class DefaultController extends AbstractController
     }
 
     /**
+     * Renders the legal mentions page.
+     *
+     * @return Response
+     */
+    #[Route('/mentions-legales', name: 'app_mentions_legales')]
+    #[RateLimiter('content_scraping')]
+    public function mentionsLegales(): Response
+    {
+        return $this->render('mentions_legales/index.html.twig');
+    }
+
+    /**
      * Renders a CMS page from Prismic based on its slug.
      *
      * @param PrismicService $prismic The Prismic service
