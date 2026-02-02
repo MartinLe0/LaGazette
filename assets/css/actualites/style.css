@@ -745,3 +745,13 @@
 .element-HP {
   padding-top: 0 !important;
 }
+
+/* Harmonisation du bandeau CTA et du bouton "Contactez-nous" avec l'accueil */
+.actualites-page-wrapper .cta-text-7 {
+  font-size: 28px !important;
+  line-height: 28px !important;
+}
+
+.actualites-page-wrapper .cta-text-button-5 {
+  font-size: 14px !important;
+}
