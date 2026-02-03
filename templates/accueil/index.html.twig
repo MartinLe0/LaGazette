@@ -13,11 +13,11 @@
 			border-bottom-right-radius: 20px !important;
 		}
 
-		/* Fix Zooming: Responsive Height (Dezoom plus fort pour écran large) */
+		/* Fix Zooming: Unified Responsive Height for Large Screens */
 		@media(min-width: 1440px) {
 			.element-HP .hero,
 			.element-HP .hero-container {
-				height: 800px !important;
+				height: 750px !important;
 			}
 			/* Réduction de la taille du texte pour écran large */
 			.hero-title-responsive,
@@ -28,12 +28,6 @@
 			.hero-description-responsive,
 			.hero-description-responsive span {
 				font-size: 18px !important;
-			}
-		}
-		@media(min-width: 1800px) {
-			.element-HP .hero,
-			.element-HP .hero-container {
-				height: 950px !important; /* Hauteur augmentée pour dézoomer */
 			}
 		}
 	</style>
@@ -79,7 +73,7 @@
 			<p class="notre-quipe-prend-en">
 				<span class="text-wrapper-2">Notre équipe prend en charge l'ensemble de vos démarches juridiques et administratives.<br/>
 					Traitement rigoureux, respect des délais, interlocuteur unique.<br/>Notre expertise garantit un traitement
-																																																		                fiable et maîtrisé à chaque étape.<br/></span>
+																																																																																																				                fiable et maîtrisé à chaque étape.<br/></span>
 				<span class="text-wrapper-3" style="font-weight:700;">Avec Gazette Solutions à vos côtés, les formalités juridiques ne sont plus une contrainte.</span>
 			</p>
 		</div>
@@ -273,7 +267,7 @@
 				<div class="div-wrapper">
 					<p class="text-wrapper-11">
 						Notaires, cabinets d'experts-comptables et sociétés de<br/>toutes tailles s'appuient sur Gazette
-																																																												                    Solutions pour la<br/>
+																																																																																																																								                    Solutions pour la<br/>
 						fiabilité et la réactivité de nos services.Leur satisfaction est<br/>notre meilleure preuve de sérieux.
 					</p>
 				</div>
@@ -291,13 +285,6 @@
 			<h3 class="span-wrapper">
 				<span class="span">L'actualité juridique évolue vite.<br/>Les news Gazette Solutions, sans superflu.</span>
 			</h3>
-			<div class="bouton-4">
-				<p class="text-button-3">
-					<span class="text-wrapper-12">Voir toute l'actualité</span>
-				</p>
-				<img class="img arrow-right" src="https://c.animaapp.com/ml166olt9ARs0G/img/outline-interface-arrow-right.svg" alt=""/>
-				<img class="img arrow-down" src="https://c.animaapp.com/ml166olt9ARs0G/img/outline-interface-arrow-down.svg" alt=""/>
-			</div>
 		</div>
 		<div class="row">
 			<div class="carte-article">
@@ -368,6 +355,13 @@
 				</div>
 			</div>
 		</div>
+		<a href="{{ path('app_actualites') }}" class="bouton-4" style="text-decoration: none;">
+			<p class="text-button-3">
+				<span class="text-wrapper-12">Voir toute l'actualité</span>
+			</p>
+			<img class="img arrow-right" src="https://c.animaapp.com/ml166olt9ARs0G/img/outline-interface-arrow-right.svg" alt=""/>
+			<img class="img arrow-down" src="https://c.animaapp.com/ml166olt9ARs0G/img/outline-interface-arrow-down.svg" alt=""/>
+		</a>
 	</div>
 
 

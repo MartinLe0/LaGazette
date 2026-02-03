@@ -1,4 +1,4 @@
-.element-HP {
+﻿.element-HP {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +11,7 @@
   margin: 0 auto;
 }
 
-/* Ã‰lÃ©ments masquÃ©s par dÃ©faut (version Bureau) */
+/* Ãƒâ€°lÃƒÂ©ments masquÃƒÂ©s par dÃƒÂ©faut (version Bureau) */
 .element-HP .PRIMAIRE-SHORT,
 .element-HP .frame-responsive,
 .element-HP .hero-content-responsive {
@@ -21,9 +21,10 @@
 .element-HP .hero {
   position: relative;
   width: 100%;
-  height: 560px;
+  height: 450px;
   object-fit: cover;
-  object-position: center;
+  object-position: center 0%;
+  /* Absolute top to show more content */
   /* Apply radius to image directly */
   border-bottom-left-radius: 20px !important;
   border-bottom-right-radius: 20px !important;
@@ -31,7 +32,7 @@
 
 .element-HP .hero-container {
   width: 100%;
-  height: 560px;
+  height: 450px;
   overflow: hidden;
   position: relative;
   /* Correction coins arrondis */
@@ -47,20 +48,12 @@
   }
 }
 
-/* Fix Zooming: Increase height on larger screens */
+/* Unified Large Screen Hero Height */
 @media (min-width: 1440px) {
 
   .element-HP .hero,
   .element-HP .hero-container {
     height: 750px !important;
-  }
-}
-
-@media (min-width: 1800px) {
-
-  .element-HP .hero,
-  .element-HP .hero-container {
-    height: 850px !important;
   }
 }
 
@@ -667,6 +660,24 @@
   flex: 0 0 auto;
 }
 
+@media (max-width: 1200px) {
+  .element-HP .contentt {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 20px !important;
+  }
+
+  .element-HP .contents {
+    width: 100% !important;
+  }
+
+  .element-HP .logos {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-top: 20px !important;
+  }
+}
+
 .element-HP .contents {
   display: flex;
   flex-direction: column;
@@ -675,6 +686,20 @@
   align-items: flex-start;
   gap: 40px;
   position: relative;
+}
+
+@media (max-width: 1440px) {
+  .element-HP .row {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 40px !important;
+  }
+
+  .element-HP .carte-article {
+    width: 100% !important;
+    max-width: 500px !important;
+    /* Limit width so it doesn't get too giant */
+  }
 }
 
 .element-HP .ils-nous-font {
@@ -728,7 +753,27 @@
   background-color: #fcfdfd;
 }
 
+.element-HP .blog .div-3 {
+  order: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.element-HP .row {
+  order: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
 .element-HP .bouton-4 {
+  order: 3;
   gap: 8px;
   padding: 12px 0px;
   flex: 0 0 auto;
@@ -736,6 +781,43 @@
   display: inline-flex;
   align-items: center;
   position: relative;
+}
+
+@media (min-width: 1441px) {
+
+  /* On desktop, keep button at top-right visually by adjusting the container */
+  .element-HP .blog .div-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* We moved the button out, so we need to fix desktop layout to show it next to title */
+  /* Actually, easiest is to let it be order 3 and for desktop use order on div-3 if we want it top? */
+  /* Wait, if it's order 3 it's at bottom. So for Desktop (min-width: 1441px): */
+  .element-HP .blog {
+    position: relative;
+  }
+
+  .element-HP .bouton-4 {
+    position: absolute;
+    top: 60px;
+    right: 80px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .element-HP .blog {
+    align-items: center !important;
+  }
+
+  .element-HP .bouton-4 {
+    order: 3;
+    /* Bottom */
+    align-self: center !important;
+    position: static !important;
+  }
 }
 
 .element-HP .text-button-3 {
@@ -972,6 +1054,14 @@
   }
 
   /* Hero */
+  .element-HP .hero-container {
+    height: auto !important;
+    min-height: auto !important;
+    overflow: hidden !important;
+    border-bottom-left-radius: 30px !important;
+    border-bottom-right-radius: 30px !important;
+  }
+
   .element-HP .hero {
     display: none;
   }
@@ -982,11 +1072,14 @@
     align-items: center;
     justify-content: center;
     gap: 40px;
-    padding: 120px 80px 40px;
+    padding: 100px 20px 80px;
+    /* Restored balanced padding */
     width: 100%;
-    background: url(https://c.animaapp.com/ml166olt9ARs0G/img/container-1.png) top center / auto 200% no-repeat;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    /* Use cover to zoom in and hide the baked-in "torn paper" effect at the bottom */
+    background: url(https://c.animaapp.com/ml166olt9ARs0G/img/container-1.png) top center / cover no-repeat;
+    border-bottom-left-radius: 30px !important;
+    border-bottom-right-radius: 30px !important;
+    background-size: 600%;
   }
 
   .element-HP .illustration-hero {
@@ -998,6 +1091,10 @@
 
   .text-red {
     color: var(--solutions) !important;
+  }
+
+  .text-black {
+    color: #030303 !important;
   }
 
   .text-bold {
@@ -1103,7 +1200,7 @@
     left: 50% !important;
     transform: translateX(-50%) !important;
     width: 100% !important;
-    height: 500px !important;
+    height: 650px !important;
     object-fit: cover;
   }
 
@@ -1266,5 +1363,45 @@
   .element-HP .bouton-hero {
     width: 100%;
     justify-content: center;
+  }
+}
+
+/* --- RESPONSIVE 370PX (Micro-Mobile) --- */
+@media (max-width: 370px) {
+  .element-HP .hero-content-responsive {
+    background-size: 1000% !important;
+  }
+}
+
+/* --- RESPONSIVE 450PX (Mobile Zoom) --- */
+@media (max-width: 450px) {
+  .element-HP .hero-content-responsive {
+    background-size: 1200% !important;
+  }
+}
+/* --- RESPONSIVE 1250PX (Tablets Stacking) --- */
+@media (max-width: 1250px) {
+  .element-HP .liste-services,
+  .element-HP .process-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 40px !important;
+  }
+
+  .element-HP .service-wrapper {
+    width: 100% !important;
+    max-width: 400px !important;
+    padding: 0 20px !important;
+  }
+
+  .element-HP .arrow-right {
+    display: none !important;
+  }
+
+  .element-HP .arrow-down {
+    display: block !important;
+    width: 24px;
+    height: 24px;
+    margin: 10px 0;
   }
 }
