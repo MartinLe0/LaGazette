@@ -1,42 +1,11 @@
-﻿# La Gazette - Gazette Solutions
-
-Ce projet est le site vitrine de **Gazette Solutions**, spécialisé dans les formalités juridiques et les annonces légales.
-
-## 🛠 Stack Technique
-
-- **Framework** : Symfony 7.4
-- **CMS** : Prismic (via ``App\Service\PrismicService``)
-- **Assets** : Symfony AssetMapper (Vanilla JS & CSS)
-- **Templates** : Twig
-
-## 📁 Structure des Assets (CSS)
-
-Les fichiers CSS ont été réorganisés pour une meilleure clarté dans ``assets/css/`` :
-
-- ``common/`` : Styles partagés (globals.css, styleguide.css)
-- ``accueil/`` : Styles spécifiques à la page d'accueil
-- `annonces_legales/` : Styles dédiés au service d'annonces légales
-- ``actualites/`` : Styles pour la section blog et actualités
-
-## 🚀 Installation & Développement
-
-1.  **Pré-requis** : PHP 8.2+, Composer.
-2.  **Installation** :
-    ```bash
-    composer install
-    ```
-3.  **Variables d'environnement** :
-    Configurez votre fichier ``.env.local`` avec vos clés Prismic :
-    ```env
-    PRISMIC_REPO=votre-repo
-    PRISMIC_TOKEN=votre-token
-    ```
-4.  **Lancement du serveur** :
-    ```bash
-    symfony server:start
-    ```
-    Ou via Laragon en pointant le DocumentRoot sur le dossier ``public/``.
-
-## 📖 Documentation du Code
-
-Le code utilise les standards **PHPDoc**. Pour générer la documentation technique, vous pouvez utiliser des outils comme ``phpDocumentor``.
+﻿ __________________________________________________________________________________________________________
+| Composant         | Technologie            | Pourquoi ?                                                   |
+| :---              | :---                   | :---                                                         |
+| **Framework**     | Symfony 7.x            | Version la plus récente, optimisée pour PHP 8.2+.            |
+| **CMS**           | Prismic                | Gestion de contenu déconnectée, réduit la surface d'attaque. |
+| **Client API**    | Symfony HTTP Client    | Plus sécurisé et performant que Guzzle.                      |
+| **Sécurité XSS**  | symfony/html-sanitizer | Nettoyage du HTML provenant du CMS avant affichage.          |
+| **Images**        | symfony/ux-lazy-image  | Lazy loading pour préserver les performances Lighthouse.     |
+| **Cache**         | Symfony Cache (Redis)  | Protection du quota API et performance.                      |
+| **Sécurité**      | NelmioCorsBundle + CSP | Gestion stricte des en-têtes de sécurité.                    |
+|___________________________________________________________________________________________________________|
