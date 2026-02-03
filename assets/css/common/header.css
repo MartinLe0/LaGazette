@@ -82,7 +82,7 @@
 .element-HP .text-button-7 {
     font-weight: var(--label-large-font-weight);
     color: #3E5FBC;
-    font-size: 28px;
+    font-size: 16px;
     letter-spacing: var(--label-large-letter-spacing);
     line-height: var(--label-large-line-height);
     white-space: nowrap;
@@ -110,7 +110,7 @@
 .element-HP .text-button-8 {
     font-weight: var(--label-large-font-weight);
     color: #fcfdfd;
-    font-size: 28px;
+    font-size: 16px;
     letter-spacing: var(--label-large-letter-spacing);
     line-height: var(--label-large-line-height);
     white-space: nowrap;
