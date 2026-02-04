@@ -1,16 +1,124 @@
-@media (max-width: 768px) {
-
-    .hero-content,
-    .history-section {
-        flex-direction: column;
+/* Tablet / Desktop Small (max-width: 1200px) */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 40px;
     }
 
-    .why-us-grid,
+    .hero-section {
+        width: 100%;
+        /* Override 1160px */
+        height: auto;
+        padding: 60px 40px;
+        border-radius: 0 0 30px 30px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-text {
+        width: 100%;
+        flex: none;
+        align-items: center;
+    }
+
+    .hero-title,
+    .hero-subtitle {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 400px;
+        flex: none;
+    }
+
+    .history-section,
+    .approach-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        margin: 60px auto;
+    }
+
+    .history-text,
+    .approach-text {
+        align-items: center;
+        width: 100%;
+    }
+
+    .approach-section {
+        flex-direction: column-reverse;
+        /* Switch image/text order if needed for consistency */
+    }
+
+    .advantages-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .advantages-grid {
+        width: 100%;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet / Mobile Large (max-width: 790px) */
+@media (max-width: 790px) {
+    .hero-section {
+        padding: 40px 20px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+/* Mobile (max-width: 360px) */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero-section {
+        padding: 30px 15px;
+    }
+
+    .hero-title {
+        font-size: 22px;
+    }
+
     .testimonials-grid {
         grid-template-columns: 1fr;
     }
 
-    .hero-title {
-        font-size: 32px;
+    .history-title {
+        font-size: 28px;
+    }
+
+    .section-label {
+        font-size: 12px;
     }
 }

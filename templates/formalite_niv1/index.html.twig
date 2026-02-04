@@ -3,146 +3,139 @@
 {% block title %}Gazette Solutions - Création d'entreprise{% endblock %}
 
 {% block stylesheets %}
-	<link rel="stylesheet" href="{{ asset('css/formalite_niv1/globals.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/formalite_niv1/styleguide.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/formalite_niv1/style.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/formalite_niv1/responsive-style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/formalite_niv1/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/formalite_niv1/responsive-style.css') }}">
 {% endblock %}
 
 {% block content %}
 <div class="element-formalite-niv1-screen">
-    <!-- Hero / Top Section -->
-    <div class="page-header">
-        <div class="container">
-             <a href="{{ path('app_formalites') }}" class="back-link">
-                <img src="https://c.animaapp.com/ml166olt9ARs0G/img/outline-interface-arrow-left.svg" alt="Retour">
-                Retour
-             </a>
-             <h1 class="page-title">Formalités de création d'entreprise</h1>
-             <p class="page-subtitle">
-                 Immatriculez votre société en toute simplicité. Nos formalistes s'occupent de tout :
-                 rédaction des statuts, annonce légale et dépôt au greffe.
-             </p>
+    <div class="container">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <a href="{{ path('app_formalites') }}">Formalités</a>
+            <span>/</span>
+            Création d'entreprise
+        </nav>
+
+        <!-- Header Area -->
+        <div class="header-area">
+            <span class="formalite-tag">Formalités</span>
+            <h1 class="page-title">Formalités de création d'entreprise</h1>
         </div>
-    </div>
 
-    <!-- Main Content Grid -->
-    <div class="main-content-section">
-        <div class="container content-grid">
-            
-            <!-- Left Column: Checklist & Info -->
-            <div class="details-column">
-                
-                <div class="info-block">
-                    <div class="block-icon">
-                        <img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon-2.svg" alt="Icon">
+        <!-- Main Layout -->
+        <div class="content-grid">
+            <!-- Left Column -->
+            <div class="left-column">
+                <div class="description-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempus ultrices nunc, nisl integer dictumst, viverra venenatis et. Lobortis in nec gravida pharetra eros cras ullamcorper ac pellentesque. Mollis amet eu dictum est, curabitur neque pharetra posuere.</p>
+                    <p>Accumsan est amet diam sit. In metus vel vitae magna arcu donec morbi vitae. Quis at tellus vestibulum est diam quis. Sed habitant adipiscing volutpat consequat sed massa in sit tellus. Tincidunt pretium ornare orci vitae eu risus porttitor dui. Pretium in nulla pellentesque augue justo.</p>
+                </div>
+
+                <div class="formalite-blue-box">
+                    <div class="box-header">
+                        <div class="box-icon"><img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon.svg" alt="" style="width: 24px;"></div>
+                        <h3>Création d'entreprise</h3>
                     </div>
-                    <div>
-                        <h3>Pièces à fournir</h3>
-                        <p>Liste des documents nécessaires pour l'immatriculation :</p>
-                        <ul class="checklist">
-                            <li>Statuts signés par tous les associés</li>
-                            <li>Attestation de dépôt des fonds (si capital numéraire)</li>
-                            <li>Justificatif de domicile du siège social</li>
-                            <li>Pièce d'identité du dirigeant</li>
-                            <li>Attestation de non-condamnation et filiation</li>
-                            <li>Annonce légale de constitution</li>
-                            <li>Déclaration des bénéficiaires effectifs (DBE)</li>
+
+                    <div class="box-section">
+                        <h4>Société commerciale</h4>
+                        <ul class="box-list">
+                            <li>Création d'une entreprise unipersonnelle à responsabilité limitée (EURL)</li>
+                            <li>Création d'une société par actions simplifiée unipersonnelle (SASU)</li>
+                            <li>Création d'une société à responsabilité limitée (SARL)</li>
+                            <li>Création d'une société par actions simplifiée (SAS)</li>
+                            <li>Création d'une société en nom collectif (SNC)</li>
+                            <li>Création d'une société anonyme (SA)</li>
+                            <li>Création d'une société en commandite simple (SCS)</li>
+                        </ul>
+                    </div>
+
+                    <div class="box-section">
+                        <h4>Société civile</h4>
+                        <ul class="box-list">
+                            <li>Création d'une société civile professionnelle (SCP)</li>
+                            <li>Création d'une société civile (SCI - SCM - SCM)</li>
+                            <li>Création d'une société agricole (SCEA - GAEC - EARL)</li>
+                        </ul>
+                    </div>
+
+                    <div class="box-section">
+                        <h4>Société libérale</h4>
+                        <ul class="box-list">
+                            <li>Création d'une société d'exercice libéral (SEL)</li>
+                        </ul>
+                    </div>
+
+                    <div class="box-section">
+                        <h4>Autre</h4>
+                        <ul class="box-list">
+                            <li>Création d'une micro-entreprise (auto-entrepreneur)</li>
+                            <li>Création d'une entreprise individuelle (EI)</li>
+                            <li>Création d'un fond de commerce</li>
+                            <li><a href="{{ path('app_formalite_creation_fonds_physique') }}">Achat du fonds - personne physique</a></li>
+                            <li>Prise en location gérance du fonds - personne physique</li>
+                            <li>Prise en gérance-mandat du fonds - personne physique</li>
                         </ul>
                     </div>
                 </div>
-
-                <div class="info-block">
-                     <div class="block-icon">
-                        <img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon.svg" alt="Icon">
-                    </div>
-                    <div>
-                        <h3>Déroulement</h3>
-                        <ul class="process-list">
-                            <li>1. Réception et vérification des pièces</li>
-                            <li>2. Rédaction des formulaires (M0)</li>
-                            <li>3. Envoi au Greffe / CFE compétent</li>
-                            <li>4. Suivi et obtention du Kbis (48h moy.)</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="content-section">
-                     <h3>Types de création</h3>
-                     <p>Sélectionnez votre situation pour obtenir les détails spécifiques :</p>
-                     <ul class="info-list">
-                         <li><a href="{{ path('app_formalite_creation_fonds_physique') }}" style="color:var(--primaire); font-weight:600;">> Création du fonds - Personne Physique</a></li>
-                         <li><a href="#" style="color:var(--noir); opacity:0.6;">> Création de société (SAS, SARL...) - Bientôt disponible</a></li>
-                     </ul>
-                </div>
-
-                 <div class="info-block">
-                     <div class="block-icon">
-                        <img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon-4.svg" alt="Icon">
-                    </div>
-                    <div>
-                        <h3>Tarifs</h3>
-                        <ul class="checklist">
-                            <li>Honoraires Gazette Solutions : sur devis</li>
-                            <li>Frais de Greffe : ~60€ TTC (variables)</li>
-                            <li>Annonce légale : Forfait légal selon département</li>
-                        </ul>
-                    </div>
-                </div>
-
             </div>
 
-            <!-- Right Column: Sticky Contact Form -->
-            <div class="sidebar-column">
-                <div class="contact-card sticky-card">
-                    <div class="card-header">
-                        <h3 class="card-title">Réserver la formalité</h3>
-                    </div>
-                    <form class="contact-form">
+            <!-- Right Column -->
+            <div class="right-column">
+                <div class="form-card">
+                    <span class="form-label-top">FORMULAIRE</span>
+                    <h2>Réserver la formalité.</h2>
+
+                    <form action="#" method="POST">
                         <div class="form-group">
-                            <label>Nom du contact *</label>
-                            <input type="text" placeholder="Votre nom" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Email *</label>
-                            <input type="email" placeholder="email@cabinet.com" required>
+                            <label for="name">Nom et prénom</label>
+                            <input type="text" id="name" placeholder="Votre nom complet">
                         </div>
                         <div class="form-group">
-                            <label>Téléphone</label>
-                            <input type="tel" placeholder="01 23 45 67 89">
-                        </div>
-                         <div class="form-group">
-                            <label>Société (Optionnel)</label>
-                            <input type="text" placeholder="Nom du cabinet / entreprise">
+                            <label for="society">Société</label>
+                            <input type="text" id="society" placeholder="Nom de votre société">
                         </div>
                         <div class="form-group">
-                             <label>Message / Précisions</label>
-                             <textarea rows="4" placeholder="Bonjour, je souhaite immatriculer une SAS..."></textarea>
+                            <label for="email">Adresse email</label>
+                            <input type="email" id="email" placeholder="votre@email.com">
                         </div>
-                        
-                        <div class="form-bottom">
-                            <button type="submit" class="submit-btn">Envoyer la demande</button>
-                            <p class="privacy-note">
-                                En soumettant ce formulaire, vous acceptez notre politique de confidentialité.
-                            </p>
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" placeholder="06 00 00 00 00">
                         </div>
+                        <div class="form-group">
+                            <label for="message">Message (Facultatif)</label>
+                            <textarea id="message" rows="4" placeholder="Votre message..."></textarea>
+                        </div>
+
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="consent">
+                            <label for="consent">J'accepte que mes données soient utilisées pour être recontacté(e) dans le cadre de ma demande. *</label>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Envoyer votre message</button>
                     </form>
+
+                    <div class="form-note">
+                        Notre équipe s'engage à vous recontacter dans un délai de 24h afin d'analyser votre dossier.
+                    </div>
+                    
+                    <div class="form-note" style="margin-top: 15px; font-size: 11px;">
+                        La Gazette Solutions collecte et traite vos données afin de pouvoir répondre à votre demande. Pour en savoir plus sur vos droits ainsi que nos traitements, cliquez sur notre <a href="#" style="color: #3E5FBC;">politique de confidentialité</a>.
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
 
-    <!-- Simulator Banner (Blue) -->
-    <div class="simulator-banner">
-        <div class="container simulator-content">
-            <div class="simulator-text">
-                <h2>Rien n'a plus de valeur que votre <span class="highlight-text">temps</span>.</h2>
-                <p>Consacrez-le à votre cœur de métier.</p>
-                <a href="#" class="btn-simulator">Voir nos simulateurs</a>
-            </div>
+    <!-- Pre-footer -->
+    <div class="pre-footer">
+        <div class="container">
+            <h2>Rien n'a plus de valeur que votre <span>temps</span><br>consacrez-le à votre coeur de métier.</h2>
+            <p>Retrouvez la sérénité, notre équipe devient la votre.</p>
+            <a href="{{ path('app_contact') }}" class="btn-white">Contactez-nous</a>
         </div>
     </div>
-
 </div>
 {% endblock %}

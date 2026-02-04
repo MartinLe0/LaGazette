@@ -3,142 +3,126 @@
 {% block title %}Gazette Solutions - Création du fonds{% endblock %}
 
 {% block stylesheets %}
-	<link rel="stylesheet" href="{{ asset('css/formalite_niv2/globals.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/formalite_niv2/styleguide.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/formalite_niv2/style.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/formalite_niv2/responsive-style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/formalite_niv2/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/formalite_niv2/responsive-style.css') }}">
 {% endblock %}
 
 {% block content %}
 <div class="element-formalite-niv2-screen">
-    <!-- Hero / Top Section -->
-    <div class="page-header">
-        <div class="container">
-             <div class="breadcrumbs">
-                 <a href="{{ path('app_formalites') }}">Formalités</a> > <a href="{{ path('app_formalite_creation') }}">Création d'entreprise</a> > <span class="current">Création du fonds</span>
-             </div>
-             
-             <h1 class="page-title">Création du fonds - personne physique</h1>
-             <p class="tag-status">À l'étape</p>
-             
-             <p class="page-subtitle">
-                 L'immatriculation d'une personne physique qui crée ou achète un fonds de commerce nécessite le dépôt d'un dossier complet au greffe.
-             </p>
-             
-             <div class="alert-box">
-                 <p><strong>A noter :</strong></p>
-                 <p>
-                     Si l'activité est réglementée, vérifiez bien que vous remplissez les conditions d'exercice avant de déposer le dossier (diplômes, autorisations...).
-                     En cas de rachat de fonds, l'acte de vente doit être enregistré aux impôts avant la formalité.
-                 </p>
-             </div>
+    <div class="container">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+            <a href="{{ path('app_formalites') }}">Formalités</a>
+            <span>/</span>
+            <a href="{{ path('app_formalite_creation') }}">Création d'entreprise</a>
+            <span>/</span>
+            Création d'un commerçant personne physique
+        </nav>
+
+        <!-- Header Area -->
+        <div class="header-area">
+            <span class="formalite-tag">Création d'entreprise</span>
+            <h1 class="page-title">Création du fonds - personne physique</h1>
+            <p class="chapo">Chapo : Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
-    </div>
 
-    <!-- Main Content Grid -->
-    <div class="main-content-section">
-        <div class="container content-grid">
-            
-            <!-- Left Column: Details -->
-            <div class="details-column">
-                
-                <div class="content-section">
-                     <h3>Pièces à fournir</h3>
-                     <p>Veuillez réunir les pièces suivantes pour la constitution de votre dossier :</p>
-                     <ul class="checklist">
-                         <li>Formulaire P0 signé (original ou copie)</li>
-                         <li>Attestation de non-condamnation et de filiation</li>
-                         <li>Justificatif d'identité (CNI ou Passeport en cours de validité)</li>
-                         <li>Justificatif de jouissance des locaux (Bail, titre de propriété...)</li>
-                         <li>Attestation de l'annonce légale (si achat de fonds)</li>
-                         <li>Chèque à l'ordre du Greffe du Tribunal de Commerce</li>
-                     </ul>
-                     
-                     <div class="action-buttons-row">
-                         <a href="#" class="btn-download">
-                             <img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon-4.svg" style="width:20px; filter:brightness(0) invert(1);"> 
-                             Télécharger la liste complète
-                         </a>
-                         <a href="#" class="btn-secondary-action">Faire une demande de devis</a>
-                     </div>
-                </div>
-
-                <div class="content-section">
-                     <h3>Infos formalités à savoir pour aller plus loin</h3>
-                     <ul class="info-list">
-                         <li>Coût moyen Greffe : 60 € (création), 200 € (achat)</li>
-                         <li>Délai moyen de traitement : 48h à 72h</li>
-                         <li>TVA : Pensez à choisir votre régime fiscal dès le début</li>
-                         <li>CFE : Déclaration automatique via le guichet unique</li>
-                     </ul>
-                     
-                     <a href="#" class="link-more">Consulter le guide pratique -></a>
-                </div>
-
-            </div>
-
-            <!-- Right Column: Sticky Contact Form -->
-            <div class="sidebar-column">
-                <div class="contact-card sticky-card">
-                    <div class="card-header">
-                        <h3 class="card-title">Réserver la formalité</h3>
-                    </div>
-                    <form class="contact-form">
-                        <div class="form-row">
-                             <div class="form-group half">
-                                <label>Nom</label>
-                                <input type="text" placeholder="Dupond">
-                             </div>
-                             <div class="form-group half">
-                                <label>Prénom</label>
-                                <input type="text" placeholder="Jean">
-                             </div>
-                        </div>
-                        <div class="form-row">
-                             <div class="form-group half">
-                                <label>Téléphone</label>
-                                <input type="tel" placeholder="06...">
-                             </div>
-                             <div class="form-group half">
-                                <label>Email</label>
-                                <input type="email" placeholder="@">
-                             </div>
-                        </div>
-                        
-                        <div class="form-group">
-                             <label>Message / SIREN (si existant)</label>
-                             <textarea rows="3" placeholder="Précisez votre demande..."></textarea>
-                        </div>
-                        
-                        <div class="form-checkbox">
-                             <input type="checkbox" id="accept">
-                             <label for="accept">J'accepte que mes données soient traitées par Gazette Solutions.</label>
-                        </div>
-                        
-                        <div class="form-bottom">
-                            <button type="submit" class="submit-btn">Envoyer la demande</button>
-                        </div>
-                    </form>
+        <!-- Main Layout -->
+        <div class="content-grid">
+            <!-- Left Column -->
+            <div class="left-column">
+                <div class="docs-section">
+                    <h3>Documents à joindre au dossier pour la création d'un commerçant personne physique (création du fond)</h3>
                     
-                    <p class="footer-note">
-                        Un expert vous recontactera sous 2h ouvrées pour valider le dossier.
-                    </p>
+                    <div class="doc-group">
+                        <h4>Actes</h4>
+                        <ul class="doc-list">
+                            <li>Une copie du contrat d'appui au projet d'entreprise pour la création ou la reprise d'une activité économique, certifiée conforme par le représentant légal, le cas échéant.</li>
+                            <li>Un exemplaire daté et signé de l'attestation de délivrance de l'information donnée à son conjoint des conséquences sur les biens communs des dettes contractées dans l'exercice de sa profession, si l'entrepreneur individuel est marié sous le régime de la communauté légale ou conventionnelle.</li>
+                        </ul>
+                    </div>
+
+                    <div class="doc-group">
+                        <h4>Pièces justificatives</h4>
+                        <ul class="doc-list">
+                            <li>Justificatif de l'établissement principal de moins de 3 mois (Facture EDF, taxe foncière, facture internet, bail, contrat de domiciliation)</li>
+                            <li>Pièces d'identité en cours de validité de l'entrepreneur</li>
+                            <li>DNC avec filiation de l'entrepreneur (Ou KBIS de moins de 3 mois pour les PM) Pouvoir MSB</li>
+                        </ul>
+                    </div>
+
+                    <p class="chapo" style="font-size: 14px;">Si l'activité déclarée est réglementée, produire une copie de l'autorisation délivrée par l'autorité de tutelle, du diplôme ou du titre.</p>
+                    <p class="chapo" style="font-size: 14px;">Une copie authentique de la déclaration relative à l'insaisissabilité, le cas échéant.</p>
+
+                    <div class="action-btns">
+                        <a href="#" class="btn-icon-blue"><img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon-11.svg" alt="" style="width: 20px; filter: brightness(0) invert(1); margin-right: 10px;"> Télécharger la liste des pièces</a>
+                        <a href="#" class="btn-icon-outline"><img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon-2.svg" alt="" style="width: 20px; margin-right: 10px;"> Télécharger le pouvoir</a>
+                    </div>
+                </div>
+
+                <div class="other-formalites">
+                    <h3>Autres formalités de création d'entreprise</h3>
+                    <ul class="other-list">
+                        <li><a href="#">Création d'une micro-entreprise (auto-entrepreneur)</a></li>
+                        <li><a href="#">Achat du fonds - personne physique</a></li>
+                        <li><a href="#">Prise en location gérance du fonds - personne physique</a></li>
+                        <li><a href="#">Prise en gérance-mandat du fonds - personne physique</a></li>
+                        <li><a href="#">Création d'une entreprise unipersonnelle à responsabilité limitée (EURL)</a></li>
+                    </ul>
+                    <a href="{{ path('app_formalites') }}" class="btn-view-all">Voir toutes les formalités</a>
                 </div>
             </div>
 
-        </div>
-    </div>
+            <!-- Right Column -->
+            <div class="right-column">
+                <div class="form-card">
+                    <span class="form-label-top">FORMULAIRE</span>
+                    <h2>Réserver la formalité.</h2>
 
-    <!-- Simulator Banner (Blue) -->
-    <div class="simulator-banner">
-        <div class="container simulator-content">
-            <div class="simulator-text">
-                <h2>Rien n'a plus de valeur que votre <span class="highlight-text">temps</span>.</h2>
-                <p>Consacrez-le à votre cœur de métier.</p>
-                <a href="#" class="btn-simulator">Nous contacter</a>
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nom et prénom</label>
+                            <input type="text" id="name" placeholder="Votre nom complet">
+                        </div>
+                        <div class="form-group">
+                            <label for="society">Société</label>
+                            <input type="text" id="society" placeholder="Nom de votre société">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Adresse email</label>
+                            <input type="email" id="email" placeholder="votre@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" placeholder="06 00 00 00 00">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message (Facultatif)</label>
+                            <textarea id="message" rows="4" placeholder="Votre message..."></textarea>
+                        </div>
+
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="consent">
+                            <label for="consent">J'accepte que mes données soient utilisées pour être recontacté(e) dans le cadre de ma demande. *</label>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Envoyer votre message</button>
+                    </form>
+
+                    <div class="form-note">
+                        Notre équipe s'engage à vous recontacter dans un délai de 24h afin d'analyser votre dossier.
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- Pre-footer -->
+    <div class="pre-footer">
+        <div class="container">
+            <h2>Rien n'a plus de valeur que votre <span>temps</span><br>consacrez-le à votre coeur de métier.</h2>
+            <p>Retrouvez la sérénité, notre équipe devient la votre.</p>
+            <a href="{{ path('app_contact') }}" class="btn-white">Contactez-nous</a>
+        </div>
+    </div>
 </div>
 {% endblock %}

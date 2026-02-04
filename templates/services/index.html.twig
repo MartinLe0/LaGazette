@@ -1,149 +1,177 @@
 {% extends 'accueil_base.html.twig' %}
 
-{% block title %}Gazette Solutions - Nos Services{% endblock %}
+{% block title %}Gazette Solutions - Services{% endblock %}
 
 {% block stylesheets %}
-	<link rel="stylesheet" href="{{ asset('css/services/globals.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/services/styleguide.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/services/style.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/services/responsive-style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/services/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/services/responsive-style.css') }}">
 {% endblock %}
 
 {% block content %}
 <div class="element-services-screen">
     <!-- Hero Section -->
     <div class="hero-section">
-        <div class="hero-content">
+        <div class="container hero-content">
             <div class="hero-text">
                 <span class="hero-tag">SERVICES</span>
-                <h1 class="hero-title">Simplifiez toutes vos démarches juridiques en ligne.</h1>
+                <h1 class="hero-title">
+                    Simplifiez toutes vos <strong>démarches juridiques<img class="vector-underline" src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-14.svg" alt=""></strong><br>
+                    en ligne.
+                </h1>
                 <p class="hero-subtitle">
-                    Gazette Solutions accompagne les professionnels du Droit et du Chiffre dans la gestion de leurs formalités légales.
+                    Profitez d'un accompagnement 360 pour vos formalités, annonces légales et votre secrétariat juridique. Concentrez vous sur l'essentiel, on s'occupe de l'administratif.
                 </p>
-                <div class="hero-actions">
-                     <div class="bouton-hero" style="background:var(--primaire); border-radius:8px; display:inline-block; padding:12px 24px;">
-                        <a href="#" style="color:white; font-weight:bold;">Découvrir nos offres</a>
-                    </div>
-                </div>
             </div>
             <div class="hero-image">
-                <img src="https://via.placeholder.com/600x500" alt="Illustration Services" style="max-width:100%; height:auto;">
+                <img src="https://via.placeholder.com/600x400" alt="Illustration Services">
             </div>
         </div>
     </div>
 
-    <!-- Nos Expertises -->
-    <div class="expertises-section">
+    <!-- Section: Business Services -->
+    <div class="container" style="margin-top: 100px;">
+        <span class="section-label">SERVICES GAZETTE SOLUTIONS<img class="vector-underline" src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-14.svg" alt=""></span>
+        <h2 class="history-title">Des démarches juridiques claires, rapides et conformes.</h2>
+        <p class="history-description" style="max-width: 900px;">
+            De la création d'une société à la gestion de vos formalités et obligations juridiques, nous nous occupons de tout pour chaque étape de la vie de votre entreprise. Plus de stress, plus d'erreurs, juste vous concentrer sur ce qui compte vraiment. C'est ça l'esprit Gazette Solutions.
+        </p>
+
+        <div class="expertise-cards-grid">
+            <div class="service-card">
+                <div class="card-icon-circle"><img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon.svg" alt="" style="width: 32px;"></div>
+                <h3>FORMALITÉS</h3>
+                <p>Conformité administrative, immatriculation, modification et radiation... tout est parfaitement maîtrisé.</p>
+                <a href="{{ path('app_formalites') }}" class="btn-card">Traiter une formalité</a>
+            </div>
+            <div class="service-card">
+                <div class="card-icon-circle"><img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon-4.svg" alt="" style="width: 32px;"></div>
+                <h3>ANNONCES LÉGALES</h3>
+                <p>Publiez vos annonces légales en quelques clics partout en France et recevez votre attestation immédiatement.</p>
+                <a href="{{ path('app_annonces_legales') }}" class="btn-card">Publier une annonce légale</a>
+            </div>
+            <div class="service-card">
+                <div class="card-icon-circle"><img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon-2.svg" alt="" style="width: 32px;"></div>
+                <h3>SECRÉTARIAT JURIDIQUE</h3>
+                <p>Assurer l'enregistrement et le dépôt de vos actes en quelques jours. Accompagnement sur-mesure pour vous faciliter votre quotidien.</p>
+                <a href="#" class="btn-card">Être accompagné</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section: Accompagnement -->
+    <div class="accomp-section">
+        <div class="container accomp-content">
+            <div class="accomp-text">
+                <span class="section-label">L'ACCOMPAGNEMENT<img class="vector-underline" src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-14.svg" alt=""></span>
+                <h2 class="history-title">Gain de temps et tranquillité : Vivez l'expérience Gazette Solutions.</h2>
+                <p class="history-description">
+                    Que vous soyez notaire, avocat ou responsable juridique, nous avons à coeur de proposer un service sur-mesure à nos clients afin de les décharger de la charge administrative par les process.
+                </p>
+                <ul class="accomp-list">
+                    <li>Un contact de formaliste de vos actes et vous validez votre les pièces.</li>
+                    <li>On publie dans les journaux d'annonces légales et au BODACC.</li>
+                    <li>On se charge du dépôt des formalités auprès du guichet unique.</li>
+                    <li>On s'occupe des relations avec le greffe pour avoir les KBIS dans les temps.</li>
+                </ul>
+            </div>
+            <div class="accomp-image">
+                <img src="https://via.placeholder.com/600x400" alt="Equipe Gazette Solutions">
+            </div>
+        </div>
+    </div>
+
+    <!-- Section: Parcours -->
+    <div class="parcours-section">
         <div class="container">
-            <h2 class="section-title">NOS EXPERTISES</h2>
-            <p class="section-subtitle">Une réponse à chaque besoin : claire, rapide et conforme.</p>
-            
-            <div class="cards-grid">
-                <!-- Annonces Légales -->
-                <div class="service-card">
-                    <div class="card-icon">
-                        <img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon-4.svg" alt="Icon">
-                    </div>
-                    <h3>Annonces Légales</h3>
-                    <p>Publication instantanée et attestation de parution immédiate dans toute la France.</p>
-                    <a href="{{ path('app_annonces_legales') }}" class="card-link">Publier une annonce</a>
-                </div>
+            <span class="section-label">PARCOURS D'UNE DÉMARCHE<img class="vector-underline" src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-14.svg" alt=""></span>
+            <h2 class="history-title">De la demande à la validation, on s'occupe de tout.</h2>
+            <p class="history-description" style="max-width: 900px;">
+                Demandez et gagnez vos formalités juridiques et administratives pro en moins de temps qu'il n'en faut pour prendre un café. Avec notre interface dédiée et notre approche client, nous rendons vos démarches simples et sans effort. Chaque étape de la demande est suivie de bout en bout par votre formaliste de référence.
+            </p>
 
-                <!-- Formalités -->
-                <div class="service-card">
-                    <div class="card-icon">
-                         <img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon.svg" alt="Icon">
-                    </div>
-                    <h3>Formalités</h3>
-                    <p>Immatriculation, modification, radiation, dépôt des comptes. Nous gérons tout.</p>
-                    <a href="{{ path('app_formalites') }}" class="card-link">Déléguer une formalité</a>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-icon">1</div>
+                    <h4>Audit du dossier</h4>
+                    <p>Analyse et vérifie les pièces et examiner la conformité du dossier.</p>
                 </div>
+                <div class="step-item">
+                    <div class="step-icon">2</div>
+                    <h4>Collecte des pièces</h4>
+                    <p>Récupérer les pièces nécessaires à la rédaction des documents.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">3</div>
+                    <h4>Annonce Légale</h4>
+                    <p>Publication et insertion dans les journaux d'annonces légales (BODACC).</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">4</div>
+                    <h4>Suivi du dossier</h4>
+                    <p>Relance de la formalité auprès des organismes de greffe et d'insertion administrative.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-icon">5</div>
+                    <h4>Remise du dossier</h4>
+                    <p>Remise du dossier complet après vérification de la conformité du certificat d'immatriculation / KBIS.</p>
+                </div>
+            </div>
 
-                <!-- Secrétariat Juridique -->
-                <div class="service-card">
-                    <div class="card-icon">
-                         <img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon-2.svg" alt="Icon">
-                    </div>
-                    <h3>Secrétariat Juridique</h3>
-                    <p>Externalisez la préparation de vos AG et la tenue de vos registres.</p>
-                    <a href="#" class="card-link">En savoir plus</a>
-                </div>
+            <div class="parcours-actions">
+                <a href="{{ path('app_formalites') }}" class="btn-primary">Déléguer une formalité</a>
+                <a href="{{ path('app_contact') }}" class="btn-secondary">Estimer un devis</a>
             </div>
         </div>
     </div>
 
-    <!-- Pourquoi nous choisir (Values) -->
-    <div class="values-section">
-        <div class="container">
-            <div class="values-content">
-                <div class="values-text">
-                    <span class="section-label">POURQUOI NOUS CHOISIR ?</span>
-                    <h2 class="values-title">De la demande à la validation, on s'occupe de tout.</h2>
-                    <p>
-                        Notre équipe d'experts vérifie chaque dossier avant envoi. 
-                        Nous garantissons un suivi personnalisé et une réactivité sans faille.
-                    </p>
-                    <ul class="values-list">
-                        <li>
-                            <strong>Simplicité</strong> : Une interface unique pour toutes vos démarches.
-                        </li>
-                        <li>
-                            <strong>Gain de temps</strong> : Concentrez-vous sur le conseil, on gère l'administratif.
-                        </li>
-                        <li>
-                            <strong>Sécurité</strong> : Veille juridique permanente et conformité assurée.
-                        </li>
-                    </ul>
-                </div>
-                <div class="values-images">
-                    <!-- Placeholder for the grid of people images -->
-                    <div class="image-grid">
-                         <img src="https://via.placeholder.com/150x200" style="border-radius:10px;">
-                         <img src="https://via.placeholder.com/150x200" style="border-radius:10px;">
-                         <img src="https://via.placeholder.com/150x200" style="border-radius:10px;">
-                         <img src="https://via.placeholder.com/150x200" style="border-radius:10px;">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Interlocuteurs / Team -->
-    <div class="team-contact-section">
-        <div class="container" style="text-align:center;">
-             <h2 class="section-title">Qui sont vos interlocuteurs ?</h2>
-             <p>Une équipe humaine et disponible pour vous répondre.</p>
-             <div class="team-grid">
-                  <div class="team-member">
-                      <div class="member-photo" style="background:#eee; height:80px; width:80px; border-radius:50%; margin:0 auto 10px;"></div>
-                      <h4>Service Formalités</h4>
-                      <p>Des experts dédiés à la conformité.</p>
-                  </div>
-                  <div class="team-member">
-                      <div class="member-photo" style="background:#eee; height:80px; width:80px; border-radius:50%; margin:0 auto 10px;"></div>
-                      <h4>Support Client</h4>
-                      <p>Réponse en moins de 2h.</p>
-                  </div>
+    <!-- Section: Avis Clients -->
+    <div class="container" style="padding: 100px 20px;">
+         <div class="testimonials-header">
+             <div class="testimonials-title-group">
+                 <span class="section-label">AVIS CLIENTS<img class="vector-underline" src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-14.svg" alt=""></span>
+                 <h2 class="history-title">Vous avez la parole :<br>Ce que nos clients disent de nous.</h2>
              </div>
-        </div>
-    </div>
-
-    <!-- Testimonials -->
-    <div class="testimonials-section">
-        <div class="container">
-             <h2 class="section-title" style="color:white; text-align:center;">Ils nous font confiance</h2>
-             <div class="testimonials-slider">
-                 <div class="testimonial-item">
-                     <p class="quote">"Un gain de temps phénoménal. Je recommande Gazette Solutions."</p>
-                     <p class="author">- Cabinet Dupont</p>
-                 </div>
-                 <div class="testimonial-item">
-                     <p class="quote">"Service impeccable, validation des annonces dans la minute."</p>
-                     <p class="author">- Maitre Martin</p>
-                 </div>
+             <div class="arrows">
+                 <button class="arrow-btn">←</button>
+                 <button class="arrow-btn">→</button>
              </div>
-        </div>
+         </div>
+         
+         <div class="testimonials-grid">
+             <div class="testimonial-card">
+                 <div class="client-avatar">D</div>
+                 <h4>Dimitri DESWARTE</h4>
+                 <div class="rating">★★★★★</div>
+                 <p>"Je recommande vivement Gazette Solutions. Une équipe à l'écoute et très pro ! Nous avons pu gérer toutes nos formalités rapidement..."</p>
+             </div>
+             <div class="testimonial-card">
+                 <div class="client-avatar">Q</div>
+                 <h4>Quentin Ramaget</h4>
+                 <div class="rating">★★★★★</div>
+                 <p>"Service client au top ! Merci à toute l'équipe pour leur réactivité et leur professionnalisme."</p>
+             </div>
+             <div class="testimonial-card">
+                 <div class="client-avatar">A</div>
+                 <h4>Arnaud Ehouz</h4>
+                 <div class="rating">★★★★★</div>
+                 <p>"Une solution clé en main qui nous fait gagner un temps précieux. Je ne passe plus par personne d'autre."</p>
+             </div>
+             <div class="testimonial-card">
+                 <div class="client-avatar">S</div>
+                 <h4>Sullivan Debousson</h4>
+                 <div class="rating">★★★★★</div>
+                 <p>"La plateforme est intuitive et les documents conformes. Parfait."</p>
+             </div>
+         </div>
     </div>
 
+    <!-- Pre-footer -->
+    <div class="pre-footer">
+        <div class="container">
+            <h2>Rien n'a plus de valeur que votre <span>temps</span><br>consacrez-le à votre coeur de métier.</h2>
+            <p>Maitrisez la sérénité, notre équipe devient la votre.</p>
+            <a href="{{ path('app_contact') }}" class="btn-white">Contactez-nous</a>
+        </div>
+    </div>
 </div>
 {% endblock %}

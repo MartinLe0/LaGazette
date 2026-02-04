@@ -1,17 +1,63 @@
-@media (max-width: 900px) {
+/* Tablet / Desktop Small (max-width: 1200px) */
+@media (max-width: 1200px) {
     .content-grid {
         flex-direction: column;
+        gap: 40px;
     }
 
-    .sidebar-column {
-        order: 1;
+    .left-column,
+    .right-column {
+        width: 100%;
     }
 
-    .sticky-card {
+    .right-column .form-card {
         position: static;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .action-btns {
+        flex-direction: column;
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* Tablet / Mobile Large (max-width: 790px) */
+@media (max-width: 790px) {
+    .page-title {
+        font-size: 28px;
+    }
+
+    .header-area {
+        text-align: center;
+    }
+
+    .chapo {
+        text-align: center;
+    }
+}
+
+/* Mobile (max-width: 360px) */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 15px;
     }
 
     .page-title {
-        font-size: 28px;
+        font-size: 24px;
+    }
+
+    .form-card {
+        padding: 24px;
+    }
+
+    .docs-section h3 {
+        font-size: 16px;
+    }
+
+    .pre-footer h2 {
+        font-size: 24px;
     }
 }
