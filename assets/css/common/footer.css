@@ -168,7 +168,7 @@
 
 .label-8 {
   cursor: pointer !important;
-  font-size: 14px !important;
+  font-size: 16px !important;
 }
 
 .text-wrapper-149 {
@@ -202,10 +202,24 @@
   flex-wrap: wrap !important;
 }
 
-.text-wrapper-160 {
+@media (min-width: 790px) {
+  .rglementaires-8 {
+    justify-content: center !important;
+  }
+}
+
+.text-wrapper-160,
+.text-wrapper-161 {
   font-family: "Montserrat", Helvetica, sans-serif !important;
   font-size: 14px !important;
   color: #030303 !important;
+  text-decoration: none !important;
+}
+
+.text-wrapper-160:hover,
+.text-wrapper-161:hover {
+  text-decoration: underline !important;
+  opacity: 0.8 !important;
 }
 
 /* Prevents Newsletter wrap between 1250px and 1430px */

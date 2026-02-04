@@ -19,8 +19,12 @@ class AccueilController extends AbstractController
      */
     #[Route('/', name: 'app_accueil')]
     #[RateLimiter('content_scraping')]
-    public function index(): Response
+    public function index(\App\Service\PrismicService $prismic): Response
     {
-        return $this->render('accueil/index.html.twig');
+        $articlesData = $prismic->getArticles(1, 3);
+
+        return $this->render('accueil/index.html.twig', [
+            'articles' => $articlesData['results']
+        ]);
     }
 }

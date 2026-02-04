@@ -44,6 +44,30 @@ class DefaultController extends AbstractController
     }
 
     /**
+     * Renders the privacy policy page.
+     *
+     * @return Response
+     */
+    #[Route('/politique-de-confidentialite', name: 'app_confidentialite')]
+    #[RateLimiter('content_scraping')]
+    public function politiqueConfidentialite(): Response
+    {
+        return $this->render('politique_confidentialite/index.html.twig');
+    }
+
+    /**
+     * Renders the cookie charter page.
+     *
+     * @return Response
+     */
+    #[Route('/charte-cookies', name: 'app_cookies')]
+    #[RateLimiter('content_scraping')]
+    public function charteCookies(): Response
+    {
+        return $this->render('charte_cookies/index.html.twig');
+    }
+
+    /**
      * Renders a CMS page from Prismic based on its slug.
      *
      * @param PrismicService $prismic The Prismic service

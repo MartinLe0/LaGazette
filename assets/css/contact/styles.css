@@ -42,9 +42,8 @@ textarea {
 .logo { ... }
 .logo-mobile { ... }
 */
-height: 100%;
-object-fit: contain;
-}
+/* .logo-mobile img removed as it's part of the global header */
+
 
 .logo-desktop {
   display: none;
@@ -79,8 +78,9 @@ object-fit: contain;
 
 /* Hero Section - Mobile */
 .hero {
-  background: linear-gradient(31deg, rgba(27, 47, 83, 1) 0%, rgba(62, 95, 188, 1) 75%);
-  padding: 40px 20px;
+  background: none !important;
+  padding: 40px 20px !important;
+  border-radius: 0 0 20px 20px !important;
 }
 
 .hero-container {
@@ -96,12 +96,12 @@ object-fit: contain;
 }
 
 .hero-tag {
-  font-family: 'Open Sauce One', 'Montserrat', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  color: #bff5d9;
-  text-align: center;
+  font-family: 'Open Sauce One', 'Montserrat', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 20px !important;
+  line-height: 24px !important;
+  color: #bff5d9 !important;
+  text-align: center !important;
 }
 
 .hero-title {
@@ -119,14 +119,24 @@ object-fit: contain;
 }
 
 .hero-heading {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  font-family: 'IBM Plex Sans Arabic', sans-serif;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 30px;
-  color: #fcfdfd;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  font-family: 'IBM Plex Sans Arabic', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 28px !important;
+  line-height: 38px !important;
+  color: #fcfdfd !important;
+  text-align: center !important;
+}
+
+@media (max-width: 500px) {
+  .hero-heading {
+    gap: 4px !important;
+    line-height: 32px !important;
+  }
 }
 
 .hero-heading-line {
@@ -144,17 +154,19 @@ object-fit: contain;
 }
 
 .underline {
-  width: 100%;
-  height: auto;
-  margin-top: -2px;
+  width: 100% !important;
+  max-width: 280px !important;
+  height: 8px !important;
+  margin-top: -4px !important;
 }
 
 .hero-description {
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  color: #fcfdfd;
-  text-align: center;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  letter-spacing: 0.5px !important;
+  color: #fcfdfd !important;
+  text-align: center !important;
+  width: 100% !important;
 }
 
 .hero-description br {
@@ -562,14 +574,14 @@ object-fit: contain;
   }
 
   .hero-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-direction: row;
-    align-items: center;
-    background: linear-gradient(31deg, rgba(27, 47, 83, 1) 0%, rgba(62, 95, 188, 1) 75%);
-    border-radius: 0 0 15px 15px;
-    padding: 80px;
-    min-height: 400px;
+    max-width: 1600px !important;
+    margin: 0 auto !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    background: none !important;
+    border-radius: 0 0 20px 20px !important;
+    padding: 80px !important;
+    min-height: 400px !important;
   }
 
   .hero-content {

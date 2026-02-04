@@ -287,73 +287,35 @@
 			</h3>
 		</div>
 		<div class="row">
-			<div class="carte-article">
-				<div class="image-2"></div>
-				<div class="texte">
-					<div class="tag">
-						<div class="text-wrapper-13">Astuces</div>
-					</div>
-					<div class="date-temps-de">
-						<div class="text-wrapper-14">07/05/2025</div>
-						<div class="text-wrapper-14">|</div>
-						<div class="text-wrapper-14">2 min de lecture</div>
-					</div>
-					<div class="div-wrapper">
-						<h4 class="votre-AG-d">
-							<span class="text-wrapper-4">Votre AG d'approbation des<br/>comptes approche ?</span>
-						</h4>
-					</div>
-					<div class="bouton-5">
-						<p class="text-button-4">
-							<span class="text-wrapper-15">Lire l'article</span>
-						</p>
-						<img class="img arrow-right" src="https://c.animaapp.com/ml166olt9ARs0G/img/outline-interface-arrow-right.svg" alt=""/>
-						<img class="img arrow-down" src="https://c.animaapp.com/ml166olt9ARs0G/img/outline-interface-arrow-down.svg" alt=""/>
-					</div>
-				</div>
-			</div>
-			<div class="carte-article">
-				<div class="image-2"></div>
-				<div class="texte">
-					<div class="tag">
-						<div class="text-wrapper-13">Formalités</div>
-					</div>
-					<div class="date-temps-de">
-						<div class="text-wrapper-14">23/04/2025</div>
-						<div class="text-wrapper-14">|</div>
-						<div class="text-wrapper-14">5 min de lecture</div>
-					</div>
-					<h4 class="text-wrapper-16">La communication dans un<br/>cabinet de formalités ?</h4>
-					<div class="bouton-5">
-						<p class="text-button-4">
-							<span class="text-wrapper-15">Lire l'article</span>
-						</p>
-						<img class="img arrow-right" src="https://c.animaapp.com/ml166olt9ARs0G/img/outline-interface-arrow-right.svg" alt=""/>
-						<img class="img arrow-down" src="https://c.animaapp.com/ml166olt9ARs0G/img/outline-interface-arrow-down.svg" alt=""/>
+			{% for article in articles %}
+				<div class="carte-article">
+					<div class="image-2" style="background-image: url('{{ article.data.main_image.url|default('') }}'); background-size: cover; background-position: center;"></div>
+					<div class="texte">
+						<div class="tag">
+							<div class="text-wrapper-13">{{ article.data.category|as_text|default('Actualités') }}</div>
+						</div>
+						<div class="date-temps-de">
+							<div class="text-wrapper-14">{{ article.last_publication_date|date('d/m/Y') }}</div>
+							<div class="text-wrapper-14">|</div>
+							<div class="text-wrapper-14">{{ article.data.reading_time|as_text|default('2 min de lecture') }}</div>
+						</div>
+						<div class="div-wrapper">
+							<h4 class="votre-AG-d">
+								<span class="text-wrapper-4">{{ article.data.title|as_text }}</span>
+							</h4>
+						</div>
+						<a href="{{ path('app_actualites_show', {slug: article.uid}) }}" class="bouton-5" style="text-decoration: none;">
+							<p class="text-button-4">
+								<span class="text-wrapper-15">Lire l'article</span>
+							</p>
+							<img class="img arrow-right" src="https://c.animaapp.com/ml166olt9ARs0G/img/outline-interface-arrow-right.svg" alt=""/>
+							<img class="img arrow-down" src="https://c.animaapp.com/ml166olt9ARs0G/img/outline-interface-arrow-down.svg" alt=""/>
+						</a>
 					</div>
 				</div>
-			</div>
-			<div class="carte-article">
-				<div class="image-2"></div>
-				<div class="texte">
-					<div class="tag">
-						<div class="text-wrapper-13">Juridique</div>
-					</div>
-					<div class="date-temps-de">
-						<div class="text-wrapper-14">02/04/2025</div>
-						<div class="text-wrapper-14">|</div>
-						<div class="text-wrapper-14">5 min de lecture</div>
-					</div>
-					<h4 class="text-wrapper-16">La fusion-absorption d'une<br/>société</h4>
-					<div class="bouton-5">
-						<p class="text-button-4">
-							<span class="text-wrapper-15">Lire l'article</span>
-						</p>
-						<img class="img arrow-right" src="https://c.animaapp.com/ml166olt9ARs0G/img/outline-interface-arrow-right.svg" alt=""/>
-						<img class="img arrow-down" src="https://c.animaapp.com/ml166olt9ARs0G/img/outline-interface-arrow-down.svg" alt=""/>
-					</div>
-				</div>
-			</div>
+			{% else %}
+				<p>Aucun article disponible pour le moment.</p>
+			{% endfor %}
 		</div>
 		<a href="{{ path('app_actualites') }}" class="bouton-4" style="text-decoration: none;">
 			<p class="text-button-3">

@@ -22,12 +22,14 @@ class ActualitesController extends AbstractController
     public function index(Request $request, PrismicService $prismic): Response
     {
         $page = $request->query->getInt('page', 1);
-        $articlesData = $prismic->getArticles($page);
+        $category = $request->query->get('category');
+        $articlesData = $prismic->getArticles($page, 12, $category);
 
         return $this->render('actualites/index.html.twig', [
             'articles' => $articlesData['results'],
             'total_pages' => $articlesData['total_pages'],
-            'current_page' => $page
+            'current_page' => $page,
+            'active_category' => $category
         ]);
     }
 

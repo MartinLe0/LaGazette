@@ -62,7 +62,7 @@
 					<label for="newsletter_consent_8" class="label-8">
 						<span class="text-wrapper-159">J’accepte la
 						</span>
-						<span class="text-wrapper-149">politique de confidentialité</span>
+						<a href="{{ path('app_confidentialite') }}" class="text-wrapper-149" style="text-decoration: underline;">politique de confidentialité</a>
 					</label>
 				</div>
 			</div>
@@ -75,7 +75,9 @@
 	<div class="line-8" style="height: 1px; background-color: #000; width: 100%; opacity: 0.1; margin: 20px 0;"></div>
 
 	<div class="rglementaires-8">
-		<div class="text-wrapper-160">Politique de confidentialité</div>
-		<div class="text-wrapper-161">Mentions légales</div>
+		<a href="{{ path('app_confidentialite') }}" class="text-wrapper-160" style="text-decoration: none;">Politique de confidentialité</a>
+		<a href="{{ path('app_mentions_legales') }}" class="text-wrapper-161" style="text-decoration: none;">Mentions légales</a>
+		<a href="{{ path('app_cookies') }}" class="text-wrapper-160" style="text-decoration: none;">Charte sur les cookies</a>
+		<a href="#" class="text-wrapper-160" style="text-decoration: none;">Gérer vos cookies</a>
 	</div>
 </footer>
