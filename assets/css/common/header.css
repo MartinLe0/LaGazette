@@ -1,0 +1,189 @@
+/**
+ * Header commun - styles extraits de l'accueil pour être identiques partout.
+ */
+
+.element-HP .GS-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1600px;
+    align-items: center;
+    position: fixed;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.element-HP .menu {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    gap: 40px;
+    padding: 20px 20px 20px 80px;
+    position: relative;
+    background-color: #fcfdfd;
+}
+
+.element-HP .PRIMAIRE-wrapper {
+    width: 144px;
+    height: 50px;
+    gap: 8px;
+    margin-top: -5.00px;
+    margin-bottom: -5.00px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.element-HP .menu-2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    flex: 1;
+    flex-grow: 1;
+}
+
+.element-HP .menu-3 {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    align-self: stretch;
+    flex: 0 0 auto;
+}
+
+.element-HP .frame {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    flex: 0 0 auto;
+    margin-top: -4.00px;
+    margin-bottom: -4.00px;
+}
+
+.element-HP .bouton-8 {
+    gap: 8px;
+    padding: 12px;
+    align-self: stretch;
+    flex: 0 0 auto;
+    background-color: #fcfdfd;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: #3E5FBC;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+
+.element-HP .text-button-7 {
+    font-weight: var(--label-large-font-weight);
+    color: #3E5FBC;
+    font-size: 16px;
+    letter-spacing: var(--label-large-letter-spacing);
+    line-height: var(--label-large-line-height);
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    font-family: var(--label-large-font-family);
+    font-style: var(--label-large-font-style);
+}
+
+.element-HP .bouton-9 {
+    height: auto;
+    gap: 8px;
+    padding: 12px;
+    flex: 0 0 auto;
+    background-color: #3E5FBC;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+
+.element-HP .text-button-8 {
+    font-weight: var(--label-large-font-weight);
+    color: #fcfdfd;
+    font-size: 16px;
+    letter-spacing: var(--label-large-letter-spacing);
+    line-height: var(--label-large-line-height);
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    font-family: var(--label-large-font-family);
+    font-style: var(--label-large-font-style);
+}
+
+.element-HP .text-wrapper-6 {
+    font-weight: 600;
+    color: #1B2F53;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 20px;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: fit-content;
+    font-family: "Montserrat", Helvetica;
+}
+
+.arrow-down {
+    display: none;
+}
+
+/* --- RESPONSIVE Header --- */
+@media (max-width: 991px) {
+    .element-HP .GS-header .PRIMAIRE {
+        display: none;
+    }
+
+    .element-HP .PRIMAIRE-SHORT {
+        display: block;
+        width: 154px;
+        height: 70px;
+    }
+
+    .element-HP .menu-2,
+    .element-HP .frame {
+        display: none;
+    }
+
+    .element-HP .frame-responsive {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .element-HP .bouton-responsive {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px;
+        border: 1px solid #3E5FBC;
+        border-radius: 10px;
+        background-color: #fcfdfd;
+    }
+
+    .element-HP .img-responsive {
+        width: 24px;
+        height: 24px;
+    }
+
+    .element-HP .menu {
+        padding: 0 20px !important;
+        justify-content: space-between;
+        background-color: #fcfdfd !important;
+        border: none !important;
+    }
+}

@@ -1,0 +1,165 @@
+{% extends 'accueil_base.html.twig' %}
+
+{% block title %}Contact - Gazette Solutions{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/contact/styles.css')|replace({"/assets/": "assets/"}) }}">
+    <style>
+        .contact-page-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start !important;
+            text-align: left !important;
+            background-color: #fcfdfd !important;
+        }
+        .contact-page-wrapper section {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 !important;
+            align-items: flex-start !important;
+            text-align: left !important;
+        }
+        .contact-page-wrapper .section-title,
+        .contact-page-wrapper .hero-title,
+        .contact-page-wrapper .hero-tag,
+        .contact-page-wrapper .hero-description,
+        .contact-page-wrapper .section-header,
+        .contact-page-wrapper .section-tag,
+        .contact-page-wrapper .form-label,
+        .contact-page-wrapper .contact-text {
+            text-align: left !important;
+            justify-content: flex-start !important;
+            align-items: flex-start !important;
+            display: block !important;
+            width: 100% !important;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+<div class="contact-page-wrapper element-contact">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-tag">CONTACT</div>
+        <div class="hero-title">
+          <p class="hero-subtitle">Passons à l'action :</p>
+          <h1 class="hero-heading">
+            <span class="hero-heading-line">Confiez-nous vos</span>
+            <span class="hero-heading-highlight">
+              <span>démarches légales</span>
+              <img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-14.svg" alt="" class="underline">
+            </span>
+          </h1>
+        </div>
+        <p class="hero-description">
+          L'externalisation des formalités légales vous tente ? <br>
+          Notre équipe se tient à votre écoute afin de vous accompagner <br>
+          dans la démarche.
+        </p>
+      </div>
+      <img src="https://c.animaapp.com/ml3yui1qFrBM9u/img/illustrations-heros-contact-1.png" alt="" class="hero-illustration">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="contact-container">
+      <!-- Form Section -->
+      <div class="contact-form-wrapper">
+        <div class="section-header">
+          <div class="section-tag-wrapper">
+            <span class="section-tag">FORMULAIRE À FORMALITÉS</span>
+            <img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-14.svg" alt="" class="tag-underline">
+          </div>
+        </div>
+        <h2 class="section-title">Confiez-nous vos formalités<br>dès maintenant.</h2>
+        
+        <form class="contact-form">
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label">Nom et prénom</label>
+              <input type="text" class="form-input">
+            </div>
+            <div class="form-field">
+              <label class="form-label">Société</label>
+              <input type="text" class="form-input">
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label">Adresse email</label>
+              <input type="email" class="form-input" placeholder="example@domaine.com">
+            </div>
+            <div class="form-field">
+              <label class="form-label">Téléphone</label>
+              <input type="tel" class="form-input" placeholder="XX XX XX XX XX">
+            </div>
+          </div>
+          
+          <div class="form-field form-field-full">
+            <div class="form-label-wrapper">
+              <label class="form-label">Message</label>
+              <span class="form-label-optional">(Facultatif)</span>
+            </div>
+            <textarea class="form-textarea"></textarea>
+          </div>
+          
+          <div class="form-checkbox">
+            <input type="checkbox" id="consent" class="checkbox-input">
+            <label for="consent" class="checkbox-label">
+              J'accepte que mes données soient utilisées pour être recontacté(e) dans le cadre de ma demande. <span class="required">*</span>
+            </label>
+          </div>
+          
+          <div class="form-submit-wrapper">
+            <button type="submit" class="btn btn-submit">Envoyer votre message</button>
+            <p class="form-note">
+              Notre équipe s'engage à vous recontacter dans <span class="form-note-mobile-break"></span>un <strong>délai de 24h</strong> afin d'analyser votre dossier.
+            </p>
+          </div>
+          
+          <p class="form-privacy">
+            La Gazette Solutions collecte et traite ces données afin de pouvoir répondre à votre demande. Pour en savoir plus sur vos droits ainsi que nos traitements et pratiques en matière de données personnelles, cliquez sur notre <a href="#" class="privacy-link">politique de confidentialité</a>
+          </p>
+        </form>
+      </div>
+
+      <!-- Contact Info Section -->
+      <aside class="contact-info">
+        <div class="section-header">
+          <div class="section-tag-wrapper">
+            <span class="section-tag">COORDONNÉES</span>
+            <img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-14.svg" alt="" class="tag-underline">
+          </div>
+        </div>
+        <h2 class="section-title">Vous souhaitez nous <br>contacter directement ?</h2>
+        
+        <div class="contact-item">
+          <img src="https://c.animaapp.com/ml3yui1qFrBM9u/img/icon-mail---call-1.svg" alt="" class="contact-icon">
+          <div class="contact-details">
+            <p class="contact-text">03 21 13 20 65</p>
+            <p class="contact-text">
+              <a href="mailto:contact@gazettesolutions.fr" class="contact-link">contact@gazettesolutions.fr</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <img src="https://c.animaapp.com/ml3yui1qFrBM9u/img/icon-adresse-1.svg" alt="" class="contact-icon">
+          <div class="contact-details">
+            <p class="contact-text">Gazette Solutions</p>
+            <p class="contact-text">7 rue Jacquemars Giélée</p>
+            <p class="contact-text">59000 Lille</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+</div>
+{% endblock %}
