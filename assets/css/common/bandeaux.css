@@ -11,19 +11,18 @@
 /* ========== BANDEAU CTA "Rien n'a plus de valeur..." (dans le footer include) ========== */
 .call-to-action .background {
   background: var(--bandeau-gradient) !important;
-  min-height: 200px !important;
-  padding: 40px 80px !important;
-  gap: 120px !important;
-  /* border-radius removed for full width */
-  border-radius: 0 !important;
+  min-height: 180px !important;
+  padding: 30px 80px !important;
+  gap: 40px !important;
+  border-radius: 0 0 20px 20px !important;
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
   justify-content: center !important;
   position: relative !important;
   width: 100% !important;
-  max-width: none !important;
-  margin: 0 !important;
+  max-width: 1600px !important;
+  margin: 20px auto !important;
   box-sizing: border-box !important;
 }
 
@@ -64,8 +63,8 @@
   font-family: "IBM Plex Sans Arabic", Helvetica !important;
   font-weight: 400 !important;
   color: #fcfdfd !important;
-  font-size: 28px !important;
-  line-height: 28px !important;
+  font-size: 36px !important;
+  line-height: 42px !important;
 }
 
 .cta-div-temps {
@@ -103,13 +102,14 @@
 
 .cta-text-17 {
   color: #bff5d9 !important;
-  font-size: 16px !important;
+  font-size: 20px !important;
   font-family: "Montserrat", Helvetica !important;
 }
 
 .cta-bouton-6 {
-  height: 44px !important;
-  padding: 12px !important;
+  height: auto !important;
+  min-height: 44px !important;
+  padding: 12px 24px !important;
   background-color: #fcfdfd !important;
   border-radius: 10px !important;
   display: inline-flex !important;
@@ -120,7 +120,7 @@
 .cta-text-button-5 {
   color: #3E5FBC !important;
   font-weight: 700 !important;
-  font-size: 16px !important;
+  font-size: 18px !important;
   font-family: "Montserrat", Helvetica, sans-serif !important;
 }
 

@@ -5,10 +5,10 @@
 
 {% block stylesheets %}
 	{{ parent() }}
-	<link rel="stylesheet" href="{{ asset('css/actualites/globals.css')|replace({"/assets/": "assets/"}) }}">
-	<link rel="stylesheet" href="{{ asset('css/actualites/styleguide.css')|replace({"/assets/": "assets/"}) }}">
-	<link rel="stylesheet" href="{{ asset('css/actualites/style.css')|replace({"/assets/": "assets/"}) }}">
-	<link rel="stylesheet" href="{{ asset('css/actualites/responsive-style.css')|replace({"/assets/": "assets/"}) }}">
+	<link rel="stylesheet" href="{{ asset('css/actualites/globals.css')|replace({"/assets/": "assets/"}) }}?v={{ "now"|date("U") }}">
+	<link rel="stylesheet" href="{{ asset('css/actualites/styleguide.css')|replace({"/assets/": "assets/"}) }}?v={{ "now"|date("U") }}">
+	<link rel="stylesheet" href="{{ asset('css/actualites/style.css')|replace({"/assets/": "assets/"}) }}?v={{ "now"|date("U") }}">
+	<link rel="stylesheet" href="{{ asset('css/actualites/responsive-style.css')|replace({"/assets/": "assets/"}) }}?v={{ "now"|date("U") }}">
 {% endblock %}
 
 {% block content %}
@@ -89,12 +89,12 @@
 
 			<!-- Filters -->
 			<div class="filters">
-				<button class="filter-tag filter-active">Tous les articles</button>
-				<button class="filter-tag">Formalités</button>
-				<button class="filter-tag">Annonces légales</button>
-				<button class="filter-tag">Astuces</button>
-				<button class="filter-tag">Juridique</button>
-				<button class="filter-tag">Actus La Gazette</button>
+				<a href="{{ path('app_actualites') }}" class="filter-tag {{ active_category is empty ? 'filter-active' : '' }}" style="text-decoration: none;">Tous les articles</a>
+				<a href="{{ path('app_actualites', {category: 'Formalités'}) }}" class="filter-tag {{ active_category == 'Formalités' ? 'filter-active' : '' }}" style="text-decoration: none;">Formalités</a>
+				<a href="{{ path('app_actualites', {category: 'Annonces légales'}) }}" class="filter-tag {{ active_category == 'Annonces légales' ? 'filter-active' : '' }}" style="text-decoration: none;">Annonces légales</a>
+				<a href="{{ path('app_actualites', {category: 'Astuces'}) }}" class="filter-tag {{ active_category == 'Astuces' ? 'filter-active' : '' }}" style="text-decoration: none;">Astuces</a>
+				<a href="{{ path('app_actualites', {category: 'Juridique'}) }}" class="filter-tag {{ active_category == 'Juridique' ? 'filter-active' : '' }}" style="text-decoration: none;">Juridique</a>
+				<a href="{{ path('app_actualites', {category: 'Actus La Gazette'}) }}" class="filter-tag {{ active_category == 'Actus La Gazette' ? 'filter-active' : '' }}" style="text-decoration: none;">Actus La Gazette</a>
 			</div>
 
 			<!-- Articles Grid -->
@@ -122,24 +122,25 @@
 			</div>
 
 			<!-- Pagination -->
-			<div class="pagination">
-				<button class="pagination-arrow" aria-label="Page précédente">
-					<img src="https://c.animaapp.com/ml2mibj9gkulId/img/solid-interface-caret-left.svg" alt="">
-				</button>
-				<button class="pagination-page pagination-active">1</button>
-				<button class="pagination-page">2</button>
-				<button class="pagination-page">3</button>
-				<button class="pagination-page">4</button>
-				<button class="pagination-page">5</button>
-				<button class="pagination-page pagination-desktop-only">6</button>
-				<button class="pagination-page pagination-desktop-only">7</button>
-				<button class="pagination-page pagination-desktop-only">8</button>
-				<button class="pagination-page pagination-desktop-only">9</button>
-				<button class="pagination-page pagination-desktop-only">10</button>
-				<button class="pagination-arrow" aria-label="Page suivante">
-					<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-caret-right.svg" alt="">
-				</button>
-			</div>
+			{% if total_pages > 1 %}
+				<div class="pagination">
+					{% if current_page > 1 %}
+						<a href="{{ path('app_actualites', {page: current_page - 1, category: active_category}) }}" class="pagination-arrow" aria-label="Page précédente" style="text-decoration: none;">
+							<img src="https://c.animaapp.com/ml2mibj9gkulId/img/solid-interface-caret-left.svg" alt="">
+						</a>
+					{% endif %}
+
+					{% for i in 1..total_pages %}
+						<a href="{{ path('app_actualites', {page: i, category: active_category}) }}" class="pagination-page {{ i == current_page ? 'pagination-active' : '' }}" style="text-decoration: none;">{{ i }}</a>
+					{% endfor %}
+
+					{% if current_page < total_pages %}
+						<a href="{{ path('app_actualites', {page: current_page + 1, category: active_category}) }}" class="pagination-arrow" aria-label="Page suivante" style="text-decoration: none;">
+							<img src="https://c.animaapp.com/ml2mibj9gkulId/img/outline-interface-caret-right.svg" alt="">
+						</a>
+					{% endif %}
+				</div>
+			{% endif %}
 		</section>
 	</div>
 {% endblock %}

@@ -87,16 +87,34 @@ body {
   margin-bottom: 8px;
 }
 
-.title-underline::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 8px;
-  background-image: url('https://c.animaapp.com/ml2mibj9gkulId/img/vector-14-1.svg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+.element-actus .hero .hero-title h1 .title-underline {
+  position: relative !important;
+  display: inline-block !important;
+}
+
+.element-actus .hero .hero-title h1 .title-underline::after {
+  content: '' !important;
+  display: block !important;
+  width: 100% !important;
+  height: 0 !important; /* On met la hauteur à 0 car c'est la bordure qui fait l'épaisseur */
+
+  /* 1. La source */
+  border-image-source: url('https://c.animaapp.com/ml2mibj9gkulId/img/vector-14-1.svg') !important;
+
+  /* 2. La découpe (ajuste le 30 selon ton trait) */
+  border-image-slice: 0 0 100% 0 !important;
+
+  /* 3. L'épaisseur d'affichage (ici 12px de haut) */
+  border-image-width: 0 0 25px 0 !important;
+
+  /* 4. Le comportement : stretch étire le milieu, les bords protégés ne bougent pas */
+  border-image-repeat: stretch !important;
+
+  /* Obligatoire pour afficher la bordure */
+  border-style: solid !important;
+  border-width: 0 0 20px 0 !important;
+  
+  margin-top: 8px !important;
 }
 
 .hero-subtitle {
@@ -142,16 +160,22 @@ body {
   text-align: left !important;
 }
 
+.title-underline-small {
+  position: relative !important;
+  display: inline-block !important;
+  padding-bottom: 12px !important;
+}
+
 .title-underline-small::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 8px;
-  background-image: url('https://c.animaapp.com/ml2mibj9gkulId/img/vector-14.svg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 10px !important;
+  background-image: url('https://c.animaapp.com/ml2mibj9gkulId/img/vector-14.svg') !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
 }
 
 .section-subtitle {

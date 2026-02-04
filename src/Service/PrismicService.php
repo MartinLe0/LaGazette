@@ -110,24 +110,28 @@ class PrismicService
     }
 
     /**
-     * Fetch all articles from Prismic
+     * Fetch all articles from Prismic, optionally filtered by category
      */
-    public function getArticles(int $page = 1, int $pageSize = 12): array
+    public function getArticles(int $page = 1, int $pageSize = 12, ?string $category = null): array
     {
-        $cacheKey = sprintf('prismic_articles_p%d_s%d', $page, $pageSize);
+        $cacheKey = sprintf('prismic_articles_p%d_s%d_c%s', $page, $pageSize, $category ?? 'all');
 
         try {
-            return $this->cache->get($cacheKey, function (ItemInterface $item) use ($page, $pageSize) {
+            return $this->cache->get($cacheKey, function (ItemInterface $item) use ($page, $pageSize, $category) {
                 $item->expiresAfter(3600);
                 $item->tag(['prismic_content']);
 
                 $ref = $this->getMasterRef();
-                $query = '[[at(document.type, "article")]]';
+                $queries = ['[[at(document.type, "article")]]'];
+
+                if ($category) {
+                    $queries[] = sprintf('[[at(my.article.category, "%s")]]', $category);
+                }
 
                 $response = $this->httpClient->request('GET', $this->apiEndpoint . '/documents/search', [
                     'query' => [
                         'ref' => $ref,
-                        'q' => $query,
+                        'q' => '[' . implode('', $queries) . ']',
                         'access_token' => $this->apiToken,
                         'page' => $page,
                         'pageSize' => $pageSize,
