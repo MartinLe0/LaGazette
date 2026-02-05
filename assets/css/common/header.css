@@ -172,6 +172,7 @@
         border: 1px solid #3E5FBC;
         border-radius: 10px;
         background-color: #fcfdfd;
+        cursor: pointer;
     }
 
     .element-HP .img-responsive {
@@ -184,6 +185,43 @@
         justify-content: space-between;
         background-color: #fcfdfd !important;
         border: none !important;
+    }
+
+    .element-HP .menu-2.menu-open {
+        display: flex !important;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #fcfdfd;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        align-items: flex-start;
+    }
+
+    .element-HP .menu-2.menu-open .div-6,
+    .element-HP .menu-2.menu-open .menu-3 {
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .element-HP .menu-2.menu-open .menu-3 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .element-HP .menu-2.menu-open .dropdown-menu {
+        display: block !important;
+        position: static;
+        box-shadow: none;
+        border: none;
+        padding-left: 20px;
+        width: 100%;
+        background-color: transparent;
     }
 }
 

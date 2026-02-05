@@ -45,16 +45,28 @@
         max-width: 500px;
     }
 
-    .steps-container {
-        flex-direction: column;
-        gap: 40px;
+    /* Parcours responsive */
+    .element-HP .process-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 40px !important;
     }
 
-    .step-item:not(:last-child)::after {
-        content: "↓";
-        top: auto;
-        bottom: -30px;
-        right: 48%;
+    .element-HP .arrow-right {
+        display: none !important;
+    }
+
+    .element-HP .arrow-down {
+        display: block !important;
+        width: 24px;
+        height: 24px;
+        margin: 10px 0;
+    }
+
+    .element-HP .step {
+        width: 100% !important;
+        max-width: 400px !important;
+        padding: 0 20px !important;
     }
 
     .testimonials-grid {
@@ -72,16 +84,37 @@
         grid-template-columns: 1fr;
     }
 
-    .parcours-actions {
-        flex-direction: column;
-        width: 100%;
-        max-width: 300px;
-        margin: 40px auto 0;
+    .element-HP .div-2 {
+        padding: 40px 20px !important;
+        align-items: flex-start !important;
+        text-align: left;
     }
 
-    .btn-primary,
-    .btn-secondary {
-        text-align: center;
+    .element-HP .nb-titre {
+        justify-content: center !important;
+    }
+
+    .element-HP .step .div-3,
+    .element-HP .step .text-wrapper-10 {
+        text-align: left !important;
+        justify-content: center !important;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 250px;
+    }
+
+    .element-HP .CTA {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .element-HP .bouton-2,
+    .element-HP .bouton-3 {
+        align-self: center !important;
+        width: fit-content !important;
+        justify-content: center !important;
     }
 
     .testimonials-header {
