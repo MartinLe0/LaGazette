@@ -8,15 +8,13 @@
 			{% endblock %}
 		</title>
 		<meta name="description" content="{% block meta_description %}Déléguer vos formalités juridiques et annonces légales avec Gazette Solutions. Expertise, rapidité et fiabilité pour les professionnels du chiffre et du droit.{% endblock %}">
-		<link
-		rel="canonical" href="{{ app.request.uri }}">
+		<link rel="canonical" href="{{ app.request.uri }}">
 
 
 		<meta property="og:type" content="website">
 		<meta property="og:url" content="{{ app.request.uri }}">
 		<meta property="og:title" content="{% block og_title %}{{ block('title') }}{% endblock %}">
-		<meta
-		property="og:description" content="{% block og_description %}{{ block('meta_description') }}{% endblock %}">
+		<meta property="og:description" content="{% block og_description %}{{ block('meta_description') }}{% endblock %}">
 
 
 		<meta property="twitter:card" content="summary_large_image">
@@ -32,8 +30,7 @@
 		{% endif %}
 		<link rel="stylesheet" href="{{ asset('css/common/bandeaux.css') }}"/>
 		<link rel="stylesheet" href="{{ asset('css/common/footer.css') }}"/>
-		<link rel="stylesheet" href="{{ asset('css/common/cookie-consent.css') }}"/>
-		{% block stylesheets %}{% endblock %}
+		<link rel="stylesheet" href="{{ asset('css/common/cookie-consent.css') }}"/> {% block stylesheets %}{% endblock %}
 		</head>
 
 		<body>
@@ -45,6 +42,7 @@
 			{% include 'includes/_footer.html.twig' %}
 			{% include 'includes/_cookie_consent.html.twig' %}
 			<script src="{{ asset('js/cookie-consent.js') }}"></script>
+			<script src="{{ asset('js/header.js') }}"></script>
 			{% block javascripts %}{% endblock %}
 		</body>
 	</html>

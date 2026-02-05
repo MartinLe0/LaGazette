@@ -527,6 +527,8 @@ body {
     padding: 40px 80px;
     position: relative;
     padding-bottom: 120px;
+    width: 100%;
+    max-width: 1200px;
   }
 
   .advantages-header {
@@ -534,13 +536,14 @@ body {
   }
 
   .advantages-grid {
+    flex: 2;
     display: grid;
-    grid-template-columns: repeat(2, 250px);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 
   .advantage-card {
-    width: 250px;
+    width: 100%;
   }
 
   .advantage-card:nth-child(1) {
