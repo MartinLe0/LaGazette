@@ -15,7 +15,7 @@
             <div class="hero-text">
                 <span class="hero-tag">FORMALITÉS LÉGALES</span>
                 <h1 class="hero-title">
-                    Vos <strong class="hero-underline">formalités</strong><br>
+                    Vos <strong>formalités<img class="vector-underline" src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-14.svg" alt=""></strong><br>
                     juridique en ligne et en toute simplicité.
                 </h1>
                 <p class="hero-subtitle">
@@ -23,7 +23,7 @@
                 </p>
             </div>
             <div class="hero-image">
-                <img src="https://c.animaapp.com/ml166olt9ARs0G/img/illustrations-heros-formalites-1@2x.png" alt="Illustration Formalités">
+                <img src="{{ asset('img/formalites/illustration-formalites.png') }}" alt="Illustration Formalités">
             </div>
         </div>
     </div>
@@ -32,7 +32,7 @@
     <div class="container" style="padding: 80px 0;">
         <div style="display: flex; align-items: flex-start; gap: 80px;">
             <div style="flex: 0 0 350px;">
-                <img src="https://c.animaapp.com/ml166olt9ARs0G/img/rectangle-9@2x.png" alt="Équipe Gazette" style="width: 350px; height: 350px; border-radius: 20px; object-fit: cover;">
+                <img src="{{ asset('img/formalites/equipegazette.png') }}" alt="Équipe Gazette" style="width: 350px; height: 350px; border-radius: 20px; object-fit: cover;">
             </div>
             <div style="flex: 1;">
                 <span class="section-label">SERVICE<span class="vector-underline"></span></span>
@@ -53,89 +53,89 @@
             <!-- Card 1: CRÉATION -->
             <div class="domain-card">
                 <div class="domain-category-badge">
-                    <img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon-creation.svg" alt="" style="width: 40px;">
+                    <img src="{{ asset('img/formalites/iconcreation.png') }}" alt="" style="width: 40px;">
                     <h3>Création d'entreprise</h3>
                 </div>
                 
                 <h4 class="sub-category-title">Société commerciale</h4>
                 <ul class="domain-list">
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="{{ path('app_formalite_creation') }}">Création d'une EURL</a></li>
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="{{ path('app_formalite_creation') }}">Création d'une SASU</a></li>
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="{{ path('app_formalite_creation') }}">Création d'une SARL</a></li>
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="{{ path('app_formalite_creation') }}">Création d'une SAS</a></li>
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="{{ path('app_formalite_creation') }}">Création d'une SNC</a></li>
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="{{ path('app_formalite_creation') }}">Création d'une SA</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="{{ path('app_formalite_creation') }}">Création d'une EURL</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="{{ path('app_formalite_creation') }}">Création d'une SASU</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="{{ path('app_formalite_creation') }}">Création d'une SARL</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="{{ path('app_formalite_creation') }}">Création d'une SAS</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="{{ path('app_formalite_creation') }}">Création d'une SNC</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="{{ path('app_formalite_creation') }}">Création d'une SA</a></li>
                 </ul>
 
                 <h4 class="sub-category-title">Société civile</h4>
                 <ul class="domain-list">
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="#">Société civile (SC - SCI - SCM)</a></li>
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="#">Société agricole (SCEA - GFA - EARL)</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="#">Société civile (SC - SCI - SCM)</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="#">Société agricole (SCEA - GFA - EARL)</a></li>
                 </ul>
 
                 <h4 class="sub-category-title">Société libérale</h4>
                 <ul class="domain-list">
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="#">Société d'exercice libéral (SEL)</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="#">Société d'exercice libéral (SEL)</a></li>
                 </ul>
 
                 <h4 class="sub-category-title">Autre</h4>
                 <ul class="domain-list">
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="#">Micro-entreprise</a></li>
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="#">Entreprise individuelle (EI)</a></li>
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="{{ path('app_formalite_creation_fonds_physique') }}">Achat du fonds</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="#">Micro-entreprise</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="#">Entreprise individuelle (EI)</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="{{ path('app_formalite_creation_fonds_physique') }}">Achat du fonds</a></li>
                 </ul>
             </div>
 
             <!-- Card 2: MODIFICATION -->
             <div class="domain-card">
                 <div class="domain-category-badge">
-                    <img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon-modification.svg" alt="" style="width: 40px;">
+                    <img src="{{ asset('img/formalites/iconmodification.png') }}" alt="" style="width: 40px;">
                     <h3>Modification d'entreprise</h3>
                 </div>
                 
                 <h4 class="sub-category-title" style="margin-top: 0;">Principales modifications</h4>
                 <ul class="domain-list">
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="#">Transfert de siège social</a></li>
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="#">Mouvement des dirigeants</a></li>
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="#">Modification du capital social</a></li>
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="#">Modification de l'objet social</a></li>
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="#">Modification dénomination</a></li>
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="#">Transformation de forme juridique</a></li>
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="#">Ouverture d'établissement</a></li>
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="#">Mise en sommeil</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="#">Transfert de siège social</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="#">Mouvement des dirigeants</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="#">Modification du capital social</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="#">Modification de l'objet social</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="#">Modification dénomination</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="#">Transformation de forme juridique</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="#">Ouverture d'établissement</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="#">Mise en sommeil</a></li>
                 </ul>
             </div>
 
             <!-- Card 3: CESSATION -->
             <div class="domain-card">
                 <div class="domain-category-badge">
-                    <img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon-cessation.svg" alt="" style="width: 40px;">
+                    <img src="{{ asset('img/formalites/iconcessation.png') }}" alt="" style="width: 40px;">
                     <h3>Cessation d'entreprise</h3>
                 </div>
                 
                 <h4 class="sub-category-title" style="margin-top: 0;">Fermeture</h4>
                 <ul class="domain-list">
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="#">Dissolution de société</a></li>
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="#">Clôture de liquidation</a></li>
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="#">Dissolution par TUP</a></li>
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="#">Radiation personne physique</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="#">Dissolution de société</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="#">Clôture de liquidation</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="#">Dissolution par TUP</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="#">Radiation personne physique</a></li>
                 </ul>
             </div>
 
             <!-- Card 4: AUTRES -->
             <div class="domain-card">
                 <div class="domain-category-badge">
-                    <img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon-autres.svg" alt="" style="width: 40px;">
+                    <img src="{{ asset('img/formalites/iconautre.png') }}" alt="" style="width: 40px;">
                     <h3>Autres formalités</h3>
                 </div>
                 
                 <h4 class="sub-category-title" style="margin-top: 0;">Services juridiques</h4>
                 <ul class="domain-list">
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="#">Dépôt des comptes annuels</a></li>
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="#">Registre des bénéficiaires effectifs</a></li>
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="#">Mise à jour du RNE</a></li>
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="#">Anonymisation des actes</a></li>
-                    <li><img src="https://c.animaapp.com/ml166olt9ARs0G/img/vector-1.svg"><a href="#">Privilèges et nantissements</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="#">Dépôt des comptes annuels</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="#">Registre des bénéficiaires effectifs</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="#">Mise à jour du RNE</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="#">Anonymisation des actes</a></li>
+                    <li>{% include 'includes/_arrow_service.html.twig' %}<a href="#">Privilèges et nantissements</a></li>
                 </ul>
             </div>
         </div>
@@ -153,7 +153,7 @@
                 <a href="#" class="btn-info">Accéder au tableau de bord <img src="https://c.animaapp.com/ml166olt9ARs0G/img/outline---interface---arrow-right-11@2x.png" style="width: 24px;"></a>
             </div>
             <div style="flex: 0 0 424px;">
-                <img src="https://c.animaapp.com/ml166olt9ARs0G/img/mock-up-formalite--v2-1@2x.png" alt="Dashboard Gazette" style="width: 424px; height: 300px; object-fit: contain;">
+                <img src="{{ asset('img/formalites/dashboardgazette.png') }}" alt="Dashboard Gazette" style="width: 424px; height: 300px; object-fit: contain;">
             </div>
         </div>
     </div>
@@ -204,8 +204,8 @@
     <!-- Section: Autres Services -->
     <div class="container other-services-section" style="padding: 80px 0;">
         <span class="section-label">AUTRES SERVICES<span class="vector-underline"></span></span>
-        <div style="display: flex; justify-content: center; margin-top: 40px;">
-            <div class="other-service-card" style="max-width: 320px;">
+        <div style="display: flex; justify-content: flex-start; margin-top: 40px;">
+            <div class="other-service-card" style="max-width: 320px; align-items: flex-start; text-align: left; padding: 0;">
                 <div class="other-service-icon">
                     <img src="https://c.animaapp.com/ml166olt9ARs0G/img/icon-4.svg" style="width: 40px;">
                 </div>
@@ -213,23 +213,11 @@
                 <p style="font-family: 'Montserrat'; font-size: 14px; color: #030303; line-height: 20px; margin-bottom: 25px;">
                     Publiez vos annonces légales en quelques clics partout en France et recevez les attestations de parution immédiatement.
                 </p>
-                <a href="{{ path('app_annonces_legales') }}" class="btn-info" style="width: 100%; justify-content: center;">Publier une annonce légale <img src="https://c.animaapp.com/ml166olt9ARs0G/img/outline---interface---arrow-right-11@2x.png" style="width: 24px;"></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Section: CTA Pre-footer -->
-    <div class="container" style="padding-bottom: 40px;">
-        <div class="pre-footer-gs">
-            <div style="display: flex; align-items: center; justify-content: center; gap: 100px; padding: 40px 80px;">
-                <div style="max-width: 515px;">
-                    <h2 style="font-family: 'IBM Plex Sans Arabic'; font-size: 28px; font-weight: 700; line-height: 30px; margin-bottom: 15px;">
-                        Rien n’a plus de valeur que votre <strong class="hero-underline">temps</strong><br>
-                        consacrez-le à votre coeur de métier.
-                    </h2>
-                    <span style="font-family: 'Open Sauce One'; color: #BFF5D9; font-size: 16px;">Retrouvez la sérénité, notre équipe devient la vôtre.</span>
-                </div>
-                <a href="{{ path('app_contact') }}" class="btn-outline-gs" style="padding: 12px 24px; font-weight: 500; border-radius: 10px;">Nous contacter</a>
+                <a href="{{ path('app_annonces_legales') }}" class="btn-info" style="width: 100%; justify-content: center;">Publier une annonce légale 
+                    <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 8px;">
+                        <path d="M7.71967 1.28033C7.42678 0.987437 7.42678 0.512563 7.71967 0.21967C8.01256 -0.0732233 8.48744 -0.0732233 8.78033 0.21967L12.7803 4.21967C13.0732 4.51256 13.0732 4.98744 12.7803 5.28033L8.78033 9.28033C8.48744 9.57322 8.01256 9.57322 7.71967 9.28033C7.42678 8.98744 7.42678 8.51256 7.71967 8.21967L10.4393 5.5H0.75C0.335787 5.5 0 5.16421 0 4.75C0 4.33579 0.335787 4 0.75 4H10.4393L7.71967 1.28033Z" fill="#030303"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </div>

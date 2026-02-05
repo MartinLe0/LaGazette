@@ -23,7 +23,7 @@
                 </p>
             </div>
             <div class="hero-image">
-                <img src="https://via.placeholder.com/600x400" alt="Illustration Services">
+                <img src="{{ asset('img/services/illustration-service.png') }}" alt="Illustration Services">
             </div>
         </div>
     </div>
@@ -75,7 +75,7 @@
                 </ul>
             </div>
             <div class="accomp-image">
-                <img src="https://via.placeholder.com/600x400" alt="Equipe Gazette Solutions">
+                <img src="{{ asset('img/services/equipegazettesolution.png') }}" alt="Equipe Gazette Solutions">
             </div>
         </div>
     </div>
@@ -138,40 +138,11 @@
          </div>
          
          <div class="testimonials-grid">
-             <div class="testimonial-card">
-                 <div class="client-avatar">D</div>
-                 <h4>Dimitri DESWARTE</h4>
-                 <div class="rating">★★★★★</div>
-                 <p>"Je recommande vivement Gazette Solutions. Une équipe à l'écoute et très pro ! Nous avons pu gérer toutes nos formalités rapidement..."</p>
-             </div>
-             <div class="testimonial-card">
-                 <div class="client-avatar">Q</div>
-                 <h4>Quentin Ramaget</h4>
-                 <div class="rating">★★★★★</div>
-                 <p>"Service client au top ! Merci à toute l'équipe pour leur réactivité et leur professionnalisme."</p>
-             </div>
-             <div class="testimonial-card">
-                 <div class="client-avatar">A</div>
-                 <h4>Arnaud Ehouz</h4>
-                 <div class="rating">★★★★★</div>
-                 <p>"Une solution clé en main qui nous fait gagner un temps précieux. Je ne passe plus par personne d'autre."</p>
-             </div>
-             <div class="testimonial-card">
-                 <div class="client-avatar">S</div>
-                 <h4>Sullivan Debousson</h4>
-                 <div class="rating">★★★★★</div>
-                 <p>"La plateforme est intuitive et les documents conformes. Parfait."</p>
+             <!-- Google Reviews Widget integration point -->
+             <div class="google-reviews-placeholder" style="text-align: center; padding: 40px; color: #666; font-style: italic; width: 100%;">
+                 Chargement des avis Google...
              </div>
          </div>
-    </div>
-
-    <!-- Pre-footer -->
-    <div class="pre-footer">
-        <div class="container">
-            <h2>Rien n'a plus de valeur que votre <span>temps</span><br>consacrez-le à votre coeur de métier.</h2>
-            <p>Maitrisez la sérénité, notre équipe devient la votre.</p>
-            <a href="{{ path('app_contact') }}" class="btn-white">Contactez-nous</a>
-        </div>
     </div>
 </div>
 {% endblock %}
