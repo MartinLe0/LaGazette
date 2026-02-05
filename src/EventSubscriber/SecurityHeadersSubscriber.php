@@ -23,7 +23,6 @@ class SecurityHeadersSubscriber implements EventSubscriberInterface
 
         $response = $event->getResponse();
 
-        // Strict Content Security Policy
         $csp = "default-src 'self'; ";
         $csp .= "img-src 'self' https://images.prismic.io https://c.animaapp.com data:; ";
         $csp .= "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; ";

@@ -15,9 +15,7 @@ class PrismicExtension extends AbstractExtension
         ];
     }
 
-    /**
-     * Converts Prismic Rich Text or Title to plain text
-     */
+
     public function asText($value): string
     {
         if (is_string($value)) {
@@ -38,10 +36,7 @@ class PrismicExtension extends AbstractExtension
         return trim($text);
     }
 
-    /**
-     * Converts Prismic Rich Text to simple HTML
-     * For a complete implementation, use Prismic's LinkResolver and HTMLSerializer
-     */
+
     public function asHtml($value): string
     {
         if (is_string($value)) {

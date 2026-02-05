@@ -1,0 +1,39 @@
+framework:
+    html_sanitizer:
+        sanitizers:
+            default:
+                allow_safe_elements: true
+                allow_static_elements: true
+                
+                allow_elements:
+                    - 'iframe'
+                    - 'img'
+                    - 'h1'
+                    - 'h2'
+                    - 'h3'
+                    - 'h4'
+                    - 'h5'
+                    - 'h6'
+                    - 'p'
+                    - 'div'
+                    - 'span'
+                    - 'br'
+                    - 'ul'
+                    - 'ol'
+                    - 'li'
+                    - 'strong'
+                    - 'em'
+                    - 'b'
+                    - 'i'
+                    - 'a'
+                    - 'blockquote'
+                
+                allow_attributes:
+                    'src': ['img', 'iframe']
+                    'href': ['a']
+                    'alt': ['img']
+                    'title': ['a', 'img']
+                    'class': '*'
+                    'target': ['a']
+                    'rel': ['a']
+                    'style': '*'

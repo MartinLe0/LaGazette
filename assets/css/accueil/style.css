@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   padding: 0px;
-  /* Removed top padding */
   position: relative;
   background-color: #fcfdfd;
   width: 100%;
@@ -11,7 +10,6 @@
   margin: 0 auto;
 }
 
-/* Ãƒâ€°lÃƒÂ©ments masquÃƒÂ©s par dÃƒÂ©faut (version Bureau) */
 .element-HP .PRIMAIRE-SHORT,
 .element-HP .frame-responsive,
 .element-HP .hero-content-responsive {
@@ -24,8 +22,6 @@
   height: 450px;
   object-fit: cover;
   object-position: center 0%;
-  /* Absolute top to show more content */
-  /* Apply radius to image directly */
   border-bottom-left-radius: 20px !important;
   border-bottom-right-radius: 20px !important;
 }
@@ -35,7 +31,6 @@
   height: 450px;
   overflow: hidden;
   position: relative;
-  /* Correction coins arrondis */
   border-bottom-left-radius: 20px !important;
   border-bottom-right-radius: 20px !important;
 }
@@ -48,7 +43,6 @@
   }
 }
 
-/* Unified Large Screen Hero Height */
 @media (min-width: 1440px) {
 
   .element-HP .hero,
@@ -698,7 +692,6 @@
   .element-HP .carte-article {
     width: 100% !important;
     max-width: 500px !important;
-    /* Limit width so it doesn't get too giant */
   }
 }
 
@@ -785,7 +778,6 @@
 
 @media (min-width: 1441px) {
 
-  /* On desktop, keep button at top-right visually by adjusting the container */
   .element-HP .blog .div-3 {
     display: flex;
     flex-direction: row;
@@ -793,9 +785,6 @@
     align-items: center;
   }
 
-  /* We moved the button out, so we need to fix desktop layout to show it next to title */
-  /* Actually, easiest is to let it be order 3 and for desktop use order on div-3 if we want it top? */
-  /* Wait, if it's order 3 it's at bottom. So for Desktop (min-width: 1441px): */
   .element-HP .blog {
     position: relative;
   }
@@ -814,7 +803,7 @@
 
   .element-HP .bouton-4 {
     order: 3;
-    /* Bottom */
+
     align-self: center !important;
     position: static !important;
   }
@@ -995,22 +984,11 @@
   font-style: var(--title-medium-font-style);
 }
 
-
-/* CTA Section : styles communs dans css/common/bandeaux.css */
-
-/* Footer : styles communs dans css/common/footer.css */
-
-
-/* Header : styles communs dans css/common/header.css */
-
-/* --- RESPONSIVE 790PX (Tablette) --- */
 @media (max-width: 790px) {
   .element-HP {
     padding-top: 0;
   }
 
-  /* Header */
-  /* Header Logo Only */
   .element-HP .GS-header .PRIMAIRE {
     display: none;
   }
@@ -1053,7 +1031,6 @@
     background-color: transparent !important;
   }
 
-  /* Hero */
   .element-HP .hero-container {
     height: auto !important;
     min-height: auto !important;
@@ -1073,9 +1050,7 @@
     justify-content: center;
     gap: 40px;
     padding: 100px 20px 80px;
-    /* Restored balanced padding */
     width: 100%;
-    /* Use cover to zoom in and hide the baked-in "torn paper" effect at the bottom */
     background: url(https://c.animaapp.com/ml166olt9ARs0G/img/container-1.png) top center / cover no-repeat;
     border-bottom-left-radius: 30px !important;
     border-bottom-right-radius: 30px !important;
@@ -1148,7 +1123,7 @@
     text-align: left;
   }
 
-  /* Services */
+
   .element-HP .liste-services {
     flex-direction: column !important;
     align-items: center !important;
@@ -1163,7 +1138,6 @@
     align-items: center !important;
   }
 
-  /* Parcours */
   .element-HP .process-container {
     flex-direction: column !important;
     align-items: center !important;
@@ -1190,7 +1164,6 @@
     gap: 20px;
   }
 
-  /* Chiffres */
   .element-HP .chiffres {
     height: auto;
     padding: 40px 20px;
@@ -1209,7 +1182,6 @@
     gap: 30px;
   }
 
-  /* Blog */
   .element-HP .row {
     flex-direction: column !important;
     align-items: center !important;
@@ -1220,16 +1192,13 @@
   .element-HP .step .text-wrapper-10 {
     text-align: left !important;
     justify-content: center !important;
-    /* Keep flex container centered? No. */
     width: 100%;
     margin: 0 auto;
     max-width: 250px;
-    /* Constrain width to center the block visually */
   }
 
   .element-HP .step .div-3 {
     justify-content: center;
-    /* Actually div-3 is flex row? */
     display: flex;
   }
 
@@ -1237,14 +1206,12 @@
     justify-content: center !important;
   }
 
-  /* Fix Chiffres Stack */
   .element-HP .chiffres-2 {
     flex-direction: column !important;
     align-items: center !important;
     gap: 40px;
   }
 
-  /* Fix Text Alignment */
   .element-HP .div-2,
   .element-HP .blog {
     text-align: left !important;
@@ -1257,7 +1224,6 @@
     justify-content: flex-start !important;
   }
 
-  /* Fix CTA Overflow & Stacking */
   .element-HP .background {
     flex-direction: column !important;
     height: auto !important;
@@ -1277,11 +1243,6 @@
 
   .element-HP .heading {
     flex-direction: row !important;
-    /* Keep "Rien..." and "temps" on same line if possible? No, user said "pas au centre". */
-    /* Actually user saw them stacked. "temps" on new line. */
-    /* If row, they might overflow. */
-    /* Let's keep column if they are long. But heading was flex row on desktop. */
-    /* Let's try wrap. */
     flex-wrap: wrap !important;
     flex-direction: row !important;
   }
@@ -1294,10 +1255,9 @@
     word-wrap: break-word;
     text-align: left !important;
     width: auto !important;
-    /* Let them fit content so they can wrap inline */
+
   }
 
-  /* Fix temps underline scaling if needed? It's pseudo element. */
 
   .element-HP .bouton-6 {
     width: 100%;
@@ -1313,7 +1273,6 @@
   }
 }
 
-/* --- RESPONSIVE 360PX (Mobile) --- */
 @media (max-width: 480px) {
   .element-HP .hero-content-responsive {
     padding: 120px 20px 40px;
@@ -1326,7 +1285,6 @@
     object-fit: cover;
   }
 
-  /* Utilities (Global) */
   .text-red {
     color: var(--solutions) !important;
   }
@@ -1366,21 +1324,20 @@
   }
 }
 
-/* --- RESPONSIVE 370PX (Micro-Mobile) --- */
 @media (max-width: 370px) {
   .element-HP .hero-content-responsive {
     background-size: 1000% !important;
   }
 }
 
-/* --- RESPONSIVE 450PX (Mobile Zoom) --- */
 @media (max-width: 450px) {
   .element-HP .hero-content-responsive {
     background-size: 1200% !important;
   }
 }
-/* --- RESPONSIVE 1250PX (Tablets Stacking) --- */
+
 @media (max-width: 1250px) {
+
   .element-HP .liste-services,
   .element-HP .process-container {
     flex-direction: column !important;

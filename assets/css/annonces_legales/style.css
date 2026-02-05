@@ -12,11 +12,11 @@
   flex-direction: column;
   width: 100%;
   height: auto;
-  /* Allow flexible height */
+
   min-height: 560px;
   align-items: center;
   justify-content: center;
-  /* Center content vertically */
+
   padding: 0px 20px;
   position: relative;
 }
@@ -832,6 +832,3 @@
   white-space: nowrap;
   font-style: var(--label-large-font-style);
 }
-
-
-/* Footer : styles communs dans css/common/footer.css */

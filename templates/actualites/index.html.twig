@@ -14,7 +14,7 @@
 {% block content %}
 	<div
 		class="element-actus">
-		<!-- Hero Section -->
+
 		<section class="hero">
 			<div class="background">
 				<div class="hero-content">
@@ -40,10 +40,10 @@
 			</div>
 		</section>
 
-		<!-- Blog Section -->
+
 		<section
 			class="blog-section">
-			<!-- Featured Article -->
+
 			<div class="section-header">
 				<h2 class="section-title">
 					<span class="title-underline-small">A LA UNE</span>
@@ -76,7 +76,7 @@
 				{% endif %}
 			</div>
 
-			<!-- All Articles -->
+
 			<div class="section-header">
 				<h2 class="section-title">
 					<span class="title-underline-small">LE BLOG</span>
@@ -87,7 +87,7 @@
 				<p>Toute l'actualité juridique.</p>
 			</div>
 
-			<!-- Filters -->
+
 			<div class="filters">
 				<a href="{{ path('app_actualites') }}" class="filter-tag {{ active_category is empty ? 'filter-active' : '' }}" style="text-decoration: none;">Tous les articles</a>
 				<a href="{{ path('app_actualites', {category: 'Formalités'}) }}" class="filter-tag {{ active_category == 'Formalités' ? 'filter-active' : '' }}" style="text-decoration: none;">Formalités</a>
@@ -97,7 +97,7 @@
 				<a href="{{ path('app_actualites', {category: 'Actus La Gazette'}) }}" class="filter-tag {{ active_category == 'Actus La Gazette' ? 'filter-active' : '' }}" style="text-decoration: none;">Actus La Gazette</a>
 			</div>
 
-			<!-- Articles Grid -->
+
 			<div class="articles-grid">
 				{% for article in articles %}
 					<article class="article-card">
@@ -121,7 +121,7 @@
 				{% endfor %}
 			</div>
 
-			<!-- Pagination -->
+
 			{% if total_pages > 1 %}
 				<div class="pagination">
 					{% if current_page > 1 %}

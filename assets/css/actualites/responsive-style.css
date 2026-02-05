@@ -1,7 +1,3 @@
-/* ========================================
-   MOBILE FIRST - BASE (360px)
-   ======================================== */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -22,7 +18,7 @@ body {
   align-items: flex-start !important;
   text-align: left !important;
   margin-top: 0 !important;
-  /* Correction for gap */
+
   padding-top: 0 !important;
 }
 
@@ -33,11 +29,9 @@ body {
   align-items: flex-start !important;
 }
 
-/* Header removed to use global header.css */
 
-/* ========================================
-   HERO SECTION
-   ======================================== */
+
+
 
 .hero {
   background: linear-gradient(31deg, rgba(27, 47, 83, 1) 0%, rgba(62, 95, 188, 1) 75%);
@@ -96,24 +90,19 @@ body {
   content: '' !important;
   display: block !important;
   width: 100% !important;
-  height: 0 !important; /* On met la hauteur à 0 car c'est la bordure qui fait l'épaisseur */
+  height: 0 !important;
 
-  /* 1. La source */
   border-image-source: url('https://c.animaapp.com/ml2mibj9gkulId/img/vector-14-1.svg') !important;
 
-  /* 2. La découpe (ajuste le 30 selon ton trait) */
   border-image-slice: 0 0 100% 0 !important;
 
-  /* 3. L'épaisseur d'affichage (ici 12px de haut) */
   border-image-width: 0 0 25px 0 !important;
 
-  /* 4. Le comportement : stretch étire le milieu, les bords protégés ne bougent pas */
   border-image-repeat: stretch !important;
 
-  /* Obligatoire pour afficher la bordure */
   border-style: solid !important;
   border-width: 0 0 20px 0 !important;
-  
+
   margin-top: 8px !important;
 }
 
@@ -137,9 +126,7 @@ body {
   display: none;
 }
 
-/* ========================================
-   BLOG SECTION
-   ======================================== */
+
 
 .blog-section {
   padding: 40px 20px;
@@ -186,7 +173,7 @@ body {
   color: #3e5fbc;
 }
 
-/* FILTERS */
+
 .filters {
   display: flex !important;
   flex-wrap: wrap;
@@ -206,7 +193,7 @@ body {
   background-color: var(--confirmation);
 }
 
-/* ARTICLES */
+
 .article-card {
   background-color: #fcfdfd;
   border-radius: 8px;
@@ -269,7 +256,7 @@ body {
   gap: 40px;
 }
 
-/* PAGINATION */
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -301,11 +288,9 @@ body {
   display: none;
 }
 
-/* CTA removed to use global bandeaux.css */
 
-/* ========================================
-   TABLET - 790px
-   ======================================== */
+
+
 
 @media (min-width: 790px) {
   .hero {
@@ -325,12 +310,10 @@ body {
   }
 }
 
-/* ========================================
-   DESKTOP - 1200px
-   ======================================== */
+
 
 @media (min-width: 1200px) {
-  /* Header removed to use global header.css */
+
 
   body {
     padding-top: 0;

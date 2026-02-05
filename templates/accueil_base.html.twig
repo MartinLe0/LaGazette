@@ -11,14 +11,14 @@
 		<link
 		rel="canonical" href="{{ app.request.uri }}">
 
-		{# Open Graph / Facebook #}
+
 		<meta property="og:type" content="website">
 		<meta property="og:url" content="{{ app.request.uri }}">
 		<meta property="og:title" content="{% block og_title %}{{ block('title') }}{% endblock %}">
 		<meta
 		property="og:description" content="{% block og_description %}{{ block('meta_description') }}{% endblock %}">
 
-		{# Twitter #}
+
 		<meta property="twitter:card" content="summary_large_image">
 		<meta property="twitter:url" content="{{ app.request.uri }}">
 		<meta property="twitter:title" content="{{ block('og_title') }}">
@@ -31,7 +31,9 @@
 			<link rel="stylesheet" href="{{ asset('css/accueil/style.css') }}"/>
 		{% endif %}
 		<link rel="stylesheet" href="{{ asset('css/common/bandeaux.css') }}"/>
-		<link rel="stylesheet" href="{{ asset('css/common/footer.css') }}"/> {% block stylesheets %}{% endblock %}
+		<link rel="stylesheet" href="{{ asset('css/common/footer.css') }}"/>
+		<link rel="stylesheet" href="{{ asset('css/common/cookie-consent.css') }}"/>
+		{% block stylesheets %}{% endblock %}
 		</head>
 
 		<body>
@@ -41,6 +43,8 @@
 			</div>
 			{% include 'includes/_cta_banner.html.twig' %}
 			{% include 'includes/_footer.html.twig' %}
+			{% include 'includes/_cookie_consent.html.twig' %}
+			<script src="{{ asset('js/cookie-consent.js') }}"></script>
 			{% block javascripts %}{% endblock %}
 		</body>
 	</html>

@@ -1,4 +1,3 @@
-/* Base styles - Mobile First (360px) */
 body {
   margin: 0;
   padding: 0;
@@ -11,9 +10,9 @@ body {
   flex-direction: column;
 }
 
-/* Header Styles removed to use global header.css */
 
-/* Hero Section */
+
+
 .hero {
   background: linear-gradient(31deg, rgba(27, 47, 83, 1) 0%, rgba(62, 95, 188, 1) 75%);
   padding: 40px 20px;
@@ -80,7 +79,7 @@ body {
   display: none;
 }
 
-/* Service Section */
+
 .service-section {
   display: flex;
   flex-direction: column;
@@ -225,7 +224,7 @@ body {
   height: 24px;
 }
 
-/* Advantages Section */
+
 .advantages-section {
   display: flex;
   flex-direction: column;
@@ -365,7 +364,7 @@ body {
   white-space: nowrap;
 }
 
-/* Other Services Section */
+
 .other-services {
   display: flex;
   flex-direction: column;
@@ -413,9 +412,9 @@ body {
   margin: 0;
 }
 
-/* CTA Section removed to use global bandeaux.css */
 
-/* Tablet Styles (790px) */
+
+
 @media (min-width: 790px) {
   .hero {
     padding: 40px 80px;
@@ -464,7 +463,7 @@ body {
   }
 }
 
-/* Desktop Styles (1200px) */
+
 @media (min-width: 1200px) {
   .page-container {
     max-width: 1200px;

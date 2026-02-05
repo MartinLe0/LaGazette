@@ -13,7 +13,7 @@
 
 {% block content %}
 	<div class="element-article">
-		<!-- Breadcrumb -->
+
 		<div class="breadcrumb">
 			<div class="div">
 				<div class="text-wrapper">Blog</div>
@@ -28,7 +28,7 @@
 			</div>
 		</div>
 
-		<!-- Detail Section -->
+
 		<div class="detail">
 			<div class="article">
 				<div class="right-content">
@@ -62,14 +62,16 @@
 							{% endif %}
 						{% endfor %}
 
-						{# Fullback if no slices #}
+
 						{% if article.data.content is defined %}
-							<div class="text-wrapper-4">{{ article.data.content|as_html|raw }}</div>
+							<div class="article-content">
+								{{ article.data.content|as_html|sanitize_html }}
+							</div>
 						{% endif %}
 					</div>
 				</div>
 
-				<!-- Sidebar / Left Content -->
+
 				<div class="left-content">
 					<div class="div-3">
 						<div class="div-wrapper">
@@ -89,7 +91,7 @@
 								<span class="text-wrapper-7">À lire aussi</span>
 							</p>
 						</div>
-						<!-- We can populate this dynamically later -->
+
 						<div class="carte-article">
 							<div class="image-2"></div>
 							<div class="texte">
