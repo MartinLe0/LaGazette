@@ -1,0 +1,96 @@
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--blanc, #fff);
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    padding: 24px;
+    font-family: var(--body-medium-font-family, 'Montserrat', sans-serif);
+    border-top: 1px solid #e1e1e1;
+}
+
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.cookie-text h3 {
+    font-family: var(--title-small-font-family, 'Open Sauce One', sans-serif);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--noir, #333);
+}
+
+.cookie-text p {
+    font-size: 0.95rem;
+    color: var(--noir-light, #666);
+    line-height: 1.5;
+    margin: 0;
+    max-width: 800px;
+}
+
+.cookie-link {
+    color: var(--primaire, #3e5fbc);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.cookie-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-cookie {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-family: var(--label-large-font-family, 'Montserrat', sans-serif);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.btn-accept {
+    background-color: var(--primaire, #3e5fbc);
+    color: var(--blanc, #fff);
+}
+
+.btn-accept:hover {
+    opacity: 0.9;
+}
+
+.btn-reject {
+    background-color: transparent;
+    border: 1px solid var(--primaire, #3e5fbc);
+    color: var(--primaire, #3e5fbc);
+}
+
+.btn-reject:hover {
+    background-color: rgba(62, 95, 188, 0.05);
+}
+
+@media (max-width: 768px) {
+    .cookie-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cookie-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .btn-cookie {
+        flex: 1;
+        text-align: center;
+    }
+}

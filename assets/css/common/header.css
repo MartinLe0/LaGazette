@@ -1,7 +1,3 @@
-/**
- * Header commun - styles extraits de l'accueil pour être identiques partout.
- */
-
 .element-HP .GS-header {
     display: flex;
     flex-direction: column;
@@ -145,7 +141,7 @@
     display: none;
 }
 
-/* --- RESPONSIVE Header --- */
+
 @media (max-width: 991px) {
     .element-HP .GS-header .PRIMAIRE {
         display: none;
@@ -188,5 +184,78 @@
         justify-content: space-between;
         background-color: #fcfdfd !important;
         border: none !important;
+    }
+}
+
+
+.menu-dropdown-container {
+    position: relative;
+    cursor: pointer;
+    height: 100%;
+}
+
+.menu-label-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 100%;
+}
+
+.arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.menu-dropdown-container:hover .arrow-icon {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px 0;
+    list-style: none;
+    z-index: 1001;
+    border: 1px solid #eee;
+}
+
+.menu-dropdown-container:hover .dropdown-menu {
+    display: block;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 20px;
+    color: #1B2F53;
+    font-size: 14px;
+    font-family: "Montserrat", Helvetica;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f5f7fa;
+    color: #3E5FBC;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

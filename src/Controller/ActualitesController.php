@@ -9,14 +9,10 @@ use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\RateLimiter\Annotation\RateLimiter;
 use App\Service\PrismicService;
 
-/**
- * Controller for the news/blog section.
- */
+
 class ActualitesController extends AbstractController
 {
-    /**
-     * Renders the news list page.
-     */
+
     #[Route('/actualites', name: 'app_actualites')]
     #[RateLimiter('content_scraping')]
     public function index(Request $request, PrismicService $prismic): Response
@@ -33,9 +29,7 @@ class ActualitesController extends AbstractController
         ]);
     }
 
-    /**
-     * Renders a single news article.
-     */
+
     #[Route('/actualites/{slug}', name: 'app_actualites_show')]
     #[RateLimiter('content_scraping')]
     public function show(string $slug, PrismicService $prismic): Response

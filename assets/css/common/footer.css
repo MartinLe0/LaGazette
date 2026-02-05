@@ -1,7 +1,3 @@
-/**
- * Footer unifié basé sur le style "Actualités" (classes -8).
- */
-
 .d-GS-footer-8 {
   display: flex !important;
   flex-wrap: wrap !important;
@@ -222,7 +218,7 @@
   opacity: 0.8 !important;
 }
 
-/* Prevents Newsletter wrap between 1250px and 1430px */
+
 @media (min-width: 1250px) and (max-width: 1430px) {
   .d-GS-footer-8 {
     padding: 40px 30px !important;
@@ -238,7 +234,7 @@
   }
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 991px) {
   .d-GS-footer-8 {
     padding: 40px 20px !important;

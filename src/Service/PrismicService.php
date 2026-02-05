@@ -7,21 +7,13 @@ use Symfony\Contracts\Cache\TagAwareCacheInterface;
 use Symfony\Contracts\Cache\ItemInterface;
 use Psr\Log\LoggerInterface;
 
-/**
- * Service for interacting with the Prismic CMS API.
- */
+
 class PrismicService
 {
     private string $apiEndpoint;
     private string $apiToken;
 
-    /**
-     * @param HttpClientInterface $httpClient The HTTP client
-     * @param TagAwareCacheInterface $cache The cache interface
-     * @param LoggerInterface $logger The logger interface
-     * @param string $prismicRepoName The Prismic repository name (from parameters)
-     * @param string $prismicToken The Prismic API token (from parameters)
-     */
+
     public function __construct(
         private HttpClientInterface $httpClient,
         private TagAwareCacheInterface $cache,
@@ -33,13 +25,11 @@ class PrismicService
         $this->apiToken = $prismicToken;
     }
 
-    /**
-     * Get the master ref from Prismic API
-     */
+
     private function getMasterRef(): string
     {
         return $this->cache->get('prismic_master_ref', function (ItemInterface $item) {
-            $item->expiresAfter(300); // Check for new ref every 5 minutes
+            $item->expiresAfter(300);
 
             try {
                 $response = $this->httpClient->request('GET', $this->apiEndpoint, [
@@ -55,7 +45,6 @@ class PrismicService
                 }
             } catch (\Exception $e) {
                 $this->logger->error('Prismic Master Ref Error: ' . $e->getMessage());
-                // Return a previously cached ref if possible or fail
                 throw $e;
             }
 
@@ -63,17 +52,14 @@ class PrismicService
         });
     }
 
-    /**
-     * Fetch a document by its slug/type and filter its data
-     */
+
     public function getDocument(string $type, string $slug): ?array
     {
         $cacheKey = sprintf('prismic_doc_%s_%s', $type, $slug);
 
         try {
             return $this->cache->get($cacheKey, function (ItemInterface $item) use ($type, $slug) {
-                // Extended TTL for better availability during API downtime
-                $item->expiresAfter(86400); // 24 hours
+                $item->expiresAfter(86400);
                 $item->tag(['prismic_content']);
 
                 $ref = $this->getMasterRef();
@@ -109,9 +95,7 @@ class PrismicService
         }
     }
 
-    /**
-     * Fetch all articles from Prismic, optionally filtered by category
-     */
+
     public function getArticles(int $page = 1, int $pageSize = 12, ?string $category = null): array
     {
         $cacheKey = sprintf('prismic_articles_p%d_s%d_c%s', $page, $pageSize, $category ?? 'all');
@@ -158,25 +142,20 @@ class PrismicService
         }
     }
 
-    /**
-     * Filter sensitive or unnecessary metadata from Prismic response
-     */
+
     private function filterData(array $document): array
     {
-        // Keep only what's needed for the frontend
         return [
             'id' => $document['id'],
             'uid' => $document['uid'],
             'type' => $document['type'],
-            'data' => $document['data'], // This contains the actual CMS content
+            'data' => $document['data'],
             'slug' => $document['slugs'][0] ?? null,
             'last_publication_date' => $document['last_publication_date'],
         ];
     }
 
-    /**
-     * Clear Prismic cache
-     */
+
     public function clearCache(): void
     {
         $this->cache->invalidateTags(['prismic_content']);

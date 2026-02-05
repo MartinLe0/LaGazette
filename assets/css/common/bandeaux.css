@@ -1,14 +1,8 @@
-/**
- * Bandeaux bleus communs - même style et même taille sur toutes les pages.
- * Hero (bandeau du haut) et CTA "Rien n'a plus de valeur..." (bandeau avant le footer).
- */
-
-/* Gradient bleu identique partout */
 :root {
   --bandeau-gradient: linear-gradient(31deg, rgba(27, 47, 83, 1) 0%, rgba(62, 95, 188, 1) 75%);
 }
 
-/* ========== BANDEAU CTA "Rien n'a plus de valeur..." (dans le footer include) ========== */
+
 .call-to-action .background {
   background: var(--bandeau-gradient) !important;
   min-height: 180px !important;
@@ -26,7 +20,7 @@
   box-sizing: border-box !important;
 }
 
-/* ========== HERO BLEU (bandeau du haut) - Actualités et Annonces ========== */
+
 .element-HP section.hero,
 .element-annonces .hero,
 .element-actus .hero {
@@ -44,7 +38,7 @@
   margin-right: auto !important;
 }
 
-/* ========== CTA CONTENT PREFIXED ========== */
+
 .cta-titre-3 {
   display: flex !important;
   flex-direction: column !important;
@@ -128,7 +122,7 @@
   display: none !important;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 991px) {
   .call-to-action .background {
     padding: 40px 20px !important;
