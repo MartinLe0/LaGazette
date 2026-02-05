@@ -994,7 +994,7 @@
   height: 100%;
   position: relative;
   z-index: 2;
-  background: url(https://c.animaapp.com/ml166olt9ARs0G/img/container-1.png) top center / cover no-repeat;
+  background: url(https://c.animaapp.com/ml166olt9ARs0G/img/container-1.png) center / 600% no-repeat;
   border-bottom-left-radius: 20px !important;
   border-bottom-right-radius: 20px !important;
 }
